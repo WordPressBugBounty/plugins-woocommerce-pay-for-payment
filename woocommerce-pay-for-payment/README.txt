@@ -3,8 +3,8 @@ Contributors: vyskoczilova, podpirate
 Donate link: https://paypal.me/KarolinaVyskocilova
 Tags: ecommerce, woocommerce, payment gateway, fee
 Requires at least: 4.6
-Tested up to: 6.6
-Stable tag: 2.1.8
+Tested up to: 6.7
+Stable tag: 2.1.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,9 @@ Setup individual charges for each payment method in WooCommerce.
 
 Add individual charges for each payment method as a flat rate and/or as a percentage of the cart total. The plugin first calculates the percentage rate and then adds the fixed rate on top.
 
-**Current version is not compatible with WooCommerce Block Checkou** which is default since WC 8.3 please use shortcode for checkout instead. [How to guide](https://kybernaut.cz/en/clanky/how-to-revert-woocommerce-block-checkout-to-the-old-checkou-page/). I'm working on a new version compatible with block checkout and React settings.
+
+**Current version is not compatible with WooCommerce Block Checkout** please use shortcode for checkout instead. [How to guide](https://kybernaut.cz/en/clanky/how-to-revert-woocommerce-block-checkout-to-the-old-checkou-page/). I'm working on a new version compatible with block checkout and React settings.
+
 
 You can use **placeholders** in the payment item title:
 
@@ -33,7 +35,8 @@ Requires at least WooCommerce 2.6, compatible with WooCommerce 3.2+ (recommended
 - **Plugin API**. See [GitHub](https://github.com/vyskoczilova/woocommerce-payforpayment) for details.
 
 = Compatibility =
-= **Current version is not compatible with WooCommerce Block Checkout** please use shortcode for checkout instead. [How to guide](https://kybernaut.cz/en/clanky/how-to-revert-woocommerce-block-checkout-to-the-old-checkou-page/)
+
+- ** Current version is not compatible with WooCommerce Block Checkout** please use shortcode for checkout instead. [How to guide](https://kybernaut.cz/en/clanky/how-to-revert-woocommerce-block-checkout-to-the-old-checkou-page/). I'm working on a new version compatible with block checkout and React settings.
 - **Currently not compatible with [WooCommerce Stripe Payment Gateway](https://wordpress.org/plugins/woocommerce-gateway-stripe/)** since it's React powered and I can't hook in. Use [Payment Plugins for Stripe WooCommerce](https://wordpress.org/plugins/woo-stripe-payment/) instead for now, waiting for their team to resolve the problem.
 - **WPML** (see [FAQ](https://wordpress.org/plugins/woocommerce-pay-for-payment#faq))
 - [WooCommerce Price Based on Country for WooCommerce](https://wordpress.org/plugins/woocommerce-product-price-based-on-countries/) & PRO
@@ -77,9 +80,18 @@ you'll have to use one of the filters. See [Plugin API](https://github.com/vysko
 
 <code>woocommerce_pay4pay_{$payment_gateway_id}_amount</code> allows you to alter the amount of the charge being added.
 
-= How can I report security bugs? =
 
-You can report security bugs through the Patchstack Vulnerability Disclosure Program. The Patchstack team help validate, triage and handle any security vulnerabilities. [Report a security vulnerability.](https://patchstack.com/database/vdp/woocommerce-pay-for-payment)
+= I want to use the latest files. How can I do this? =
+
+Use the GitHub Repo rather than the WordPress Plugin. Do as follows:
+
+1. If you haven't already done: [Install git](https://help.github.com/articles/set-up-git)
+
+2. In the console cd into Your 'wp-content/plugins´ directory
+
+3. type `git clone https://github.com/vyskoczilova/woocommerce-payforpayment` or better type `git fork https://github.com/vyskoczilova/woocommerce-payforpayment`
+
+4. If you want to update to the latest files (be careful, might be untested on Your WP-Version) type `git pull´.
 
 = I found a bug. Where should I post it? =
 
@@ -98,6 +110,11 @@ Either post it on [GitHub](https://github.com/vyskoczilova/woocommerce-payforpay
 
 
 == Changelog ==
+
+= 2.1.9 (2025-04-01) =
+
+* Fix: Tax class settings not being saved properly in payment gateway configuration.
+* [Call for beta testers](https://kybernaut.cz/en/plugins/woocommerce-pay-for-payment/testing-v2/): New features are coming in Q2 2024—and I’m looking for folks to help test them out!
 
 = 2.1.8 (2023-07-24) =
 
