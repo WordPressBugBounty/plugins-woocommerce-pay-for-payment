@@ -22,6 +22,8 @@ class Pay4Pay {
 			'pay4pay_item_title' => __( 'Extra Charge', 'woocommerce-pay-for-payment' ),
 			'pay4pay_charges_fixed' => 0,
 			'pay4pay_charges_percentage' => 0,
+			'pay4pay_charges_minimum' => 0,
+			'pay4pay_charges_maximum' => 0,
 			'pay4pay_disable_on_free_shipping' => 'no',
 			'pay4pay_disable_on_zero_shipping' => 'no',
 
@@ -142,8 +144,7 @@ jQuery(document).ready(function($){
 			 * https://docs.woocommerce.com/document/class-reference/#section-5
 			 * @version 2.0.8
 			 */
-			global $woocommerce;
-			if ( $woocommerce->customer->is_vat_exempt() ) {
+			if ( WC()->customer->is_vat_exempt() ) {
 				$taxable = false;
 			}
 
@@ -239,7 +240,7 @@ jQuery(document).ready(function($){
 
 										if ( $itemTaxRate >= $highestTaxRate ) {
 											$highestTaxRate = $itemTaxRate;
-											$tax_class = $item['data']->tax_class;
+											$tax_class = $item['data']->get_tax_class();
 										}
 									}
 								}
@@ -312,7 +313,7 @@ jQuery(document).ready(function($){
 		if ( $current_gateway = $this->get_current_gateway() ) {
 			$defaults = self::get_default_settings();
 			$settings = $current_gateway->settings + $defaults;
-			return apply_filters('(float) ', $settings, $current_gateway);
+			return apply_filters('woocommerce_pay4pay_get_current_gateway_settings', $settings, $current_gateway);
 		}
 		return false;
 	}
