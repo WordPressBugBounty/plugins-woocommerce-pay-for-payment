@@ -1,0 +1,81 @@
+{
+    "name": "kbnt/pay4payment",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Karolína Vyskočilová",
+            "email": "karolina@kybernaut.cz"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "freemius/wordpress-sdk": "^2.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "wpify/scoper": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "platform": {
+            "php": "8.1"
+        }
+    },
+    "scripts": {
+        "test:unit": "vendor/bin/phpunit --testsuite Unit",
+        "test:unit:coverage": "XDEBUG_MODE=coverage vendor/bin/phpunit --testsuite Unit --coverage-text",
+        "test:unit:coverage-html": "XDEBUG_MODE=coverage vendor/bin/phpunit --testsuite Unit --coverage-html ./.coverage-report",
+        "coverage:check": "XDEBUG_MODE=coverage vendor/bin/phpunit --testsuite Unit --coverage-clover coverage.xml && vendor/bin/coverage-check coverage.xml 97",
+        "lint": "vendor/bin/parallel-lint --exclude vendor --exclude node_modules --exclude wip --exclude build .",
+        "analyse": "vendor/bin/phpstan analyse --memory-limit=1G",
+        "standards:check": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+        "standards:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+        "i18n:pot": "bash scripts/i18n-pot.sh",
+        "i18n:build": "bash scripts/i18n-build.sh",
+        "i18n:check": "bash scripts/i18n-check.sh",
+        "i18n": [
+            "@i18n:pot",
+            "@i18n:build"
+        ],
+        "changelog:check": "node scripts/changelog-fold-entries.js --check",
+        "stats": "bash scripts/stats.sh",
+        "check": [
+            "@lint",
+            "@standards:check",
+            "@analyse",
+            "@test:unit"
+        ]
+    },
+    "extra": {
+        "wpify-scoper": {
+            "prefix": "Pay4PaymentDeps",
+            "folder": "vendor/deps",
+            "composerjson": "scoped/composer.json"
+        }
+    },
+    "require-dev": {
+        "10up/wp_mock": "*",
+        "phpstan/phpstan": "^2.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "php-stubs/woocommerce-stubs": "^10.8",
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "wpify/scoper": "^3.2",
+        "squizlabs/php_codesniffer": "^3.9",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "woocommerce/woocommerce-sniffs": "^1.0",
+        "rregeer/phpunit-coverage-check": "^0.3",
+        "freemius/php-sdk": "*"
+    }
+}

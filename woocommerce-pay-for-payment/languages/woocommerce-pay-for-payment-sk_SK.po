@@ -1,10 +1,12 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Pay for Payment\n"
-"POT-Creation-Date: 2021-06-03 10:10+0200\n"
-"PO-Revision-Date: 2021-06-03 10:11+0200\n"
+"Report-Msgid-Bugs-To: https://kybernaut.cz/kontakt/\n"
+"POT-Creation-Date: 2026-09-23T15:42:14+02:00\n"
+"PO-Revision-Date: 2026-08-19 10:30+0200\n"
 "Last-Translator: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
-"Language-Team: \n"
+"Language-Team: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,248 +15,1512 @@ msgstr ""
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: woocommerce-payforpayment.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-WPHeader: woocommerce-payforpayment.php\n"
 
-#: inc/class-pay4pay-admin.php:55 inc/class-pay4pay.php:62
-#, php-format
+#. Plugin Name of the plugin
+#: woocommerce-payforpayment.php
+msgid "Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts"
+msgstr ""
+"Pay for Payment for WooCommerce – poplatky a zľavy podľa platobnej metódy"
+
+#. Plugin URI of the plugin
+#: woocommerce-payforpayment.php
+msgid "https://payforpayment.com/"
+msgstr "https://payforpayment.com/"
+
+#. Description of the plugin
+#: woocommerce-payforpayment.php
 msgid ""
-"Pay for Payment for WooCommerce requires at least WooCommerce %s. Please "
-"update!"
+"Charge a fee or give a discount on any WooCommerce payment method. Fixed or "
+"percentage, tax aware, with min and max caps."
 msgstr ""
-"Pay for Payment for WooCommerce vyžaduje aspoň WooCommerce %s. Prosím "
-"aktualizujte!"
+"Účtujte poplatok alebo poskytnite zľavu pri ľubovoľnej platobnej metóde vo "
+"WooCommerce. Pevné alebo percentuálne, s ohľadom na dane, s minimom a "
+"maximom."
 
-#: inc/class-pay4pay-admin.php:73 inc/class-pay4pay-admin.php:344
-#: inc/class-pay4pay.php:22
-msgid "Extra Charge"
-msgstr "Poplatok za platbu"
-
-#: inc/class-pay4pay-admin.php:79
-msgid "Item Title"
-msgstr "Názov poplatku"
-
-#: inc/class-pay4pay-admin.php:81
-msgid "This will show up in the shopping basket."
-msgstr "Zobrazí sa v nákupnom košíku."
-
-#: inc/class-pay4pay-admin.php:85
-msgid "Fixed charge"
-msgstr "Pevný poplatok"
-
-#: inc/class-pay4pay-admin.php:87
-msgid "Extra charge to be added to cart when this payment method is selected."
-msgstr ""
-"Ďalší poplatok, ktorý sa pridá do košíka, ak bude zvolená táto platobná "
-"metóda."
-
-#: inc/class-pay4pay-admin.php:94
-msgid "Percent charge"
-msgstr "Poplatok v percentách"
-
-#: inc/class-pay4pay-admin.php:96
-msgid "Percentage of cart total to be added to payment."
-msgstr "Percento z celkovej ceny košíka, ktoré sa pridá ku platbe."
-
-#: inc/class-pay4pay-admin.php:107
-msgid "Charge at least"
-msgstr "Najmenej"
-
-#: inc/class-pay4pay-admin.php:109
-msgid ""
-"Minimum extra charge to be added to cart when this payment method is "
-"selected."
-msgstr ""
-"Minimálny poplatok, ktorý bude pridaný do košíka, keď bude zvolená táto "
-"platobná metóda."
-
-#: inc/class-pay4pay-admin.php:117
-msgid "Charge at most"
-msgstr "Maximálne"
-
-#: inc/class-pay4pay-admin.php:119
-msgid ""
-"Maximum extra charge to be added to cart when this payment method is "
-"selected. Enter zero to disable."
-msgstr ""
-"Maximálny poplatok, ktorý bude pridaný do košíka, keď bude zvolená táto "
-"platobná metóda. Zadajte nulu, ak sa nemá použiť."
-
-#: inc/class-pay4pay-admin.php:127
-msgid "Disable on Free Shipping"
-msgstr "Nepoužiť pri doprave zdarma"
-
-#: inc/class-pay4pay-admin.php:128
-msgid "Don’t charge this fee when free shipping is available."
-msgstr "Neuplatniť poplatok, pokiaľ je k dispozícii doprava zdarma."
-
-#: inc/class-pay4pay-admin.php:133
-msgid "Disable on Zero Shipping"
-msgstr "Nepoužiť pri doprave zdarma"
-
-#: inc/class-pay4pay-admin.php:134
-msgid "Don’t charge this fee when zero shipping is available."
-msgstr "Neuplatniť poplatok, pokiaľ je k dispozícii doprava zdarma."
-
-#: inc/class-pay4pay-admin.php:144
-msgid "Extra Charge Taxes"
-msgstr "Poplatok za platbu a DPH"
-
-#: inc/class-pay4pay-admin.php:149
-msgid "Taxable"
-msgstr "Zdaniteľný"
-
-#: inc/class-pay4pay-admin.php:151
-msgid "Payment fee is taxable"
-msgstr "Poplatok podlieha DPH"
-
-#: inc/class-pay4pay-admin.php:158
-msgid "Inclusive Taxes"
-msgstr "Vrátane DPH"
-
-#: inc/class-pay4pay-admin.php:160
-msgid "The payment fee is inclusive of taxes."
-msgstr "Poplatok za platbu je vrátane dane."
-
-#: inc/class-pay4pay-admin.php:161
-msgid ""
-"If you leave this unchecked taxes will be calculated on top of the payment "
-"fee."
-msgstr ""
-"Ak toto pole ponecháte prázdne, k poplatku za platbu bude pripočítaná DPH."
-
-#: inc/class-pay4pay-admin.php:167
-msgid "Tax class"
-msgstr "Daňová trieda"
-
-#: inc/class-pay4pay-admin.php:169
-msgid "Select a the tax class applied to the extra charge."
-msgstr "Vyberte daňovú triedu, ktorá sa použije pre poplatok za platbu."
-
-#: inc/class-pay4pay-admin.php:182
-msgid "Include in percental payment fee calculation:"
-msgstr "Zahrnúť do kalkulácie percentuálneho poplatku:"
-
-#: inc/class-pay4pay-admin.php:188
-msgid "Fees"
-msgstr "Poplatky"
-
-#: inc/class-pay4pay-admin.php:190
-msgid "Include fees in calculation."
-msgstr "Zahrnúť do kalkulácie poplatky."
-
-#: inc/class-pay4pay-admin.php:196
-msgid "Coupons"
-msgstr "Kupóny"
-
-#: inc/class-pay4pay-admin.php:198
-msgid "Include Coupons in calculation."
-msgstr "Zahrnúť do kalkulácie kupóny."
-
-#: inc/class-pay4pay-admin.php:204
-msgid "Shipping"
-msgstr "Doručenie"
-
-#: inc/class-pay4pay-admin.php:206
-msgid "Include shipping cost in calculation."
-msgstr "Zahrnúť do kalkulácie náklady na dopravu."
-
-#: inc/class-pay4pay-admin.php:215
-msgid "Taxes"
-msgstr "Dane"
-
-#: inc/class-pay4pay-admin.php:217
-msgid "Include taxes in calculation."
-msgstr "Zahrnúť do kalkulácie dane."
-
-#: inc/class-pay4pay-admin.php:309
-msgid ""
-"There has been an error within the Pay for Payment for WooCommerce plugin "
-"and settings can't be saved."
-msgstr ""
-"Došlo k chybe v rámci Pay for Payment for WooCommerce pre platobný plugin a "
-"nastavenia nie je možné uložiť."
-
-#: inc/class-pay4pay-admin.php:309
-#, php-format
-msgid ""
-"To fix the issue, contact the plugin author either on %sGithub%s or "
-"%sWordPress.org%s and provide following information:"
-msgstr ""
-"Ak chcete vyriešiť tento problém, obráťte sa na autora pluginu buď na "
-"%sGithub %s alebo %sWordPress. org %s a poskytnite nasledujúce informácie:"
-
-#: inc/class-pay4pay-admin.php:311
-msgid ""
-"Name of the payment method you are trying to save and the URL where it can "
-"be downloaded for testing."
-msgstr ""
-"Názov spôsobu platby, ktorý sa pokúšate uložiť, a adresu URL, kde ju možno "
-"prevziať na testovanie."
-
-#: inc/class-pay4pay-admin.php:312
-msgid "Current section ID:"
-msgstr "Aktuálna identifikácia sekcie:"
-
-#: inc/class-pay4pay-admin.php:313
-msgid "Anything else might be helpful (recently added/updated plugins, etc.)."
-msgstr ""
-"Čokoľvek iného by mohlo byť užitočné (Nedávno pridané/aktualizované pluginy, "
-"atď)."
-
-#: inc/class-pay4pay-admin.php:357
-#, php-format
-msgctxt "Gateway list column"
-msgid "%s %% of cart totals"
-msgstr "%s %% z ceny objednávky"
-
-#: inc/class-pay4pay.php:293
-msgid "Payment fee tax class based on cart items"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-#: woocommerce-payforpayment.php:52
-msgid "Pay for Payment for WooCommerce"
-msgstr ""
-
-#: woocommerce-payforpayment.php:53
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: woocommerce-payforpayment.php:56
-#, php-format
-msgid ""
-"%1$s requires %2$s. Please activate %2$s before activation of %1$s. This "
-"plugin has been deactivated."
-msgstr ""
-"%1$s vyžaduje %2$s. Pred aktiváciou %1$s aktivujte aktiváciu %2$s. Tento "
-"plugin bol deaktivovaný."
-
-#. Plugin URI of the plugin/theme
-#, fuzzy
-#| msgid "https://wordpress.org/plugins/woocommerce-pay-for-payment/"
-msgid "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
-msgstr "https://wordpress.org/plugins/woocommerce-pay-for-payment/"
-
-#. Description of the plugin/theme
-msgid "Setup individual charges for each payment method in WooCommerce."
-msgstr "Nastaviť individuálne poplatky za každý spôsob platby v WooCommerce."
-
-#. Author of the plugin/theme
+#. Author of the plugin
+#: woocommerce-payforpayment.php
 msgid "Karolína Vyskočilová"
 msgstr "Karolína Vyskočilová"
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
+#: woocommerce-payforpayment.php
 msgid "https://kybernaut.cz"
 msgstr "https://kybernaut.cz"
 
-#~ msgid "Standard"
-#~ msgstr "Štandardný"
+#. translators: %s: plugin name.
+#: src/Admin.php:305
+#, php-format
+msgid "Thank you for using %s!"
+msgstr "Ďakujeme, že používate %s!"
 
-#~ msgid "WooCommerce Pay for Payment"
-#~ msgstr "WooCommerce Pay for Payment"
+#. translators: 1: plugin name, 2: five-star rating link.
+#: src/Admin.php:312
+#, php-format
+msgid ""
+"If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
+msgstr ""
+"Ak sa vám %1$s páči, ohodnoťte nás prosím %2$s. Vopred veľmi pekne ďakujeme!"
+
+#. translators: %s: plugin version.
+#: src/Admin.php:328
+#, php-format
+msgid "Version %s"
+msgstr "Verzia %s"
+
+#: src/Admin.php:339
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: src/Admin/AdminPostActions.php:43
+msgid "You are not allowed to do this."
+msgstr "Na túto akciu nemáte oprávnenie."
+
+#. translators: 1: filter name, 2: comma-separated payment method names.
+#: src/Admin/LegacyFilterNotice.php:80
+#, php-format
+msgid ""
+"Code on this site filters %1$s for payment methods whose fee is switched off "
+"here, so it cannot charge anything: %2$s. Switch a method on — leaving its "
+"amounts at zero — to let your code set the fee."
+msgstr ""
+"Kód na tomto webe filtruje %1$s pri platobných metódach, ktoré tu majú "
+"poplatok vypnutý, takže nemôže nič účtovať: %2$s. Zapnite metódu — sumy "
+"môžete nechať na nule — a váš kód poplatok nastaví."
+
+#: src/Admin/OptinNotice.php:73
+msgid "One more thing."
+msgstr "Ešte jedna vec."
+
+
+#: src/Admin/OptinNotice.php:74
+msgid ""
+"Sharing basic usage data tells me which gateways and settings people "
+"actually use, and it is how you get security and update notices."
+msgstr "Zdieľanie základných údajov o používaní mi ukáže, ktoré brány a nastavenia ľudia naozaj používajú, a je to spôsob, ako dostávať bezpečnostné oznámenia a informácie o aktualizáciách."
+
+
+#: src/Admin/OptinNotice.php:77
+msgid "Opt in"
+msgstr "Súhlasím"
+
+#: src/Admin/OptinNotice.php:79
+msgid "No thanks"
+msgstr "Teraz nie"
+
+
+#: src/Admin/RestApi.php:154
+msgid "Invalid parameters"
+msgstr "Neplatné parametre"
+
+#: src/Admin/RestApi.php:198
+msgid "Validation failed. Please check your input and try again."
+msgstr "Overenie zlyhalo. Skontrolujte prosím zadané údaje a skúste to znova."
+
+#: src/Admin/Settings.php:317 build/settings.js:3 build/settings.js:16
+msgid "Pay for Payment"
+msgstr "Pay for Payment"
+
+#. translators: %s: payment method title
+#: src/Admin/SettingsSerializer.php:327 build/settings.js:9
+#, php-format
+msgid "%s fee"
+msgstr "Poplatok – %s"
+
+#: src/Admin/SettingsValidator.php:124
+msgid "Enabled methods must be a list of payment method ids"
+msgstr "Zapnuté metódy musia byť zoznam identifikátorov platobných metód"
+
+#: src/Admin/SettingsValidator.php:128
+msgid "Invalid fee line type"
+msgstr "Neplatný typ položky poplatku"
+
+#: src/Admin/SettingsValidator.php:151
+msgid "Fee tiers must be a list"
+msgstr "Úrovne poplatku musia byť zoznam"
+
+#. translators: %d: maximum number of fee tiers per payment method
+#: src/Admin/SettingsValidator.php:157
+#, php-format
+msgid "A payment method can have at most %d fee tiers"
+msgstr "Platobná metóda môže mať najviac %d úrovní poplatku"
+
+#: src/Admin/SettingsValidator.php:166
+msgid "Tier must be an object"
+msgstr "Úroveň poplatku musí byť objekt"
+
+#: src/Admin/SettingsValidator.php:206 build/settings.js:5
+msgid "Fixed fee must be a valid number"
+msgstr "Fixný poplatok musí byť platné číslo"
+
+#: src/Admin/SettingsValidator.php:207 build/settings.js:5
+msgid "Percentage fee must be a valid number"
+msgstr "Percentuálny poplatok musí byť platné číslo"
+
+#: src/Admin/SettingsValidator.php:208 build/settings.js:5
+msgid "Minimum fee must be a valid number"
+msgstr "Minimálny poplatok musí byť platné číslo"
+
+#: src/Admin/SettingsValidator.php:209 build/settings.js:5
+msgid "Maximum fee must be a valid number"
+msgstr "Maximálny poplatok musí byť platné číslo"
+
+#: src/Admin/SettingsValidator.php:261 build/settings.js:9
+msgid "Conditions must be a list"
+msgstr "Podmienky musia byť zoznam"
+
+#. translators: %d: maximum number of conditions per fee tier
+#: src/Admin/SettingsValidator.php:267
+#, php-format
+msgid "A fee tier can have at most %d conditions"
+msgstr "Úroveň poplatku môže mať najviac %d podmienok"
+
+#: src/Admin/SettingsValidator.php:298 build/settings.js:9
+msgid "Condition must be an object"
+msgstr "Podmienka musí byť objekt"
+
+#: src/Admin/SettingsValidator.php:305 build/settings.js:9
+msgid "Condition type must be a non-empty string"
+msgstr "Typ podmienky musí byť neprázdny reťazec"
+
+#: src/Admin/SettingsValidator.php:315 build/settings.js:9
+msgid "Invalid operator for this condition type"
+msgstr "Neplatný operátor pre tento typ podmienky"
+
+#: src/Admin/SettingsValidator.php:321 build/settings.js:9
+msgid "Cart total condition value must be a valid number"
+msgstr "Hodnota podmienky celkovej ceny košíka musí byť platné číslo"
+
+#: src/Admin/SettingsValidator.php:323 build/settings.js:9
+msgid "Cart total condition value cannot be negative"
+msgstr "Hodnota podmienky celkovej ceny košíka nesmie byť záporná"
+
+#: src/Admin/SettingsValidator.php:326 build/settings.js:9
+msgid "Condition value must be a non-empty list of choices"
+msgstr "Hodnota podmienky musí byť neprázdny zoznam možností"
+
+#. translators: %d: maximum number of values per condition
+#: src/Admin/SettingsValidator.php:330
+#, php-format
+msgid "A condition can list at most %d values"
+msgstr "Podmienka môže obsahovať najviac %d hodnôt"
+
+#: src/Admin/SettingsValidator.php:359 build/settings.js:5
+msgid "Maximum fee must be greater than or equal to minimum fee"
+msgstr "Maximálny poplatok musí byť väčší alebo rovný minimálnemu poplatku"
+
+#: src/Admin/SettingsValidator.php:381
+msgid "Fee label must be a string"
+msgstr "Názov poplatku musí byť reťazec"
+
+#: src/Admin/SettingsValidator.php:387 build/settings.js:5
+msgid "Fee label cannot be empty"
+msgstr "Názov poplatku nesmie byť prázdny"
+
+#: src/Admin/SettingsValidator.php:391 build/settings.js:5
+msgid "Fee label is too long (maximum 200 characters)"
+msgstr "Názov poplatku je príliš dlhý (maximálne 200 znakov)"
+
+#: src/Admin/UpgradeNotice.php:74
+msgid "Welcome to the new Pay for Payment."
+msgstr "Vitajte v novom Pay for Payment."
+
+#. translators: %s: comma-separated payment method names.
+#: src/Admin/UpgradeNotice.php:77
+#, php-format
+msgid ""
+"Your fee settings for %s were carried over automatically, so there is "
+"nothing to reconfigure, but you might want to double-check."
+msgstr ""
+"Nastavenia poplatkov pre %s sa preniesli automaticky, takže nie je potrebné "
+"nič znovu nastavovať, ale pre istotu sa na ne pozrite."
+
+#: src/Admin/UpgradeNotice.php:84
+msgid "Go to settings"
+msgstr "Prejsť do nastavení"
+
+#: src/Admin/UpgradeNotice.php:86
+msgid "Dismiss this notice"
+msgstr "Skryť toto upozornenie"
+
+#: src/Admin/UpgradeNotice.php:167
+msgid ""
+"P.S. I’ve built the features people asked for most: fee rules by cart total, "
+"country or shipping method, several fee tiers per payment method, and the "
+"fee as a product line for invoicing. They live in Pro, and buying it is what "
+"pays for the work on the free plugin — thank you for considering it."
+msgstr ""
+"P.S. Postavila som funkcie, o ktoré ľudia žiadali najčastejšie: pravidlá "
+"poplatku podľa hodnoty košíka, krajiny alebo spôsobu dopravy, niekoľko "
+"úrovní poplatku pre jednu platobnú metódu a poplatok ako produktovú položku "
+"pre fakturáciu. Nájdete ich vo verzii Pro a práve jej kúpa platí prácu na "
+"bezplatnom plugine – ďakujem, že o nej uvažujete."
+
+#. translators: 1: discount, e.g. "50%"; 2: coupon code.
+#: src/Admin/UpgradeNotice.php:174
+#, php-format
+msgid "While the launch offer lasts it is %1$s off with the code %2$s."
+msgstr "Kým trvá úvodná ponuka, získate ho o %1$s lacnejšie s kódom %2$s."
+
+#: src/Admin/UpgradeNotice.php:184
+msgid "Take a look at Pro"
+msgstr "Pozrite sa na Pro"
+
+#: src/Deprecated/class-pay4pay.php:58
+msgid "Payment fee tax class based on cart items"
+msgstr "Daňová trieda poplatku podľa položiek v košíku"
+
+#. translators: %s: the order's currency code, e.g. EUR.
+#: src/Integrations/WooMultiCurrency.php:106
+#, php-format
+msgid ""
+"No payment fee was added: the active multi-currency plugin does not convert "
+"amounts in the admin, and this order is in %s rather than the shop currency. "
+"Add the fee by hand if it is due."
+msgstr ""
+"Poplatok za platbu nebol pridaný: aktívny viacmenový plugin neprepočítava "
+"sumy v administrácii a táto objednávka je v mene %s namiesto meny obchodu. "
+"Ak sa má poplatok účtovať, pridajte ho ručne."
+
+#. translators: 1: fee line title(s), 2: payment method the fee belongs to, 3: order total once the fee is removed.
+#: src/OrderFeeSync.php:209
+#, php-format
+msgid ""
+"“%1$s” applies to %2$s. Pay with another method and it is removed — your "
+"total is then %3$s."
+msgstr ""
+"„%1$s“ sa vzťahuje na %2$s. Pri platbe inou metódou sa poplatok odstráni — "
+"celkom potom zaplatíte %3$s."
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:473
+#, php-format
+msgid "\"%s\" removed"
+msgstr "„%s“ odstránené"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:483
+#, php-format
+msgid "\"%s\" updated"
+msgstr "„%s“ aktualizované"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:494
+#, php-format
+msgid "\"%s\" added"
+msgstr "„%s“ pridané"
+
+#. translators: 1: where the sync ran (order-pay page / admin / checkout), 2: what changed.
+#: src/OrderFeeSync.php:525
+#, php-format
+msgid "Payment fee synced (%1$s): %2$s."
+msgstr "Poplatok za platbu synchronizovaný (%1$s): %2$s."
+
+#: src/OrderFeeSync.php:542
+msgid "admin order edit"
+msgstr "úprava objednávky v administrácii"
+
+#: src/OrderFeeSync.php:545
+msgid "blocks checkout"
+msgstr "bloková pokladňa"
+
+#: src/OrderFeeSync.php:548
+msgid "order-pay page"
+msgstr "stránka platby objednávky"
+
+#: src/PlanReview.php:198
+msgid "Welcome back to Pay for Payment Pro!"
+msgstr "Vitajte späť v Pay for Payment Pro!"
+
+#: src/PlanReview.php:199
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again now that Pro is active. Take "
+"a quick look so nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Máte uložené Pro pravidlá poplatkov — ďalšie úrovne, podmienené poplatky a "
+"nastavenia pre celý e-shop — a teraz, keď je Pro aktívne, sa znova "
+"uplatňujú. Skontrolujte ich prosím, nech vás v pokladni alebo pri nových "
+"objednávkach nič neprekvapí."
+
+#: src/PlanReview.php:202
+msgid "Review my fee settings"
+msgstr "Skontrolovať nastavenia poplatkov"
+
+#: src/PlanReview.php:204 build/settings.js:4
+msgid "Yes, I've reviewed — hide this notice"
+msgstr "Skontrolované — skryť toto upozornenie"
+
+#: src/Pro/DisplayControls.php:307
+msgid "Fee preview per payment gateway id."
+msgstr "Náhľad poplatku podľa ID platobnej brány."
+
+#. translators: %s: payment fee amount, shown beside the payment method.
+#: src/Pro/FeeHintFormatter.php:159
+#, php-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#. translators: %s: order total including this method's payment fee.
+#: src/Pro/FeeHintFormatter.php:186
+#, php-format
+msgid "Total with this method: %s"
+msgstr "Celkom s touto metódou: %s"
+
+#. translators: %s: order total without any payment fee.
+#: src/Pro/FeeHintFormatter.php:202
+#, php-format
+msgid "No payment fee · Total with this method: %s"
+msgstr "Bez poplatku za platbu · Spolu s touto metódou: %s"
+
+#. translators: %d: number of days the watchdog sampled.
+#: src/Pro/FeeWatchdog.php:355
+#, php-format
+msgid "the last %d day"
+msgid_plural "the last %d days"
+msgstr[0] "posledný %d deň"
+msgstr[1] "posledné %d dni"
+msgstr[2] "posledných %d dní"
+
+#. translators: 1: orders without the fee, 2: orders checked.
+#: src/Pro/FeeWatchdog.php:366
+#, php-format
+msgid "%1$d of %2$d recent orders is missing the configured payment fee."
+msgid_plural ""
+"%1$d of %2$d recent orders are missing the configured payment fee."
+msgstr[0] ""
+"Pri %1$d z %2$d nedávnych objednávok chýba nastavený poplatok za platbu."
+msgstr[1] ""
+"Pri %1$d z %2$d nedávnych objednávok chýba nastavený poplatok za platbu."
+msgstr[2] ""
+"Pri %1$d z %2$d nedávnych objednávok chýba nastavený poplatok za platbu."
+
+#: src/Pro/FeeWatchdog.php:375
+msgid "Pay for Payment: orders may be missing payment fees."
+msgstr "Pay for Payment: pri objednávkach možno chýbajú poplatky za platbu."
+
+#. translators: %s: sampled period ("the last 7 days").
+#: src/Pro/FeeWatchdog.php:378
+#, php-format
+msgid ""
+"Orders placed over %s were paid with the methods below but carry no payment "
+"fee, although the current fee settings would charge one. A plugin conflict "
+"or a recent update may be dropping the fee silently."
+msgstr ""
+"Objednávky za %s boli zaplatené nižšie uvedenými metódami, ale nemajú "
+"poplatok za platbu, hoci podľa súčasných nastavení by sa účtovať mal. "
+"Poplatok môže potichu zahadzovať konflikt s iným pluginom alebo nedávna "
+"aktualizácia."
+
+#: src/Pro/FeeWatchdog.php:383
+msgid "Review fee settings"
+msgstr "Skontrolovať nastavenia poplatkov"
+
+#: src/Pro/FeeWatchdog.php:385
+msgid "This is expected — don't warn again for this configuration"
+msgstr "Je to v poriadku — pri tomto nastavení už neupozorňovať"
+
+#: src/Pro/ManagedFeeProduct.php:167
+msgid "Payment fee"
+msgstr "Poplatok za platbu"
+
+#: src/Pro/OrderPayLiveTotals.php:282
+msgid "No fee preview is available for this order."
+msgstr "Pre túto objednávku nie je náhľad poplatku k dispozícii."
+
+#: src/Pro/OrderPayLiveTotals.php:291
+msgid "No payment method given."
+msgstr "Nebola zadaná platobná metóda."
+
+#. translators: 1: Required PHP version number, 2: Current PHP version number, 3: URL of PHP update help page
+#: woocommerce-payforpayment.php:117
+#, php-format
+msgid ""
+"The plugin requires PHP version %1$s or higher. This site is running PHP "
+"version %2$s. <a href=\"%3$s\">Learn about updating PHP</a>."
+msgstr ""
+"Plugin vyžaduje PHP verzie %1$s alebo novšej. Tento web beží na PHP verzie "
+"%2$s. <a href=\"%3$s\">Ako aktualizovať PHP</a>."
+
+#. translators: %s: comma-separated list of missing file paths.
+#: woocommerce-payforpayment.php:168
+#, php-format
+msgid ""
+"Pay for Payment is missing a file it needs to run: %s. Re-installing the "
+"plugin restores it."
+msgid_plural ""
+"Pay for Payment is missing files it needs to run: %s. Re-installing the "
+"plugin restores them."
+msgstr[0] ""
+"Pay for Payment nenašiel súbor, ktorý potrebuje na spustenie: %s. "
+"Preinštalovanie pluginu ho obnoví."
+msgstr[1] ""
+"Pay for Payment nenašiel súbory, ktoré potrebuje na spustenie: %s. "
+"Preinštalovanie pluginu ich obnoví."
+msgstr[2] ""
+"Pay for Payment nenašiel súbory, ktoré potrebuje na spustenie: %s. "
+"Preinštalovanie pluginu ich obnoví."
+
+#: woocommerce-payforpayment.php:327
+msgid ""
+"WooCommerce is not active, so no payment fees are being charged. Install and "
+"activate it — your fee settings are kept."
+msgstr ""
+"WooCommerce nie je aktívny, takže sa neúčtujú žiadne poplatky za platbu. "
+"Nainštalujte a aktivujte ho — vaše nastavenia poplatkov zostanú zachované."
+
+#. translators: %s: Required WooCommerce version number
+#: woocommerce-payforpayment.php:410
+#, php-format
+msgid ""
+"The plugin requires WooCommerce version %s or higher. Please update "
+"WooCommerce!"
+msgstr ""
+"Plugin vyžaduje WooCommerce verzie %s alebo novšej. Aktualizujte prosím "
+"WooCommerce!"
+
+#. translators: %d: number of stored extra fee tiers; <a> links to the Pro pricing page
+#: build/settings.js:2
+msgid ""
+"%d more fee tier is stored for this method. It stays safe, but only <a>Pro</"
+"a> applies and edits it."
+msgid_plural ""
+"%d more fee tiers are stored for this method. They stay safe, but only "
+"<a>Pro</a> applies and edits them."
+msgstr[0] ""
+"Pre túto metódu je uložená ešte %d úroveň poplatku. Zostáva uložená, ale "
+"uplatniť a upraviť ju vie len <a>Pro</a>."
+msgstr[1] ""
+"Pre túto metódu sú uložené ešte %d úrovne poplatku. Zostávajú uložené, ale "
+"uplatniť a upraviť ich vie len <a>Pro</a>."
+msgstr[2] ""
+"Pre túto metódu je uložených ešte %d úrovní poplatku. Zostávajú uložené, ale "
+"uplatniť a upraviť ich vie len <a>Pro</a>."
+
+#. translators: <a> links to the Pro pricing page
+#: build/settings.js:3
+msgid ""
+"Need conditional fees, multiple tiers, the fee as a product line or fees on "
+"manual orders? That’s <a>Pro</a>."
+msgstr ""
+"Potrebujete podmienené poplatky, viac úrovní, poplatok ako produktovú "
+"položku alebo poplatky pri ručne vytvorených objednávkach? To dokáže <a>Pro</"
+"a>."
+
+#: build/settings.js:3 build/settings.js:4
+msgid "Pro"
+msgstr "Pro"
+
+#: build/settings.js:3
+msgid ""
+"Charge customers an extra fee based on the payment method they choose at "
+"checkout, or give them a discount instead."
+msgstr ""
+"Účtujte zákazníkom poplatok podľa platobnej metódy, ktorú si zvolia v "
+"pokladni, alebo im naopak dajte zľavu."
+
+#: build/settings.js:3
+msgid "Documentation"
+msgstr "Dokumentácia"
+
+#: build/settings.js:3
+msgid "Support"
+msgstr "Podpora"
+
+#: build/settings.js:3
+msgid "Suggest a feature"
+msgstr "Navrhnúť funkciu"
+
+#: build/settings.js:3
+msgid "Pay for Payment sections"
+msgstr "Sekcie Pay for Payment"
+
+#: build/settings.js:3 build/settings.js:4
+msgid "General"
+msgstr "Všeobecné"
+
+#: build/settings.js:3
+msgid "Account"
+msgstr "Účet"
+
+#: build/settings.js:3
+msgid "Connect account"
+msgstr "Prepojiť účet"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:4
+msgid "%s off"
+msgstr "zľava %s"
+
+#: build/settings.js:4
+msgid "Upgrade"
+msgstr "Prejsť na Pro"
+
+#: build/settings.js:4
+msgid "Free trial"
+msgstr "Skúšobná verzia zadarmo"
+
+#: build/settings.js:4
+msgid "Welcome back to Pro!"
+msgstr "Vitajte späť v Pro!"
+
+#: build/settings.js:4
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again. Have a look below so "
+"nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Máte uložené Pro pravidlá poplatkov — ďalšie úrovne, podmienené poplatky a "
+"nastavenia pre celý e-shop — a znova sa uplatňujú. Pozrite sa nižšie, nech "
+"vás v pokladni alebo pri nových objednávkach nič neprekvapí."
+
+#: build/settings.js:4
+msgid "General settings"
+msgstr "Všeobecné nastavenia"
+
+#: build/settings.js:4
+msgid "Add the fee as"
+msgstr "Pridať poplatok ako"
+
+#: build/settings.js:4
+msgid ""
+"A fee line is WooCommerce’s standard way of adding an extra charge to an "
+"order. Only choose Product line if your accounting software can’t handle "
+"separate fee lines."
+msgstr ""
+"Položka poplatku je štandardný spôsob, akým WooCommerce pridáva k objednávke "
+"príplatok. Produktovú položku zvoľte len vtedy, ak si váš účtovný softvér so "
+"samostatnými položkami poplatku neporadí."
+
+#: build/settings.js:4
+msgid "Fee line (recommended)"
+msgstr "Položku poplatku (odporúčané)"
+
+#: build/settings.js:4 build/settings.js:19
+msgid "Product line"
+msgstr "Produktová položka"
+
+#: build/settings.js:4
+msgid ""
+"A hidden, virtual “Payment fee” product is created on first use. You may "
+"rename it or give it your own SKU — the fee amount and title always come "
+"from the fee settings."
+msgstr ""
+"Pri prvom použití sa vytvorí skrytý virtuálny produkt „Poplatok za platbu“. "
+"Môžete ho premenovať alebo mu dať vlastné katalógové číslo — suma a názov "
+"poplatku sa vždy berú z nastavení poplatkov."
+
+#: build/settings.js:4
+msgid "Fee behaviour"
+msgstr "Správanie poplatku"
+
+#: build/settings.js:4
+msgid "Charge the fee on manual & order-pay orders"
+msgstr "Účtovať poplatok aj pri ručných objednávkach a platbách objednávky"
+
+#: build/settings.js:4
+msgid ""
+"WooCommerce only charges payment fees at checkout. Enable this to also "
+"charge the fee on orders you create in the admin, and when a customer pays "
+"from the order-pay page — for example after a failed payment with another "
+"method. When disabled, no fee is added on those pages, but a fee from an "
+"earlier method is still removed when the customer switches."
+msgstr ""
+"WooCommerce účtuje poplatky za platbu len v pokladni. Zapnutím budete "
+"poplatok účtovať aj pri objednávkach, ktoré vytvoríte v administrácii, a keď "
+"zákazník platí zo stránky platby objednávky — napríklad po neúspešnej platbe "
+"inou metódou. Keď je voľba vypnutá, na týchto stránkach sa žiadny poplatok "
+"nepridá, ale poplatok skôr zvolenej metódy sa pri prechode na inú metódu "
+"stále odstráni."
+
+#: build/settings.js:4
+msgid "Show each method’s fee beside its name at checkout"
+msgstr "Zobraziť poplatok každej metódy vedľa jej názvu v pokladni"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, each payment method shows its fee beside its own name, so "
+"the customer can compare before choosing; a method with no fee shows "
+"nothing. If disabled, the fee appears only once a method has been selected."
+msgstr ""
+"Keď je táto voľba zapnutá, každá platobná metóda ukáže svoj poplatok vedľa "
+"svojho názvu, takže zákazník môže porovnávať ešte pred voľbou; pri metóde "
+"bez poplatku sa nezobrazí nič. Keď je vypnutá, poplatok sa objaví až po "
+"zvolení metódy."
+
+#: build/settings.js:4
+msgid "Do not show the fee on the cart page"
+msgstr "Nezobrazovať poplatok v košíku"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, the payment fee is only shown at checkout. If disabled, "
+"the cart may show a fee before the customer has chosen a payment method, "
+"since WooCommerce can default to one automatically. This setting only "
+"affects where the fee is shown; it does not change the amount charged."
+msgstr ""
+"Keď je táto voľba zapnutá, poplatok za platbu sa zobrazí len v pokladni. Keď "
+"je vypnutá, košík môže poplatok ukázať skôr, než si zákazník zvolí platobnú "
+"metódu, pretože WooCommerce môže niektorú zvoliť automaticky. Toto "
+"nastavenie ovplyvňuje len to, kde sa poplatok zobrazí; účtovanú sumu nemení."
+
+#: build/settings.js:4
+msgid "Fixed fee"
+msgstr "Fixný poplatok"
+
+#: build/settings.js:4
+msgid "A fixed amount added to the cart when this payment method is selected."
+msgstr "Fixná suma pridaná do košíka, keď je vybraná táto platobná metóda."
+
+#: build/settings.js:4
+msgid "Fees"
+msgstr "Poplatky"
+
+#: build/settings.js:4
+msgid "Coupons"
+msgstr "Kupóny"
+
+#: build/settings.js:4
+msgid "Shipping"
+msgstr "Doručenie"
+
+#: build/settings.js:4 build/settings.js:9
+msgid "Taxes"
+msgstr "Dane"
+
+#: build/settings.js:4
+msgid "Percentage fee"
+msgstr "Percentuálny poplatok"
+
+#: build/settings.js:4
+msgid "Percentage of the cart total added to the cart."
+msgstr "Percento z celkovej ceny košíka, ktoré sa pridá ku platbe."
+
+#: build/settings.js:4
+msgid "%"
+msgstr "%"
+
+#: build/settings.js:4
+msgid "Include in the percentage calculation"
+msgstr "Zahrnúť do výpočtu percent"
+
+#: build/settings.js:4
+msgid "Minimum fee"
+msgstr "Minimálny poplatok"
+
+#: build/settings.js:4
+msgid "The fee never drops below this amount. Enter 0 for no minimum."
+msgstr "Poplatok nikdy neklesne pod túto sumu. Na vypnutie minima zadajte 0."
+
+#: build/settings.js:4
+msgid "Maximum fee"
+msgstr "Maximálny poplatok"
+
+#: build/settings.js:4
+msgid "The fee never exceeds this amount. Enter 0 for no maximum."
+msgstr "Poplatok nikdy nepresiahne túto sumu. Na vypnutie maxima zadajte 0."
+
+#: build/settings.js:4
+msgid "the fixed charge, money-formatted"
+msgstr "pevný poplatok, vo formáte meny"
+
+#: build/settings.js:4
+msgid "the percentage rate"
+msgstr "percentuálna sadzba"
+
+#: build/settings.js:4
+msgid "the amount the percentage is calculated from, money-formatted"
+msgstr "suma, z ktorej sa počíta percento, vo formáte meny"
+
+#: build/settings.js:4
+msgid "the minimum percentage fee, money-formatted"
+msgstr "minimálny percentuálny poplatok, vo formáte meny"
+
+#: build/settings.js:4
+msgid "the maximum percentage fee, money-formatted"
+msgstr "maximálny percentuálny poplatok, vo formáte meny"
+
+#. translators: %s: a placeholder token such as [FIXED_AMOUNT]
+#: build/settings.js:5
+msgid "Insert %s"
+msgstr "Vložiť %s"
+
+#: build/settings.js:5
+msgid "Hide available placeholders"
+msgstr "Skryť dostupné zástupné symboly"
+
+#: build/settings.js:5
+msgid "Show available placeholders"
+msgstr "Zobraziť dostupné zástupné symboly"
+
+#: build/settings.js:5
+msgid ""
+"Click a placeholder to drop it where you left off in the label, or drag it "
+"into the field."
+msgstr ""
+"Kliknutím na zástupný text ho vložíte tam, kde ste v názve skončili, alebo "
+"ho do poľa presuňte."
+
+#: build/settings.js:5
+msgid "Example:"
+msgstr "Príklad:"
+
+#: build/settings.js:5
+msgid "Cart total"
+msgstr "Cena košíka"
+
+#: build/settings.js:5
+msgid "Compare against the cart total the customer sees."
+msgstr "Porovnáva sa s cenou košíka, ktorú vidí zákazník."
+
+#: build/settings.js:5
+msgid "Coupon applied"
+msgstr "Použitý kupón"
+
+#: build/settings.js:5
+msgid "Coupon"
+msgstr "Kupón"
+
+#: build/settings.js:5
+msgid "Select or type coupon codes…"
+msgstr "Vyberte alebo napíšte kódy kupónov…"
+
+#: build/settings.js:5
+msgid ""
+"Match applied coupon codes — typed codes and * patterns (SUMMER*, *SALE*) "
+"work too."
+msgstr ""
+"Porovnáva použité kódy kupónov — fungujú aj ručne zapísané kódy a vzory s * "
+"(LETO*, *ZLAVA*)."
+
+#: build/settings.js:5
+msgid ""
+"No coupons found in your store yet — you can still type codes or patterns "
+"like SUMMER*."
+msgstr ""
+"Vo vašom e-shope zatiaľ nie sú žiadne kupóny — kódy alebo vzory ako LETO* "
+"môžete napriek tomu zapísať."
+
+#: build/settings.js:5
+msgid "Shipping method"
+msgstr "Spôsob dopravy"
+
+#: build/settings.js:5
+msgid "Select shipping methods…"
+msgstr "Vyberte spôsoby dopravy…"
+
+#: build/settings.js:5
+msgid ""
+"Match the chosen shipping method — one zone instance, or any instance of a "
+"method type."
+msgstr ""
+"Porovnáva zvolený spôsob dopravy — konkrétnu inštanciu v zóne, alebo "
+"ľubovoľnú inštanciu daného typu."
+
+#: build/settings.js:5
+msgid "No shipping methods are configured yet."
+msgstr "Zatiaľ nie sú nastavené žiadne spôsoby dopravy."
+
+#: build/settings.js:5
+msgid "Shipping zone"
+msgstr "Zóna dopravy"
+
+#: build/settings.js:5
+msgid "Select shipping zones…"
+msgstr "Vyberte zóny dopravy…"
+
+#: build/settings.js:5
+msgid "Match the shipping zone serving the chosen shipping method."
+msgstr "Porovnáva zónu dopravy, do ktorej zvolený spôsob dopravy patrí."
+
+#: build/settings.js:5
+msgid "No shipping zones are configured yet."
+msgstr "Zatiaľ nie sú nastavené žiadne zóny dopravy."
+
+#: build/settings.js:5
+msgid "Shipping class in cart"
+msgstr "Trieda dopravy v košíku"
+
+#: build/settings.js:5
+msgid "Shipping class"
+msgstr "Trieda dopravy"
+
+#: build/settings.js:5
+msgid "Select shipping classes…"
+msgstr "Vyberte triedy dopravy…"
+
+#: build/settings.js:5
+msgid "Match when a cart item has any of these shipping classes."
+msgstr "Platí, keď má niektorá položka v košíku jednu z týchto tried dopravy."
+
+#: build/settings.js:5
+msgid "No shipping classes are configured yet."
+msgstr "Zatiaľ nie sú nastavené žiadne triedy dopravy."
+
+#: build/settings.js:5
+msgid "Country / state"
+msgstr "Krajina / región"
+
+#: build/settings.js:5
+msgid "Country"
+msgstr "Krajina"
+
+#: build/settings.js:5
+msgid "Select countries or states…"
+msgstr "Vyberte krajiny alebo regióny…"
+
+#: build/settings.js:5
+msgid ""
+"Match the delivery country or state — a country also covers all its states."
+msgstr ""
+"Porovnáva krajinu alebo región doručenia — krajina zahŕňa aj všetky svoje "
+"regióny."
+
+#: build/settings.js:5
+msgid "No selling countries are configured yet."
+msgstr "Zatiaľ nie sú nastavené žiadne krajiny predaja."
+
+#: build/settings.js:5
+msgid "User role"
+msgstr "Rola používateľa"
+
+#: build/settings.js:5
+msgid "Role"
+msgstr "Rola"
+
+#: build/settings.js:5
+msgid "Select user roles…"
+msgstr "Vyberte roly používateľov…"
+
+#: build/settings.js:5
+msgid "Match the signed-in customer’s role."
+msgstr "Porovnáva rolu prihláseného zákazníka."
+
+#: build/settings.js:5
+msgid "No user roles found."
+msgstr "Nenašli sa žiadne roly používateľov."
+
+#: build/settings.js:5
+msgid "Product in cart"
+msgstr "Produkt v košíku"
+
+#: build/settings.js:5
+msgid "Product"
+msgstr "Produkt"
+
+#: build/settings.js:5
+msgid "Search products…"
+msgstr "Hľadať produkty…"
+
+#: build/settings.js:5
+msgid "Match when any of these products is in the cart."
+msgstr "Platí, keď je v košíku niektorý z týchto produktov."
+
+#: build/settings.js:5
+msgid "Product category in cart"
+msgstr "Kategória produktu v košíku"
+
+#: build/settings.js:5
+msgid "Category"
+msgstr "Kategória"
+
+#: build/settings.js:5
+msgid "Select categories…"
+msgstr "Vyberte kategórie…"
+
+#: build/settings.js:5
+msgid "Match when the cart contains a product from any of these categories."
+msgstr "Platí, keď košík obsahuje produkt z niektorej z týchto kategórií."
+
+#: build/settings.js:5
+msgid "No product categories found."
+msgstr "Nenašli sa žiadne kategórie produktov."
+
+#: build/settings.js:5
+msgid "Matches"
+msgstr "Zodpovedá"
+
+#: build/settings.js:5
+msgid "Excludes"
+msgstr "Nezodpovedá"
+
+#: build/settings.js:5
+msgid "At least"
+msgstr "Najmenej"
+
+#: build/settings.js:5
+msgid "At most"
+msgstr "Najviac"
+
+#: build/settings.js:5
+msgid "of cart totals"
+msgstr "z ceny objednávky"
+
+#: build/settings.js:5
+msgid "min."
+msgstr "min."
+
+#: build/settings.js:5
+msgid "max."
+msgstr "max."
+
+#. translators: 1: first few values, 2: count of remaining
+#: build/settings.js:6
+msgid "%1$s +%2$d"
+msgstr "%1$s +%2$d"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:7
+msgid "%1$s: not %2$s"
+msgstr "%1$s: okrem %2$s"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:8
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: build/settings.js:8
+msgid "No fee set yet"
+msgstr "Zatiaľ nie je nastavený žiadny poplatok"
+
+#: build/settings.js:9
+msgid "When:"
+msgstr "Keď:"
+
+#: build/settings.js:9
+msgid "When all match:"
+msgstr "Keď platí všetko:"
+
+#: build/settings.js:9
+msgid "Fee label"
+msgstr "Názov poplatku"
+
+#: build/settings.js:9
+msgid "Shown to customers on the checkout page."
+msgstr "Zobrazuje sa zákazníkom v pokladni."
+
+#: build/settings.js:9
+msgid "Inherit from cart items"
+msgstr "Prevziať z položiek košíka"
+
+#: build/settings.js:9
+msgid ""
+"One of this method’s fees is negative. WooCommerce treats a negative fee as "
+"a discount and works its tax out from the cart items, so these settings do "
+"not apply to it."
+msgstr ""
+"Jeden z poplatkov tejto metódy je záporný. WooCommerce považuje záporný "
+"poplatok za zľavu a daň pri ňom odvodzuje z položiek košíka, takže sa naň "
+"tieto nastavenia nevzťahujú."
+
+#: build/settings.js:9
+msgid "Payment fee is taxable"
+msgstr "Poplatok podlieha DPH"
+
+#: build/settings.js:9
+msgid "Fee amount already includes tax"
+msgstr "Suma poplatku už obsahuje DPH"
+
+#: build/settings.js:9
+msgid "When unchecked, tax is calculated on top of the fee."
+msgstr "Ak nie je zaškrtnuté, DPH sa pripočíta k poplatku."
+
+#: build/settings.js:9
+msgid "Tax class"
+msgstr "Daňová trieda"
+
+#: build/settings.js:9
+msgid "Tax class applied to the fee."
+msgstr "Daňová trieda použitá na poplatok."
+
+#: build/settings.js:9
+msgid "Free shipping is chosen"
+msgstr "Je zvolená doprava zadarmo"
+
+#: build/settings.js:9
+msgid "Shipping costs nothing"
+msgstr "Doprava nič nestojí"
+
+#: build/settings.js:9
+msgid "Don’t charge the fee when"
+msgstr "Neúčtovať poplatok, ak"
+
+#: build/settings.js:9
+msgid "Loading…"
+msgstr "Načítava sa…"
+
+#: build/settings.js:9
+msgid "Amount"
+msgstr "Suma"
+
+#: build/settings.js:9
+msgid "Conditions"
+msgstr "Podmienky"
+
+#: build/settings.js:9
+msgid "No conditions — this fee applies to every order."
+msgstr "Bez podmienok — tento poplatok sa uplatní pri každej objednávke."
+
+#: build/settings.js:9
+msgid "The fee applies when all conditions match."
+msgstr "Poplatok sa uplatní, keď platia všetky podmienky."
+
+#: build/settings.js:9
+msgid "Condition"
+msgstr "Podmienka"
+
+#: build/settings.js:9
+msgid "Mode"
+msgstr "Režim"
+
+#: build/settings.js:9
+msgid "Values"
+msgstr "Hodnoty"
+
+#: build/settings.js:9
+msgid "Remove condition"
+msgstr "Odstrániť podmienku"
+
+#: build/settings.js:9
+msgid "Add condition"
+msgstr "Pridať podmienku"
+
+#. translators: %s: fee name
+#: build/settings.js:10
+msgid "Reorder %s. Use the arrow keys to move it."
+msgstr "Zmeniť poradie: %s. Na presun použite šípky."
+
+#: build/settings.js:10
+msgid "Remove fee"
+msgstr "Odstrániť poplatok"
+
+#. translators: 1: new position, 2: total number of fees
+#: build/settings.js:11
+msgid "Fee moved to position %1$d of %2$d"
+msgstr "Poplatok presunutý na pozíciu %1$d z %2$d"
+
+#: build/settings.js:11
+msgid ""
+"Fees are evaluated top to bottom — the first one whose conditions match the "
+"order is charged."
+msgstr ""
+"Poplatky sa vyhodnocujú zhora nadol — účtuje sa prvý, ktorého podmienky "
+"objednávke zodpovedajú."
+
+#: build/settings.js:11
+msgid "Add fee"
+msgstr "Pridať poplatok"
+
+#: build/settings.js:11
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: build/settings.js:11
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#. translators: %s: fee label
+#: build/settings.js:12
+msgid "Remove “%s”?"
+msgstr "Odstrániť „%s“?"
+
+#. translators: %s: payment method title
+#: build/settings.js:13
+msgid "Customers paying with %s will no longer be charged this fee."
+msgstr "Zákazníkom platiacim metódou %s sa tento poplatok už nebude účtovať."
+
+#: build/settings.js:13 build/settings.js:16
+msgid "Fee active"
+msgstr "Poplatok aktívny"
+
+#: build/settings.js:13 build/settings.js:16
+msgid "No fee"
+msgstr "Bez poplatku"
+
+#: build/settings.js:13
+msgid ""
+"This payment method is currently not active in WooCommerce, but you can "
+"still set the extra fee."
+msgstr ""
+"Táto platobná metóda nie je vo WooCommerce aktívna, poplatok si však môžete "
+"nastaviť už teraz."
+
+#: build/settings.js:13
+msgid "Extra fee"
+msgstr "Poplatok za platbu"
+
+#. translators: %s: payment method title
+#: build/settings.js:14
+msgid "Charge an extra fee when customers pay with %s"
+msgstr "Účtovať poplatok, keď zákazníci platia metódou %s"
+
+#: build/settings.js:14
+msgid "Payment methods"
+msgstr "Platobné metódy"
+
+#. translators: %s: payment method title
+#: build/settings.js:15
+msgid "— %s has a fee"
+msgstr "— %s má poplatok"
+
+#. translators: %s: payment method title
+#: build/settings.js:16
+msgid "— %s has no fee"
+msgstr "— %s nemá poplatok"
+
+#: build/settings.js:16
+msgid "cart total"
+msgstr "cena košíka"
+
+#: build/settings.js:16
+msgid "coupon"
+msgstr "kupón"
+
+#: build/settings.js:16
+msgid "product"
+msgstr "produkt"
+
+#: build/settings.js:16
+msgid "category"
+msgstr "kategória"
+
+#: build/settings.js:16
+msgid "country or state"
+msgstr "krajina alebo región"
+
+#: build/settings.js:16
+msgid "user role"
+msgstr "rola používateľa"
+
+#: build/settings.js:16
+msgid "shipping method"
+msgstr "spôsob dopravy"
+
+#: build/settings.js:16
+msgid "shipping zone"
+msgstr "zóna dopravy"
+
+#: build/settings.js:16
+msgid "shipping class"
+msgstr "trieda dopravy"
+
+#: build/settings.js:16
+msgid "Pay for Payment Pro"
+msgstr "Pay for Payment Pro"
+
+#: build/settings.js:16
+msgid "Do more with PRO"
+msgstr "S verziou PRO zvládnete viac"
+
+#: build/settings.js:16
+msgid "Everything free does, plus rules & automation."
+msgstr "Všetko čo zadarmo, navyše pravidlá a automatizácia."
+
+#. translators: 1: star rating, 2: active install count
+#: build/settings.js:17
+msgid "%1$s · %2$s active installs"
+msgstr "%1$s · %2$s aktívnych inštalácií"
+
+#: build/settings.js:17
+msgid "Conditional fees"
+msgstr "Podmienené poplatky"
+
+#: build/settings.js:17
+msgid "Charge only when it fits."
+msgstr "Účtujte len vtedy, keď to dáva zmysel."
+
+#. translators: %s: an example cart amount, e.g. "5 000 Kč"
+#: build/settings.js:18
+msgid "if cart > %s"
+msgstr "keď je košík > %s"
+
+#. translators: %s: an example fee percentage such as "2%"
+#: build/settings.js:19
+msgctxt "Pro feature example chip"
+msgid "%s fee"
+msgstr "Poplatok %s"
+
+#: build/settings.js:19
+msgid "Match by"
+msgstr "Podmienka podľa"
+
+#: build/settings.js:19
+msgid "Multiple fee tiers"
+msgstr "Viac úrovní poplatku"
+
+#: build/settings.js:19
+msgid "Stack more than one fee rule per payment method."
+msgstr "Nastavte pre jednu platobnú metódu viac pravidiel poplatku."
+
+#: build/settings.js:19
+msgid "Fee 1"
+msgstr "Poplatok 1"
+
+#: build/settings.js:19
+msgid "Fee 2"
+msgstr "Poplatok 2"
+
+#: build/settings.js:19
+msgid "Fee as a product line"
+msgstr "Poplatok ako produktová položka"
+
+#: build/settings.js:19
+msgid ""
+"Write the fee as a product instead of a fee line, for invoicing and ERP "
+"exports that skip fee lines."
+msgstr ""
+"Zapísať poplatok ako produkt namiesto položky poplatku, kvôli fakturácii a "
+"exportom do ERP, ktoré položky poplatku vynechávajú."
+
+#: build/settings.js:19
+msgid "Display controls"
+msgstr "Nastavenia zobrazenia"
+
+#: build/settings.js:19
+msgid ""
+"Hide the fee on the cart, or show each method’s fee beside its name at "
+"checkout."
+msgstr ""
+"Skryte poplatok v košíku, alebo zobrazte poplatok každej metódy vedľa jej "
+"názvu v pokladni."
+
+#: build/settings.js:19
+msgid "Cart: hidden"
+msgstr "Košík: skryté"
+
+#: build/settings.js:19
+msgid "Fees on manual & order-pay orders"
+msgstr "Poplatky pri ručných objednávkach a platbách objednávky"
+
+#: build/settings.js:19
+msgid ""
+"Charge the fee beyond checkout — on the order-pay page and on orders you "
+"create by hand."
+msgstr ""
+"Účtujte poplatok aj mimo pokladne — na stránke platby objednávky a pri ručne "
+"vytvorených objednávkach."
+
+#: build/settings.js:19
+msgid "Upgrade to PRO"
+msgstr "Prejsť na PRO"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:20
+msgid "Launch offer — %s off with code"
+msgstr "Zavádzacia ponuka — zľava %s s kódom"
+
+#: build/settings.js:20
+msgid "Keep free forever — upgrade any time."
+msgstr "Zadarmo navždy — prejsť na PRO môžete kedykoľvek."
+
+#: build/settings.js:20
+msgid "Questions or a feature request?"
+msgstr "Máte otázku alebo návrh na funkciu?"
+
+#: build/settings.js:20
+msgid ""
+"Pro customers get direct support from me — write any time. You can reach out "
+"at the <a>support forum</a>."
+msgstr ""
+"Zákazníci Pro majú podporu priamo odo mňa — napíšte kedykoľvek. Zastihnete "
+"ma vo <a>fóre podpory</a>."
+
+#: build/settings.js:20
+msgid "Loading payment methods…"
+msgstr "Načítavanie platobných metód…"
+
+#: build/settings.js:20
+msgid "No payment methods found"
+msgstr "Nenašli sa žiadne platobné metódy"
+
+#: build/settings.js:20
+msgid ""
+"Fees are set per payment method. Add and enable payment methods in "
+"WooCommerce first, then come back here to charge a fee for them."
+msgstr ""
+"Poplatky sa nastavujú pre jednotlivé platobné metódy. Najprv pridajte a "
+"zapnite platobné metódy vo WooCommerce a potom sa sem vráťte nastaviť im "
+"poplatok."
+
+#: build/settings.js:20
+msgid "Manage payment methods"
+msgstr "Spravovať platobné metódy"
+
+#: build/settings.js:20
+msgid "Payment methods could not be loaded. Reload the page to try again."
+msgstr ""
+"Platobné metódy sa nepodarilo načítať. Skúste to znova obnovením stránky."
+
+#: build/settings.js:20
+msgid ""
+"None of your payment methods is enabled in WooCommerce yet. You can still "
+"set up fees now — they apply as soon as a method is enabled. <a>Manage "
+"payment methods</a>"
+msgstr ""
+"Vo WooCommerce zatiaľ nemáte zapnutú žiadnu platobnú metódu. Poplatky si "
+"môžete nastaviť už teraz — uplatnia sa hneď, ako metódu zapnete. "
+"<a>Spravovať platobné metódy</a>"
+
+#: build/settings.js:20
+msgid "Save changes"
+msgstr "Uložiť zmeny"
+
+#: build/settings.js:20
+msgid "Please fix the validation errors above before saving."
+msgstr "Pred uložením prosím opravte vyššie uvedené chyby."
+
+#: build/settings.js:20
+msgid "Unsaved changes"
+msgstr "Neuložené zmeny"
+
+#: build/settings.js:20
+msgid "No changes to save"
+msgstr "Nie je čo uložiť"
+
+#: build/settings.js:20
+msgid "Settings saved."
+msgstr "Nastavenia uložené."
+
+#. translators: %s: the field messages, one per problem
+#: build/settings.js:21
+msgid "Validation failed: %s"
+msgstr "Overenie zlyhalo: %s"
+
+#: build/settings.js:21
+msgid "Something went wrong"
+msgstr "Niečo sa pokazilo"
+
+#: build/settings.js:21
+msgid ""
+"An error occurred while loading the settings. Please try reloading the page."
+msgstr "Pri načítaní nastavení došlo k chybe. Skúste prosím obnoviť stránku."
+
+#: build/settings.js:21
+msgid "Reload Page"
+msgstr "Znova načítať stránku"
+
+#: build/settings.js:21
+msgid "Try Again"
+msgstr "Skúsiť znova"
+
+#~ msgid "The plugin files are corrupted. Please re-install the plugin."
+#~ msgstr "Súbory pluginu sú poškodené. Preinštalujte prosím plugin."
+
+#~ msgid "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+#~ msgstr "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+
+#~ msgid "Extra Charge"
+#~ msgstr "Poplatok za platbu"
+
+#, php-format
+#~ msgctxt "Gateway list column"
+#~ msgid "%s %% of cart totals"
+#~ msgstr "%s %% z ceny objednávky"
+
+#~ msgid "Invalid off-checkout fee mode"
+#~ msgstr "Neplatný režim poplatku mimo pokladne"
+
+#~ msgid "Note shown on the cart when the payment fee is deferred to checkout."
+#~ msgstr ""
+#~ "Poznámka zobrazená v košíku, keď sa poplatok za platbu určí až v pokladni."
+
+#, php-format
+#~ msgid "Payment fee: %1$s · Total with this method: %2$s"
+#~ msgstr "Poplatok za platbu: %1$s · Spolu s touto metódou: %2$s"
+
+#~ msgid ""
+#~ "The plugin requires WooCommerce plugin and without it doesn't work. "
+#~ "Install and activate it first."
+#~ msgstr ""
+#~ "Plugin vyžaduje WooCommerce a bez neho nefunguje. Najprv ho nainštalujte "
+#~ "a aktivujte."
+
+#~ msgid ""
+#~ "Product line — for ERP & invoicing exports that skip fee lines "
+#~ "(experimental)"
+#~ msgstr ""
+#~ "Položku produktu — pre exporty do ERP a fakturácie, ktoré poplatky "
+#~ "preskakujú (experimentálne)"
+
+#~ msgid "Also convert checkout orders’ fee to the product line"
+#~ msgstr "Previesť na položku produktu aj poplatky objednávok z pokladne"
+
+#~ msgid ""
+#~ "Every order then carries the fee the same way. Checkout itself is "
+#~ "unchanged — the fee line is swapped for the product line once the order "
+#~ "is created."
+#~ msgstr ""
+#~ "Každá objednávka potom nesie poplatok rovnakým spôsobom. Samotná pokladňa "
+#~ "sa nemení — položka poplatku sa na položku produktu prevedie až po "
+#~ "vytvorení objednávky."
+
+#~ msgid "Hide the fee on the cart page until a payment method is chosen"
+#~ msgstr "Skryť poplatok v košíku, kým nie je zvolená platobná metóda"
+
+#~ msgid ""
+#~ "Without a chosen payment method the cart would show the default method’s "
+#~ "fee, which confuses customers. The cart shows a short note instead; the "
+#~ "fee appears the moment a payment method is selected at checkout — the "
+#~ "amount charged never changes."
+#~ msgstr ""
+#~ "Bez zvolenej platobnej metódy by košík ukazoval poplatok predvolenej "
+#~ "metódy, čo zákazníkov mätie. Namiesto toho sa v košíku zobrazí krátka "
+#~ "poznámka; poplatok sa objaví vo chvíli, keď zákazník v pokladni zvolí "
+#~ "platobnú metódu — účtovaná suma sa nikdy nemení."
+
+#~ msgid "Display"
+#~ msgstr "Zobrazenie"
+
+#~ msgid "Show the fee in this payment method’s description at checkout"
+#~ msgstr "Zobraziť poplatok v popise tejto platobnej metódy v pokladni"
+
+#~ msgid ""
+#~ "Customers see what each method costs before selecting one. Zero fees show "
+#~ "nothing."
+#~ msgstr ""
+#~ "Zákazníci uvidia, koľko ktorá metóda stojí, ešte než si ju vyberú. Nulové "
+#~ "poplatky sa nezobrazujú."
+
+#~ msgid "country"
+#~ msgstr "krajina"
+
+#~ msgid "Fee watchdog"
+#~ msgstr "Strážca poplatkov"
+
+#~ msgid "Get warned before an oddly high or broken fee reaches a customer."
+#~ msgstr ""
+#~ "Upozorníme vás skôr, než sa k zákazníkovi dostane podivne vysoký alebo "
+#~ "pokazený poplatok."
+
+#~ msgid "Check fee"
+#~ msgstr "Skontrolovať poplatok"
+
+#~ msgid "Minimum charge cannot be negative"
+#~ msgstr "Minimálny poplatok nesmie byť záporný"
+
+#~ msgid "Maximum charge cannot be negative"
+#~ msgstr "Maximálny poplatok nesmie byť záporný"
+
+#~ msgid "Fee"
+#~ msgstr "Poplatok"
+
+#~ msgid "Limits"
+#~ msgstr "Limity"
+
+#~ msgid "Charge at most"
+#~ msgstr "Maximálne"
+
+#~ msgid ""
+#~ "Maximum extra charge to be added to cart when this payment method is "
+#~ "selected. Enter zero to disable."
+#~ msgstr ""
+#~ "Maximálny poplatok, ktorý bude pridaný do košíka, keď bude zvolená táto "
+#~ "platobná metóda. Zadajte nulu, ak sa nemá použiť."
+
+#~ msgid "Inclusive Taxes"
+#~ msgstr "Vrátane DPH"

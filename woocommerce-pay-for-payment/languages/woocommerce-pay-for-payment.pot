@@ -1,233 +1,1232 @@
-#, fuzzy
+# Copyright (C) 2026 Karolína Vyskočilová
+# This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: WooCommerce Pay for Payment\n"
-"POT-Creation-Date: 2021-06-03 10:09+0200\n"
-"PO-Revision-Date: 2018-10-13 22:05+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Project-Id-Version: Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts 3.0.0-rc5\n"
+"Report-Msgid-Bugs-To: https://kybernaut.cz/kontakt/\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: woocommerce-payforpayment.php\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"POT-Creation-Date: 2026-09-23T15:42:36+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: woocommerce-pay-for-payment\n"
 
-#: inc/class-pay4pay-admin.php:55 inc/class-pay4pay.php:62
-#, php-format
-msgid ""
-"Pay for Payment for WooCommerce requires at least WooCommerce %s. Please "
-"update!"
+#. Plugin Name of the plugin
+#: woocommerce-payforpayment.php
+msgid "Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts"
 msgstr ""
 
-#: inc/class-pay4pay-admin.php:73 inc/class-pay4pay-admin.php:344
-#: inc/class-pay4pay.php:22
-msgid "Extra Charge"
+#. Plugin URI of the plugin
+#: woocommerce-payforpayment.php
+msgid "https://payforpayment.com/"
 msgstr ""
 
-#: inc/class-pay4pay-admin.php:79
-msgid "Item Title"
+#. Description of the plugin
+#: woocommerce-payforpayment.php
+msgid "Charge a fee or give a discount on any WooCommerce payment method. Fixed or percentage, tax aware, with min and max caps."
 msgstr ""
 
-#: inc/class-pay4pay-admin.php:81
-msgid "This will show up in the shopping basket."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:85
-msgid "Fixed charge"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:87
-msgid "Extra charge to be added to cart when this payment method is selected."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:94
-msgid "Percent charge"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:96
-msgid "Percentage of cart total to be added to payment."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:107
-msgid "Charge at least"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:109
-msgid ""
-"Minimum extra charge to be added to cart when this payment method is "
-"selected."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:117
-msgid "Charge at most"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:119
-msgid ""
-"Maximum extra charge to be added to cart when this payment method is "
-"selected. Enter zero to disable."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:127
-msgid "Disable on Free Shipping"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:128
-msgid "Don’t charge this fee when free shipping is available."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:133
-msgid "Disable on Zero Shipping"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:134
-msgid "Don’t charge this fee when zero shipping is available."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:144
-msgid "Extra Charge Taxes"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:149
-msgid "Taxable"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:151
-msgid "Payment fee is taxable"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:158
-msgid "Inclusive Taxes"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:160
-msgid "The payment fee is inclusive of taxes."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:161
-msgid ""
-"If you leave this unchecked taxes will be calculated on top of the payment "
-"fee."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:167
-msgid "Tax class"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:169
-msgid "Select a the tax class applied to the extra charge."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:182
-msgid "Include in percental payment fee calculation:"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:188
-msgid "Fees"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:190
-msgid "Include fees in calculation."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:196
-msgid "Coupons"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:198
-msgid "Include Coupons in calculation."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:204
-msgid "Shipping"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:206
-msgid "Include shipping cost in calculation."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:215
-msgid "Taxes"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:217
-msgid "Include taxes in calculation."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:309
-msgid ""
-"There has been an error within the Pay for Payment for WooCommerce plugin "
-"and settings can't be saved."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:309
-#, php-format
-msgid ""
-"To fix the issue, contact the plugin author either on %sGithub%s or "
-"%sWordPress.org%s and provide following information:"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:311
-msgid ""
-"Name of the payment method you are trying to save and the URL where it can "
-"be downloaded for testing."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:312
-msgid "Current section ID:"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:313
-msgid "Anything else might be helpful (recently added/updated plugins, etc.)."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:357
-#, php-format
-msgctxt "Gateway list column"
-msgid "%s %% of cart totals"
-msgstr ""
-
-#: inc/class-pay4pay.php:293
-msgid "Payment fee tax class based on cart items"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-#: woocommerce-payforpayment.php:52
-msgid "Pay for Payment for WooCommerce"
-msgstr ""
-
-#: woocommerce-payforpayment.php:53
-msgid "WooCommerce"
-msgstr ""
-
-#: woocommerce-payforpayment.php:56
-#, php-format
-msgid ""
-"%1$s requires %2$s. Please activate %2$s before activation of %1$s. This "
-"plugin has been deactivated."
-msgstr ""
-
-#. Plugin URI of the plugin/theme
-msgid "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "Setup individual charges for each payment method in WooCommerce."
-msgstr ""
-
-#. Author of the plugin/theme
+#. Author of the plugin
+#: woocommerce-payforpayment.php
 msgid "Karolína Vyskočilová"
 msgstr ""
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
+#: woocommerce-payforpayment.php
 msgid "https://kybernaut.cz"
+msgstr ""
+
+#. translators: %s: plugin name.
+#: src/Admin.php:305
+#, php-format
+msgid "Thank you for using %s!"
+msgstr ""
+
+#. translators: 1: plugin name, 2: five-star rating link.
+#: src/Admin.php:312
+#, php-format
+msgid "If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
+msgstr ""
+
+#. translators: %s: plugin version.
+#: src/Admin.php:328
+#, php-format
+msgid "Version %s"
+msgstr ""
+
+#: src/Admin.php:339
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/AdminPostActions.php:43
+msgid "You are not allowed to do this."
+msgstr ""
+
+#. translators: 1: filter name, 2: comma-separated payment method names.
+#: src/Admin/LegacyFilterNotice.php:80
+#, php-format
+msgid "Code on this site filters %1$s for payment methods whose fee is switched off here, so it cannot charge anything: %2$s. Switch a method on — leaving its amounts at zero — to let your code set the fee."
+msgstr ""
+
+#: src/Admin/OptinNotice.php:73
+msgid "One more thing."
+msgstr ""
+
+#: src/Admin/OptinNotice.php:74
+msgid "Sharing basic usage data tells me which gateways and settings people actually use, and it is how you get security and update notices."
+msgstr ""
+
+#: src/Admin/OptinNotice.php:77
+msgid "Opt in"
+msgstr ""
+
+#: src/Admin/OptinNotice.php:79
+msgid "No thanks"
+msgstr ""
+
+#: src/Admin/RestApi.php:154
+msgid "Invalid parameters"
+msgstr ""
+
+#: src/Admin/RestApi.php:198
+msgid "Validation failed. Please check your input and try again."
+msgstr ""
+
+#: src/Admin/Settings.php:317
+#: build/settings.js:3
+#: build/settings.js:16
+msgid "Pay for Payment"
+msgstr ""
+
+#. translators: %s: payment method title
+#: src/Admin/SettingsSerializer.php:327
+#: build/settings.js:9
+#, php-format,js-format
+msgid "%s fee"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:124
+msgid "Enabled methods must be a list of payment method ids"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:128
+msgid "Invalid fee line type"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:151
+msgid "Fee tiers must be a list"
+msgstr ""
+
+#. translators: %d: maximum number of fee tiers per payment method
+#: src/Admin/SettingsValidator.php:157
+#, php-format
+msgid "A payment method can have at most %d fee tiers"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:166
+msgid "Tier must be an object"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:206
+#: build/settings.js:5
+msgid "Fixed fee must be a valid number"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:207
+#: build/settings.js:5
+msgid "Percentage fee must be a valid number"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:208
+#: build/settings.js:5
+msgid "Minimum fee must be a valid number"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:209
+#: build/settings.js:5
+msgid "Maximum fee must be a valid number"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:261
+#: build/settings.js:9
+msgid "Conditions must be a list"
+msgstr ""
+
+#. translators: %d: maximum number of conditions per fee tier
+#: src/Admin/SettingsValidator.php:267
+#, php-format
+msgid "A fee tier can have at most %d conditions"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:298
+#: build/settings.js:9
+msgid "Condition must be an object"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:305
+#: build/settings.js:9
+msgid "Condition type must be a non-empty string"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:315
+#: build/settings.js:9
+msgid "Invalid operator for this condition type"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:321
+#: build/settings.js:9
+msgid "Cart total condition value must be a valid number"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:323
+#: build/settings.js:9
+msgid "Cart total condition value cannot be negative"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:326
+#: build/settings.js:9
+msgid "Condition value must be a non-empty list of choices"
+msgstr ""
+
+#. translators: %d: maximum number of values per condition
+#: src/Admin/SettingsValidator.php:330
+#, php-format
+msgid "A condition can list at most %d values"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:359
+#: build/settings.js:5
+msgid "Maximum fee must be greater than or equal to minimum fee"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:381
+msgid "Fee label must be a string"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:387
+#: build/settings.js:5
+msgid "Fee label cannot be empty"
+msgstr ""
+
+#: src/Admin/SettingsValidator.php:391
+#: build/settings.js:5
+msgid "Fee label is too long (maximum 200 characters)"
+msgstr ""
+
+#: src/Admin/UpgradeNotice.php:74
+msgid "Welcome to the new Pay for Payment."
+msgstr ""
+
+#. translators: %s: comma-separated payment method names.
+#: src/Admin/UpgradeNotice.php:77
+#, php-format
+msgid "Your fee settings for %s were carried over automatically, so there is nothing to reconfigure, but you might want to double-check."
+msgstr ""
+
+#: src/Admin/UpgradeNotice.php:84
+msgid "Go to settings"
+msgstr ""
+
+#: src/Admin/UpgradeNotice.php:86
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/UpgradeNotice.php:167
+msgid "P.S. I’ve built the features people asked for most: fee rules by cart total, country or shipping method, several fee tiers per payment method, and the fee as a product line for invoicing. They live in Pro, and buying it is what pays for the work on the free plugin — thank you for considering it."
+msgstr ""
+
+#. translators: 1: discount, e.g. "50%"; 2: coupon code.
+#: src/Admin/UpgradeNotice.php:174
+#, php-format
+msgid "While the launch offer lasts it is %1$s off with the code %2$s."
+msgstr ""
+
+#: src/Admin/UpgradeNotice.php:184
+msgid "Take a look at Pro"
+msgstr ""
+
+#: src/Deprecated/class-pay4pay.php:58
+msgid "Payment fee tax class based on cart items"
+msgstr ""
+
+#. translators: %s: the order's currency code, e.g. EUR.
+#: src/Integrations/WooMultiCurrency.php:106
+#, php-format
+msgid "No payment fee was added: the active multi-currency plugin does not convert amounts in the admin, and this order is in %s rather than the shop currency. Add the fee by hand if it is due."
+msgstr ""
+
+#. translators: 1: fee line title(s), 2: payment method the fee belongs to, 3: order total once the fee is removed.
+#: src/OrderFeeSync.php:209
+#, php-format
+msgid "“%1$s” applies to %2$s. Pay with another method and it is removed — your total is then %3$s."
+msgstr ""
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:473
+#, php-format
+msgid "\"%s\" removed"
+msgstr ""
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:483
+#, php-format
+msgid "\"%s\" updated"
+msgstr ""
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:494
+#, php-format
+msgid "\"%s\" added"
+msgstr ""
+
+#. translators: 1: where the sync ran (order-pay page / admin / checkout), 2: what changed.
+#: src/OrderFeeSync.php:525
+#, php-format
+msgid "Payment fee synced (%1$s): %2$s."
+msgstr ""
+
+#: src/OrderFeeSync.php:542
+msgid "admin order edit"
+msgstr ""
+
+#: src/OrderFeeSync.php:545
+msgid "blocks checkout"
+msgstr ""
+
+#: src/OrderFeeSync.php:548
+msgid "order-pay page"
+msgstr ""
+
+#: src/PlanReview.php:198
+msgid "Welcome back to Pay for Payment Pro!"
+msgstr ""
+
+#: src/PlanReview.php:199
+msgid "You already have Pro fee rules saved — extra tiers, conditional fees and store-wide fee options — and they're live again now that Pro is active. Take a quick look so nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+
+#: src/PlanReview.php:202
+msgid "Review my fee settings"
+msgstr ""
+
+#: src/PlanReview.php:204
+#: build/settings.js:4
+msgid "Yes, I've reviewed — hide this notice"
+msgstr ""
+
+#: src/Pro/DisplayControls.php:307
+msgid "Fee preview per payment gateway id."
+msgstr ""
+
+#. translators: %s: payment fee amount, shown beside the payment method.
+#: src/Pro/FeeHintFormatter.php:159
+#, php-format
+msgid "(%s)"
+msgstr ""
+
+#. translators: %s: order total including this method's payment fee.
+#: src/Pro/FeeHintFormatter.php:186
+#, php-format
+msgid "Total with this method: %s"
+msgstr ""
+
+#. translators: %s: order total without any payment fee.
+#: src/Pro/FeeHintFormatter.php:202
+#, php-format
+msgid "No payment fee · Total with this method: %s"
+msgstr ""
+
+#. translators: %d: number of days the watchdog sampled.
+#: src/Pro/FeeWatchdog.php:355
+#, php-format
+msgid "the last %d day"
+msgid_plural "the last %d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: orders without the fee, 2: orders checked.
+#: src/Pro/FeeWatchdog.php:366
+#, php-format
+msgid "%1$d of %2$d recent orders is missing the configured payment fee."
+msgid_plural "%1$d of %2$d recent orders are missing the configured payment fee."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Pro/FeeWatchdog.php:375
+msgid "Pay for Payment: orders may be missing payment fees."
+msgstr ""
+
+#. translators: %s: sampled period ("the last 7 days").
+#: src/Pro/FeeWatchdog.php:378
+#, php-format
+msgid "Orders placed over %s were paid with the methods below but carry no payment fee, although the current fee settings would charge one. A plugin conflict or a recent update may be dropping the fee silently."
+msgstr ""
+
+#: src/Pro/FeeWatchdog.php:383
+msgid "Review fee settings"
+msgstr ""
+
+#: src/Pro/FeeWatchdog.php:385
+msgid "This is expected — don't warn again for this configuration"
+msgstr ""
+
+#: src/Pro/ManagedFeeProduct.php:167
+msgid "Payment fee"
+msgstr ""
+
+#: src/Pro/OrderPayLiveTotals.php:282
+msgid "No fee preview is available for this order."
+msgstr ""
+
+#: src/Pro/OrderPayLiveTotals.php:291
+msgid "No payment method given."
+msgstr ""
+
+#. translators: 1: Required PHP version number, 2: Current PHP version number, 3: URL of PHP update help page
+#: woocommerce-payforpayment.php:117
+#, php-format
+msgid "The plugin requires PHP version %1$s or higher. This site is running PHP version %2$s. <a href=\"%3$s\">Learn about updating PHP</a>."
+msgstr ""
+
+#. translators: %s: comma-separated list of missing file paths.
+#: woocommerce-payforpayment.php:168
+#, php-format
+msgid "Pay for Payment is missing a file it needs to run: %s. Re-installing the plugin restores it."
+msgid_plural "Pay for Payment is missing files it needs to run: %s. Re-installing the plugin restores them."
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce-payforpayment.php:327
+msgid "WooCommerce is not active, so no payment fees are being charged. Install and activate it — your fee settings are kept."
+msgstr ""
+
+#. translators: %s: Required WooCommerce version number
+#: woocommerce-payforpayment.php:410
+#, php-format
+msgid "The plugin requires WooCommerce version %s or higher. Please update WooCommerce!"
+msgstr ""
+
+#. translators: %d: number of stored extra fee tiers; <a> links to the Pro pricing page
+#: build/settings.js:2
+#, js-format
+msgid "%d more fee tier is stored for this method. It stays safe, but only <a>Pro</a> applies and edits it."
+msgid_plural "%d more fee tiers are stored for this method. They stay safe, but only <a>Pro</a> applies and edits them."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: <a> links to the Pro pricing page
+#: build/settings.js:3
+msgid "Need conditional fees, multiple tiers, the fee as a product line or fees on manual orders? That’s <a>Pro</a>."
+msgstr ""
+
+#: build/settings.js:3
+#: build/settings.js:4
+msgid "Pro"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Charge customers an extra fee based on the payment method they choose at checkout, or give them a discount instead."
+msgstr ""
+
+#: build/settings.js:3
+msgid "Documentation"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Support"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Suggest a feature"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Pay for Payment sections"
+msgstr ""
+
+#: build/settings.js:3
+#: build/settings.js:4
+msgid "General"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Account"
+msgstr ""
+
+#: build/settings.js:3
+msgid "Connect account"
+msgstr ""
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:4
+#, js-format
+msgid "%s off"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Upgrade"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Free trial"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Welcome back to Pro!"
+msgstr ""
+
+#: build/settings.js:4
+msgid "You already have Pro fee rules saved — extra tiers, conditional fees and store-wide fee options — and they're live again. Have a look below so nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+
+#: build/settings.js:4
+msgid "General settings"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Add the fee as"
+msgstr ""
+
+#: build/settings.js:4
+msgid "A fee line is WooCommerce’s standard way of adding an extra charge to an order. Only choose Product line if your accounting software can’t handle separate fee lines."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Fee line (recommended)"
+msgstr ""
+
+#: build/settings.js:4
+#: build/settings.js:19
+msgid "Product line"
+msgstr ""
+
+#: build/settings.js:4
+msgid "A hidden, virtual “Payment fee” product is created on first use. You may rename it or give it your own SKU — the fee amount and title always come from the fee settings."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Fee behaviour"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Charge the fee on manual & order-pay orders"
+msgstr ""
+
+#: build/settings.js:4
+msgid "WooCommerce only charges payment fees at checkout. Enable this to also charge the fee on orders you create in the admin, and when a customer pays from the order-pay page — for example after a failed payment with another method. When disabled, no fee is added on those pages, but a fee from an earlier method is still removed when the customer switches."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Show each method’s fee beside its name at checkout"
+msgstr ""
+
+#: build/settings.js:4
+msgid "With this enabled, each payment method shows its fee beside its own name, so the customer can compare before choosing; a method with no fee shows nothing. If disabled, the fee appears only once a method has been selected."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Do not show the fee on the cart page"
+msgstr ""
+
+#: build/settings.js:4
+msgid "With this enabled, the payment fee is only shown at checkout. If disabled, the cart may show a fee before the customer has chosen a payment method, since WooCommerce can default to one automatically. This setting only affects where the fee is shown; it does not change the amount charged."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Fixed fee"
+msgstr ""
+
+#: build/settings.js:4
+msgid "A fixed amount added to the cart when this payment method is selected."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Fees"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Coupons"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Shipping"
+msgstr ""
+
+#: build/settings.js:4
+#: build/settings.js:9
+msgid "Taxes"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Percentage fee"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Percentage of the cart total added to the cart."
+msgstr ""
+
+#: build/settings.js:4
+msgid "%"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Include in the percentage calculation"
+msgstr ""
+
+#: build/settings.js:4
+msgid "Minimum fee"
+msgstr ""
+
+#: build/settings.js:4
+msgid "The fee never drops below this amount. Enter 0 for no minimum."
+msgstr ""
+
+#: build/settings.js:4
+msgid "Maximum fee"
+msgstr ""
+
+#: build/settings.js:4
+msgid "The fee never exceeds this amount. Enter 0 for no maximum."
+msgstr ""
+
+#: build/settings.js:4
+msgid "the fixed charge, money-formatted"
+msgstr ""
+
+#: build/settings.js:4
+msgid "the percentage rate"
+msgstr ""
+
+#: build/settings.js:4
+msgid "the amount the percentage is calculated from, money-formatted"
+msgstr ""
+
+#: build/settings.js:4
+msgid "the minimum percentage fee, money-formatted"
+msgstr ""
+
+#: build/settings.js:4
+msgid "the maximum percentage fee, money-formatted"
+msgstr ""
+
+#. translators: %s: a placeholder token such as [FIXED_AMOUNT]
+#: build/settings.js:5
+#, js-format
+msgid "Insert %s"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Hide available placeholders"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Show available placeholders"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Click a placeholder to drop it where you left off in the label, or drag it into the field."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Example:"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Cart total"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Compare against the cart total the customer sees."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Coupon applied"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Coupon"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select or type coupon codes…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match applied coupon codes — typed codes and * patterns (SUMMER*, *SALE*) work too."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No coupons found in your store yet — you can still type codes or patterns like SUMMER*."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Shipping method"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select shipping methods…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match the chosen shipping method — one zone instance, or any instance of a method type."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No shipping methods are configured yet."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Shipping zone"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select shipping zones…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match the shipping zone serving the chosen shipping method."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No shipping zones are configured yet."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Shipping class in cart"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Shipping class"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select shipping classes…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match when a cart item has any of these shipping classes."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No shipping classes are configured yet."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Country / state"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Country"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select countries or states…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match the delivery country or state — a country also covers all its states."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No selling countries are configured yet."
+msgstr ""
+
+#: build/settings.js:5
+msgid "User role"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Role"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select user roles…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match the signed-in customer’s role."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No user roles found."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Product in cart"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Product"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Search products…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match when any of these products is in the cart."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Product category in cart"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Category"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Select categories…"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Match when the cart contains a product from any of these categories."
+msgstr ""
+
+#: build/settings.js:5
+msgid "No product categories found."
+msgstr ""
+
+#: build/settings.js:5
+msgid "Matches"
+msgstr ""
+
+#: build/settings.js:5
+msgid "Excludes"
+msgstr ""
+
+#: build/settings.js:5
+msgid "At least"
+msgstr ""
+
+#: build/settings.js:5
+msgid "At most"
+msgstr ""
+
+#: build/settings.js:5
+msgid "of cart totals"
+msgstr ""
+
+#: build/settings.js:5
+msgid "min."
+msgstr ""
+
+#: build/settings.js:5
+msgid "max."
+msgstr ""
+
+#. translators: 1: first few values, 2: count of remaining
+#: build/settings.js:6
+#, js-format
+msgid "%1$s +%2$d"
+msgstr ""
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:7
+#, js-format
+msgid "%1$s: not %2$s"
+msgstr ""
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:8
+#, js-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: build/settings.js:8
+msgid "No fee set yet"
+msgstr ""
+
+#: build/settings.js:9
+msgid "When:"
+msgstr ""
+
+#: build/settings.js:9
+msgid "When all match:"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Fee label"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Shown to customers on the checkout page."
+msgstr ""
+
+#: build/settings.js:9
+msgid "Inherit from cart items"
+msgstr ""
+
+#: build/settings.js:9
+msgid "One of this method’s fees is negative. WooCommerce treats a negative fee as a discount and works its tax out from the cart items, so these settings do not apply to it."
+msgstr ""
+
+#: build/settings.js:9
+msgid "Payment fee is taxable"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Fee amount already includes tax"
+msgstr ""
+
+#: build/settings.js:9
+msgid "When unchecked, tax is calculated on top of the fee."
+msgstr ""
+
+#: build/settings.js:9
+msgid "Tax class"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Tax class applied to the fee."
+msgstr ""
+
+#: build/settings.js:9
+msgid "Free shipping is chosen"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Shipping costs nothing"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Don’t charge the fee when"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Loading…"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Amount"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Conditions"
+msgstr ""
+
+#: build/settings.js:9
+msgid "No conditions — this fee applies to every order."
+msgstr ""
+
+#: build/settings.js:9
+msgid "The fee applies when all conditions match."
+msgstr ""
+
+#: build/settings.js:9
+msgid "Condition"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Mode"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Values"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Remove condition"
+msgstr ""
+
+#: build/settings.js:9
+msgid "Add condition"
+msgstr ""
+
+#. translators: %s: fee name
+#: build/settings.js:10
+#, js-format
+msgid "Reorder %s. Use the arrow keys to move it."
+msgstr ""
+
+#: build/settings.js:10
+msgid "Remove fee"
+msgstr ""
+
+#. translators: 1: new position, 2: total number of fees
+#: build/settings.js:11
+#, js-format
+msgid "Fee moved to position %1$d of %2$d"
+msgstr ""
+
+#: build/settings.js:11
+msgid "Fees are evaluated top to bottom — the first one whose conditions match the order is charged."
+msgstr ""
+
+#: build/settings.js:11
+msgid "Add fee"
+msgstr ""
+
+#: build/settings.js:11
+msgid "Remove"
+msgstr ""
+
+#: build/settings.js:11
+msgid "Cancel"
+msgstr ""
+
+#. translators: %s: fee label
+#: build/settings.js:12
+#, js-format
+msgid "Remove “%s”?"
+msgstr ""
+
+#. translators: %s: payment method title
+#: build/settings.js:13
+#, js-format
+msgid "Customers paying with %s will no longer be charged this fee."
+msgstr ""
+
+#: build/settings.js:13
+#: build/settings.js:16
+msgid "Fee active"
+msgstr ""
+
+#: build/settings.js:13
+#: build/settings.js:16
+msgid "No fee"
+msgstr ""
+
+#: build/settings.js:13
+msgid "This payment method is currently not active in WooCommerce, but you can still set the extra fee."
+msgstr ""
+
+#: build/settings.js:13
+msgid "Extra fee"
+msgstr ""
+
+#. translators: %s: payment method title
+#: build/settings.js:14
+#, js-format
+msgid "Charge an extra fee when customers pay with %s"
+msgstr ""
+
+#: build/settings.js:14
+msgid "Payment methods"
+msgstr ""
+
+#. translators: %s: payment method title
+#: build/settings.js:15
+#, js-format
+msgid "— %s has a fee"
+msgstr ""
+
+#. translators: %s: payment method title
+#: build/settings.js:16
+#, js-format
+msgid "— %s has no fee"
+msgstr ""
+
+#: build/settings.js:16
+msgid "cart total"
+msgstr ""
+
+#: build/settings.js:16
+msgid "coupon"
+msgstr ""
+
+#: build/settings.js:16
+msgid "product"
+msgstr ""
+
+#: build/settings.js:16
+msgid "category"
+msgstr ""
+
+#: build/settings.js:16
+msgid "country or state"
+msgstr ""
+
+#: build/settings.js:16
+msgid "user role"
+msgstr ""
+
+#: build/settings.js:16
+msgid "shipping method"
+msgstr ""
+
+#: build/settings.js:16
+msgid "shipping zone"
+msgstr ""
+
+#: build/settings.js:16
+msgid "shipping class"
+msgstr ""
+
+#: build/settings.js:16
+msgid "Pay for Payment Pro"
+msgstr ""
+
+#: build/settings.js:16
+msgid "Do more with PRO"
+msgstr ""
+
+#: build/settings.js:16
+msgid "Everything free does, plus rules & automation."
+msgstr ""
+
+#. translators: 1: star rating, 2: active install count
+#: build/settings.js:17
+#, js-format
+msgid "%1$s · %2$s active installs"
+msgstr ""
+
+#: build/settings.js:17
+msgid "Conditional fees"
+msgstr ""
+
+#: build/settings.js:17
+msgid "Charge only when it fits."
+msgstr ""
+
+#. translators: %s: an example cart amount, e.g. "5 000 Kč"
+#: build/settings.js:18
+#, js-format
+msgid "if cart > %s"
+msgstr ""
+
+#. translators: %s: an example fee percentage such as "2%"
+#: build/settings.js:19
+#, js-format
+msgctxt "Pro feature example chip"
+msgid "%s fee"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Match by"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Multiple fee tiers"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Stack more than one fee rule per payment method."
+msgstr ""
+
+#: build/settings.js:19
+msgid "Fee 1"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Fee 2"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Fee as a product line"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Write the fee as a product instead of a fee line, for invoicing and ERP exports that skip fee lines."
+msgstr ""
+
+#: build/settings.js:19
+msgid "Display controls"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Hide the fee on the cart, or show each method’s fee beside its name at checkout."
+msgstr ""
+
+#: build/settings.js:19
+msgid "Cart: hidden"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Fees on manual & order-pay orders"
+msgstr ""
+
+#: build/settings.js:19
+msgid "Charge the fee beyond checkout — on the order-pay page and on orders you create by hand."
+msgstr ""
+
+#: build/settings.js:19
+msgid "Upgrade to PRO"
+msgstr ""
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:20
+#, js-format
+msgid "Launch offer — %s off with code"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Keep free forever — upgrade any time."
+msgstr ""
+
+#: build/settings.js:20
+msgid "Questions or a feature request?"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Pro customers get direct support from me — write any time. You can reach out at the <a>support forum</a>."
+msgstr ""
+
+#: build/settings.js:20
+msgid "Loading payment methods…"
+msgstr ""
+
+#: build/settings.js:20
+msgid "No payment methods found"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Fees are set per payment method. Add and enable payment methods in WooCommerce first, then come back here to charge a fee for them."
+msgstr ""
+
+#: build/settings.js:20
+msgid "Manage payment methods"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Payment methods could not be loaded. Reload the page to try again."
+msgstr ""
+
+#: build/settings.js:20
+msgid "None of your payment methods is enabled in WooCommerce yet. You can still set up fees now — they apply as soon as a method is enabled. <a>Manage payment methods</a>"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Save changes"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Please fix the validation errors above before saving."
+msgstr ""
+
+#: build/settings.js:20
+msgid "Unsaved changes"
+msgstr ""
+
+#: build/settings.js:20
+msgid "No changes to save"
+msgstr ""
+
+#: build/settings.js:20
+msgid "Settings saved."
+msgstr ""
+
+#. translators: %s: the field messages, one per problem
+#: build/settings.js:21
+#, js-format
+msgid "Validation failed: %s"
+msgstr ""
+
+#: build/settings.js:21
+msgid "Something went wrong"
+msgstr ""
+
+#: build/settings.js:21
+msgid "An error occurred while loading the settings. Please try reloading the page."
+msgstr ""
+
+#: build/settings.js:21
+msgid "Reload Page"
+msgstr ""
+
+#: build/settings.js:21
+msgid "Try Again"
 msgstr ""

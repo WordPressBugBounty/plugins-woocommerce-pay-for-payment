@@ -1,13 +1,13 @@
-# Translation of Plugins - WooCommerce Pay for Payment - Development (trunk) in Dutch
-# This file is distributed under the same license as the Plugins - WooCommerce Pay for Payment - Development (trunk) package.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Plugins - WooCommerce Pay for Payment - Development "
 "(trunk)\n"
-"POT-Creation-Date: 2018-10-13 22:05+0200\n"
-"PO-Revision-Date: 2018-10-13 22:13+0200\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Report-Msgid-Bugs-To: https://kybernaut.cz/kontakt/\n"
+"POT-Creation-Date: 2026-09-23T15:42:14+02:00\n"
+"PO-Revision-Date: 2026-08-19 10:30+0200\n"
+"Last-Translator: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
+"Language-Team: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,233 +15,1524 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 2.2\n"
 
-#: inc/class-pay4pay-admin.php:44 inc/class-pay4pay.php:62
-#, php-format
-msgid ""
-"WooCommerce Pay4Payment requires at least WooCommerce %s. Please update!"
+#. Plugin Name of the plugin
+#: woocommerce-payforpayment.php
+msgid "Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts"
 msgstr ""
-"WooCommerce Pay4Payment vereist tenminste WooCommerce versie %s. Update!"
+"Pay for Payment for WooCommerce – toeslagen en kortingen per betaalmethode"
 
-#: inc/class-pay4pay-admin.php:62 inc/class-pay4pay-admin.php:331
-#: inc/class-pay4pay.php:22
-msgid "Extra Charge"
-msgstr "Toeslag"
+#. Plugin URI of the plugin
+#: woocommerce-payforpayment.php
+msgid "https://payforpayment.com/"
+msgstr "https://payforpayment.com/"
 
-#: inc/class-pay4pay-admin.php:68
-msgid "Item Title"
-msgstr "Item titel"
-
-#: inc/class-pay4pay-admin.php:70
-msgid "This will show up in the shopping basket."
-msgstr "Dit zal verschijnen in het winkelmandje."
-
-#: inc/class-pay4pay-admin.php:74
-msgid "Fixed charge"
-msgstr "Vast bedrag"
-
-#: inc/class-pay4pay-admin.php:76
-msgid "Extra charge to be added to cart when this payment method is selected."
-msgstr "Toeslag wanneer deze betaalmethode is geselecteerd."
-
-#: inc/class-pay4pay-admin.php:83
-msgid "Percent charge"
-msgstr "Toeslag percentage"
-
-#: inc/class-pay4pay-admin.php:85
-msgid "Percentage of cart total to be added to payment."
-msgstr "Percentage op totaalbedrag toegevoegd aan de betaling."
-
-#: inc/class-pay4pay-admin.php:96
-msgid "Charge at least"
-msgstr "Minimum toeslag"
-
-#: inc/class-pay4pay-admin.php:98
+#. Description of the plugin
+#: woocommerce-payforpayment.php
 msgid ""
-"Minimum extra charge to be added to cart when this payment method is "
-"selected."
-msgstr "Minimum toeslag wanneer deze betaalmethode is geselecteerd."
-
-#: inc/class-pay4pay-admin.php:106
-msgid "Charge at most"
-msgstr "Maximum toeslag"
-
-#: inc/class-pay4pay-admin.php:108
-msgid ""
-"Maximum extra charge to be added to cart when this payment method is "
-"selected. Enter zero to disable."
+"Charge a fee or give a discount on any WooCommerce payment method. Fixed or "
+"percentage, tax aware, with min and max caps."
 msgstr ""
-"Maximum toeslag wanneer deze betaalmethode is geselecteerd. Voer nul in om "
-"uit te schakelen."
+"Reken een toeslag of geef een korting bij elke WooCommerce-betaalmethode. "
+"Vast of procentueel, btw-bewust, met een minimum en maximum."
 
-#: inc/class-pay4pay-admin.php:116
-msgid "Disable on Free Shipping"
-msgstr "Uitschakelen bij gratis verzending"
-
-#: inc/class-pay4pay-admin.php:117
-msgid "Don’t charge this fee when free shipping is available."
-msgstr "Deze toeslag niet verrekenen wanneer gratis verzending beschikbaar is."
-
-#: inc/class-pay4pay-admin.php:122
-msgid "Disable on Zero Shipping"
-msgstr "Uitschakelen bij gratis verzending"
-
-#: inc/class-pay4pay-admin.php:123
-msgid "Don’t charge this fee when zero shipping is available."
-msgstr "Deze toeslag niet berekenen als gratis verzending beschikbaar is."
-
-#: inc/class-pay4pay-admin.php:133
-msgid "Extra Charge Taxes"
-msgstr "Toeslag belasting"
-
-#: inc/class-pay4pay-admin.php:138
-msgid "Taxable"
-msgstr "Belastbaar"
-
-#: inc/class-pay4pay-admin.php:140
-msgid "Payment fee is taxable"
-msgstr "Toeslag is belastbaar"
-
-#: inc/class-pay4pay-admin.php:147
-msgid "Inclusive Taxes"
-msgstr "Inclusief belasting"
-
-#: inc/class-pay4pay-admin.php:149
-msgid "The payment fee is inclusive of taxes."
-msgstr "De toeslag is inclusief belasting."
-
-#: inc/class-pay4pay-admin.php:150
-msgid ""
-"If you leave this unchecked taxes will be calculated on top of the payment "
-"fee."
-msgstr ""
-"Indien je dit niet aanvinkt, wordt belasting toegevoegd bovenop de toeslag."
-
-#: inc/class-pay4pay-admin.php:156
-msgid "Tax class"
-msgstr "Belastingklasse"
-
-#: inc/class-pay4pay-admin.php:158
-msgid "Select a the tax class applied to the extra charge."
-msgstr "Selecteer een belastingsklasse om toe te passen op de toeslag."
-
-#: inc/class-pay4pay-admin.php:171
-msgid "Include in percental payment fee calculation:"
-msgstr "Opnemen in berekening van percentage-gebaseerde toeslag:"
-
-#: inc/class-pay4pay-admin.php:177
-msgid "Fees"
-msgstr "Toeslagen"
-
-#: inc/class-pay4pay-admin.php:179
-msgid "Include fees in calculation."
-msgstr "Toeslagen opnemen in berekening."
-
-#: inc/class-pay4pay-admin.php:185
-msgid "Coupons"
-msgstr "Kortingsbonnen"
-
-#: inc/class-pay4pay-admin.php:187
-msgid "Include Coupons in calculation."
-msgstr "Kortingsbonnen opnemen in berekening."
-
-#: inc/class-pay4pay-admin.php:193
-msgid "Shipping"
-msgstr "Verzending"
-
-#: inc/class-pay4pay-admin.php:195
-msgid "Include shipping cost in calculation."
-msgstr "Verzendkosten opnemen in berekening."
-
-#: inc/class-pay4pay-admin.php:204
-msgid "Taxes"
-msgstr "Belasting"
-
-#: inc/class-pay4pay-admin.php:206
-msgid "Include taxes in calculation."
-msgstr "Belasting opnemen in berekening."
-
-#: inc/class-pay4pay-admin.php:296
-#, fuzzy
-#| msgid ""
-#| "There has been an error witin the WooCommerce Pay for Payment plugin and "
-#| "settings can't be saved."
-msgid ""
-"There has been an error within the WooCommerce Pay for Payment plugin and "
-"settings can't be saved."
-msgstr ""
-"Er heeft zich een fout voorgedaan in de WooCommerce Pay for Payment plugin "
-"en instellingen konden niet opgeslagen worden."
-
-#: inc/class-pay4pay-admin.php:296
-#, fuzzy, php-format
-#| msgid ""
-#| "To fix the issue, contact the plugin author either on %sGithub%s or "
-#| "%sWordpress.org%s and provide following information:"
-msgid ""
-"To fix the issue, contact the plugin author either on %sGithub%s or "
-"%sWordPress.org%s and provide following information:"
-msgstr ""
-"Om het probleem op te lossen, neem contact op met de plugin ontwikkelaar of "
-"op %sGithub%s of %sWordPress.org%s en geef de volgende informatie:"
-
-#: inc/class-pay4pay-admin.php:298
-msgid ""
-"Name of the payment method you are trying to save and the URL where it can "
-"be downloaded for testing."
-msgstr ""
-"Naam van de betaalmethode die je wilt opslaan en de URL waar het kan worden "
-"gedownload om te testen."
-
-#: inc/class-pay4pay-admin.php:299
-msgid "Current section ID:"
-msgstr "Huidige sectie ID:"
-
-#: inc/class-pay4pay-admin.php:300
-msgid "Anything else might be helpful (recently added/updated plugins, etc.)."
-msgstr ""
-"Andere informatie kan behulpzaam zijn (recente toegevoegde/geüpdate plugins, "
-"etc.)."
-
-#: inc/class-pay4pay-admin.php:344
-#, php-format
-msgctxt "Gateway list column"
-msgid "%s %% of cart totals"
-msgstr "%s %% van winkelmand-totalen"
-
-#: inc/class-pay4pay.php:274
-msgid "Standard"
-msgstr "Standaard"
-
-#. Plugin Name of the plugin/theme
-#: woocommerce-payforpayment.php:47
-msgid "WooCommerce Pay for Payment"
-msgstr "WooCommerce Pay for Payment"
-
-#: woocommerce-payforpayment.php:48
-msgid "WooCommerce"
-msgstr "WooCommerce"
-
-#: woocommerce-payforpayment.php:51
-#, php-format
-msgid ""
-"%1$s requires %2$s. Please activate %2$s before activation of %1$s. This "
-"plugin has been deactivated."
-msgstr ""
-"%1$s vereist %2$s. Activeer %2$s alvorens %1$s te activeren. Deze plugin is "
-"gedeactiveerd."
-
-#. Plugin URI of the plugin/theme
-msgid "https://wordpress.org/plugins/woocommerce-pay-for-payment/"
-msgstr "https://nl.wordpress.org/plugins/woocommerce-pay-for-payment/"
-
-#. Description of the plugin/theme
-msgid "Setup individual charges for each payment method in WooCommerce."
-msgstr "Stel individuele toeslagen in voor elke betaalmethode in WooCommerce."
-
-#. Author of the plugin/theme
+#. Author of the plugin
+#: woocommerce-payforpayment.php
 msgid "Karolína Vyskočilová"
 msgstr "Karolína Vyskočilová"
 
-#. Author URI of the plugin/theme
+#. Author URI of the plugin
+#: woocommerce-payforpayment.php
 msgid "https://kybernaut.cz"
 msgstr "https://kybernaut.cz"
+
+#. translators: %s: plugin name.
+#: src/Admin.php:305
+#, php-format
+msgid "Thank you for using %s!"
+msgstr "Bedankt dat je %s gebruikt!"
+
+#. translators: 1: plugin name, 2: five-star rating link.
+#: src/Admin.php:312
+#, php-format
+msgid ""
+"If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
+msgstr ""
+"Als %1$s je bevalt, laat ons dan een %2$s-beoordeling achter. Alvast heel "
+"erg bedankt!"
+
+#. translators: %s: plugin version.
+#: src/Admin.php:328
+#, php-format
+msgid "Version %s"
+msgstr "Versie %s"
+
+#: src/Admin.php:339
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/Admin/AdminPostActions.php:43
+msgid "You are not allowed to do this."
+msgstr "Je hebt geen rechten om dit te doen."
+
+#. translators: 1: filter name, 2: comma-separated payment method names.
+#: src/Admin/LegacyFilterNotice.php:80
+#, php-format
+msgid ""
+"Code on this site filters %1$s for payment methods whose fee is switched off "
+"here, so it cannot charge anything: %2$s. Switch a method on — leaving its "
+"amounts at zero — to let your code set the fee."
+msgstr ""
+"Code op deze site filtert %1$s voor betaalmethoden waarvan de toeslag hier "
+"uit staat, dus die kan niets in rekening brengen: %2$s. Zet een methode aan "
+"— de bedragen mogen op nul blijven — zodat je code de toeslag kan instellen."
+
+#: src/Admin/OptinNotice.php:73
+msgid "One more thing."
+msgstr "Nog één ding."
+
+
+#: src/Admin/OptinNotice.php:74
+msgid ""
+"Sharing basic usage data tells me which gateways and settings people "
+"actually use, and it is how you get security and update notices."
+msgstr "Het delen van basisgebruiksgegevens laat me zien welke betaalmethoden en instellingen echt gebruikt worden, en zo krijg je meldingen over beveiliging en updates."
+
+
+#: src/Admin/OptinNotice.php:77
+msgid "Opt in"
+msgstr "Akkoord"
+
+#: src/Admin/OptinNotice.php:79
+msgid "No thanks"
+msgstr "Nee, bedankt"
+
+
+#: src/Admin/RestApi.php:154
+msgid "Invalid parameters"
+msgstr "Ongeldige parameters"
+
+#: src/Admin/RestApi.php:198
+msgid "Validation failed. Please check your input and try again."
+msgstr "Validatie mislukt. Controleer je invoer en probeer het opnieuw."
+
+#: src/Admin/Settings.php:317 build/settings.js:3 build/settings.js:16
+msgid "Pay for Payment"
+msgstr "Pay for Payment"
+
+#. translators: %s: payment method title
+#: src/Admin/SettingsSerializer.php:327 build/settings.js:9
+#, php-format
+msgid "%s fee"
+msgstr "Toeslag – %s"
+
+#: src/Admin/SettingsValidator.php:124
+msgid "Enabled methods must be a list of payment method ids"
+msgstr ""
+"Ingeschakelde methoden moeten een lijst met ID's van betaalmethoden zijn"
+
+#: src/Admin/SettingsValidator.php:128
+msgid "Invalid fee line type"
+msgstr "Ongeldig type toeslagregel"
+
+#: src/Admin/SettingsValidator.php:151
+msgid "Fee tiers must be a list"
+msgstr "Toeslagniveaus moeten een lijst zijn"
+
+#. translators: %d: maximum number of fee tiers per payment method
+#: src/Admin/SettingsValidator.php:157
+#, php-format
+msgid "A payment method can have at most %d fee tiers"
+msgstr "Een betaalmethode kan maximaal %d toeslagniveaus hebben"
+
+#: src/Admin/SettingsValidator.php:166
+msgid "Tier must be an object"
+msgstr "Het toeslagniveau moet een object zijn"
+
+#: src/Admin/SettingsValidator.php:206 build/settings.js:5
+msgid "Fixed fee must be a valid number"
+msgstr "Vaste toeslag moet een geldig getal zijn"
+
+#: src/Admin/SettingsValidator.php:207 build/settings.js:5
+msgid "Percentage fee must be a valid number"
+msgstr "Procentuele toeslag moet een geldig getal zijn"
+
+#: src/Admin/SettingsValidator.php:208 build/settings.js:5
+msgid "Minimum fee must be a valid number"
+msgstr "Minimale toeslag moet een geldig getal zijn"
+
+#: src/Admin/SettingsValidator.php:209 build/settings.js:5
+msgid "Maximum fee must be a valid number"
+msgstr "Maximale toeslag moet een geldig getal zijn"
+
+#: src/Admin/SettingsValidator.php:261 build/settings.js:9
+msgid "Conditions must be a list"
+msgstr "Voorwaarden moeten een lijst zijn"
+
+#. translators: %d: maximum number of conditions per fee tier
+#: src/Admin/SettingsValidator.php:267
+#, php-format
+msgid "A fee tier can have at most %d conditions"
+msgstr "Een toeslagniveau kan maximaal %d voorwaarden hebben"
+
+#: src/Admin/SettingsValidator.php:298 build/settings.js:9
+msgid "Condition must be an object"
+msgstr "Voorwaarde moet een object zijn"
+
+#: src/Admin/SettingsValidator.php:305 build/settings.js:9
+msgid "Condition type must be a non-empty string"
+msgstr "Voorwaardetype moet een niet-lege tekenreeks zijn"
+
+#: src/Admin/SettingsValidator.php:315 build/settings.js:9
+msgid "Invalid operator for this condition type"
+msgstr "Ongeldige operator voor dit voorwaardetype"
+
+#: src/Admin/SettingsValidator.php:321 build/settings.js:9
+msgid "Cart total condition value must be a valid number"
+msgstr ""
+"De waarde van de winkelwagentotaal-voorwaarde moet een geldig getal zijn"
+
+#: src/Admin/SettingsValidator.php:323 build/settings.js:9
+msgid "Cart total condition value cannot be negative"
+msgstr "De waarde van de winkelwagentotaal-voorwaarde kan niet negatief zijn"
+
+#: src/Admin/SettingsValidator.php:326 build/settings.js:9
+msgid "Condition value must be a non-empty list of choices"
+msgstr "De voorwaardewaarde moet een niet-lege lijst met keuzes zijn"
+
+#. translators: %d: maximum number of values per condition
+#: src/Admin/SettingsValidator.php:330
+#, php-format
+msgid "A condition can list at most %d values"
+msgstr "Een voorwaarde kan maximaal %d waarden bevatten"
+
+#: src/Admin/SettingsValidator.php:359 build/settings.js:5
+msgid "Maximum fee must be greater than or equal to minimum fee"
+msgstr ""
+"Maximale toeslag moet groter dan of gelijk aan de minimale toeslag zijn"
+
+#: src/Admin/SettingsValidator.php:381
+msgid "Fee label must be a string"
+msgstr "Naam van de toeslag moet een tekenreeks zijn"
+
+#: src/Admin/SettingsValidator.php:387 build/settings.js:5
+msgid "Fee label cannot be empty"
+msgstr "Naam van de toeslag mag niet leeg zijn"
+
+#: src/Admin/SettingsValidator.php:391 build/settings.js:5
+msgid "Fee label is too long (maximum 200 characters)"
+msgstr "Naam van de toeslag is te lang (maximaal 200 tekens)"
+
+#: src/Admin/UpgradeNotice.php:74
+msgid "Welcome to the new Pay for Payment."
+msgstr "Welkom bij het nieuwe Pay for Payment."
+
+#. translators: %s: comma-separated payment method names.
+#: src/Admin/UpgradeNotice.php:77
+#, php-format
+msgid ""
+"Your fee settings for %s were carried over automatically, so there is "
+"nothing to reconfigure, but you might want to double-check."
+msgstr ""
+"Je toeslaginstellingen voor %s zijn automatisch overgenomen, dus je hoeft "
+"niets opnieuw in te stellen, maar een controle is nooit verkeerd."
+
+#: src/Admin/UpgradeNotice.php:84
+msgid "Go to settings"
+msgstr "Ga naar instellingen"
+
+#: src/Admin/UpgradeNotice.php:86
+msgid "Dismiss this notice"
+msgstr "Verberg deze melding"
+
+#: src/Admin/UpgradeNotice.php:167
+msgid ""
+"P.S. I’ve built the features people asked for most: fee rules by cart total, "
+"country or shipping method, several fee tiers per payment method, and the "
+"fee as a product line for invoicing. They live in Pro, and buying it is what "
+"pays for the work on the free plugin — thank you for considering it."
+msgstr ""
+"P.S. Ik heb de functies gebouwd waar het vaakst om is gevraagd: "
+"toeslagregels op basis van winkelwagentotaal, land of verzendmethode, "
+"meerdere toeslagniveaus per betaalmethode en de toeslag als productregel "
+"voor facturatie. Ze zitten in Pro, en met die aankoop betaal je het werk aan "
+"de gratis plugin — bedankt dat je het overweegt."
+
+#. translators: 1: discount, e.g. "50%"; 2: coupon code.
+#: src/Admin/UpgradeNotice.php:174
+#, php-format
+msgid "While the launch offer lasts it is %1$s off with the code %2$s."
+msgstr ""
+"Zolang de introductieaanbieding loopt, krijg je %1$s korting met de code "
+"%2$s."
+
+#: src/Admin/UpgradeNotice.php:184
+msgid "Take a look at Pro"
+msgstr "Bekijk Pro"
+
+#: src/Deprecated/class-pay4pay.php:58
+msgid "Payment fee tax class based on cart items"
+msgstr ""
+"Belastingklasse van de toeslag op basis van de artikelen in de winkelwagen"
+
+#. translators: %s: the order's currency code, e.g. EUR.
+#: src/Integrations/WooMultiCurrency.php:106
+#, php-format
+msgid ""
+"No payment fee was added: the active multi-currency plugin does not convert "
+"amounts in the admin, and this order is in %s rather than the shop currency. "
+"Add the fee by hand if it is due."
+msgstr ""
+"Er is geen betaaltoeslag toegevoegd: de actieve multivaluta-plugin rekent "
+"bedragen in de beheeromgeving niet om, en deze bestelling staat in %s in "
+"plaats van de winkelvaluta. Voeg de toeslag handmatig toe als die van "
+"toepassing is."
+
+#. translators: 1: fee line title(s), 2: payment method the fee belongs to, 3: order total once the fee is removed.
+#: src/OrderFeeSync.php:209
+#, php-format
+msgid ""
+"“%1$s” applies to %2$s. Pay with another method and it is removed — your "
+"total is then %3$s."
+msgstr ""
+"‘%1$s’ geldt voor %2$s. Betaal je met een andere methode, dan vervalt de "
+"toeslag — je totaal is dan %3$s."
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:473
+#, php-format
+msgid "\"%s\" removed"
+msgstr "'%s' verwijderd"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:483
+#, php-format
+msgid "\"%s\" updated"
+msgstr "'%s' bijgewerkt"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:494
+#, php-format
+msgid "\"%s\" added"
+msgstr "'%s' toegevoegd"
+
+#. translators: 1: where the sync ran (order-pay page / admin / checkout), 2: what changed.
+#: src/OrderFeeSync.php:525
+#, php-format
+msgid "Payment fee synced (%1$s): %2$s."
+msgstr "Betaaltoeslag gesynchroniseerd (%1$s): %2$s."
+
+#: src/OrderFeeSync.php:542
+msgid "admin order edit"
+msgstr "bestelling bewerken in beheer"
+
+#: src/OrderFeeSync.php:545
+msgid "blocks checkout"
+msgstr "blokken-afrekenpagina"
+
+#: src/OrderFeeSync.php:548
+msgid "order-pay page"
+msgstr "pagina bestelling betalen"
+
+#: src/PlanReview.php:198
+msgid "Welcome back to Pay for Payment Pro!"
+msgstr "Welkom terug bij Pay for Payment Pro!"
+
+#: src/PlanReview.php:199
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again now that Pro is active. Take "
+"a quick look so nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Je hebt al Pro-toeslagregels opgeslagen — extra niveaus, voorwaardelijke "
+"toeslagen en instellingen voor de hele winkel — en ze werken weer nu Pro "
+"actief is. Bekijk ze even, zodat er bij het afrekenen of op nieuwe "
+"bestellingen niets onverwachts opduikt."
+
+#: src/PlanReview.php:202
+msgid "Review my fee settings"
+msgstr "Mijn toeslaginstellingen bekijken"
+
+#: src/PlanReview.php:204 build/settings.js:4
+msgid "Yes, I've reviewed — hide this notice"
+msgstr "Bekeken — verberg deze melding"
+
+#: src/Pro/DisplayControls.php:307
+msgid "Fee preview per payment gateway id."
+msgstr "Voorbeeld van de toeslag per betaalgateway-ID."
+
+#. translators: %s: payment fee amount, shown beside the payment method.
+#: src/Pro/FeeHintFormatter.php:159
+#, php-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#. translators: %s: order total including this method's payment fee.
+#: src/Pro/FeeHintFormatter.php:186
+#, php-format
+msgid "Total with this method: %s"
+msgstr "Totaal met deze methode: %s"
+
+#. translators: %s: order total without any payment fee.
+#: src/Pro/FeeHintFormatter.php:202
+#, php-format
+msgid "No payment fee · Total with this method: %s"
+msgstr "Geen betaaltoeslag · Totaal met deze methode: %s"
+
+#. translators: %d: number of days the watchdog sampled.
+#: src/Pro/FeeWatchdog.php:355
+#, php-format
+msgid "the last %d day"
+msgid_plural "the last %d days"
+msgstr[0] "de laatste %d dag"
+msgstr[1] "de laatste %d dagen"
+
+#. translators: 1: orders without the fee, 2: orders checked.
+#: src/Pro/FeeWatchdog.php:366
+#, php-format
+msgid "%1$d of %2$d recent orders is missing the configured payment fee."
+msgid_plural ""
+"%1$d of %2$d recent orders are missing the configured payment fee."
+msgstr[0] ""
+"Bij %1$d van %2$d recente bestellingen ontbreekt de ingestelde betaaltoeslag."
+msgstr[1] ""
+"Bij %1$d van %2$d recente bestellingen ontbreekt de ingestelde betaaltoeslag."
+
+#: src/Pro/FeeWatchdog.php:375
+msgid "Pay for Payment: orders may be missing payment fees."
+msgstr "Pay for Payment: bij bestellingen ontbreken mogelijk betaaltoeslagen."
+
+#. translators: %s: sampled period ("the last 7 days").
+#: src/Pro/FeeWatchdog.php:378
+#, php-format
+msgid ""
+"Orders placed over %s were paid with the methods below but carry no payment "
+"fee, although the current fee settings would charge one. A plugin conflict "
+"or a recent update may be dropping the fee silently."
+msgstr ""
+"Bestellingen uit %s zijn betaald met onderstaande methoden maar hebben geen "
+"betaaltoeslag, terwijl de huidige instellingen er wel een zouden berekenen. "
+"Mogelijk laat een pluginconflict of een recente update de toeslag stilletjes "
+"vallen."
+
+#: src/Pro/FeeWatchdog.php:383
+msgid "Review fee settings"
+msgstr "Toeslaginstellingen bekijken"
+
+#: src/Pro/FeeWatchdog.php:385
+msgid "This is expected — don't warn again for this configuration"
+msgstr "Dit klopt — niet meer waarschuwen bij deze configuratie"
+
+#: src/Pro/ManagedFeeProduct.php:167
+msgid "Payment fee"
+msgstr "Betaaltoeslag"
+
+#: src/Pro/OrderPayLiveTotals.php:282
+msgid "No fee preview is available for this order."
+msgstr "Voor deze bestelling is geen voorbeeld van de toeslag beschikbaar."
+
+#: src/Pro/OrderPayLiveTotals.php:291
+msgid "No payment method given."
+msgstr "Geen betaalmethode opgegeven."
+
+#. translators: 1: Required PHP version number, 2: Current PHP version number, 3: URL of PHP update help page
+#: woocommerce-payforpayment.php:117
+#, php-format
+msgid ""
+"The plugin requires PHP version %1$s or higher. This site is running PHP "
+"version %2$s. <a href=\"%3$s\">Learn about updating PHP</a>."
+msgstr ""
+"De plugin vereist PHP-versie %1$s of hoger. Deze site draait op PHP-versie "
+"%2$s. <a href=\"%3$s\">Lees hoe je PHP bijwerkt</a>."
+
+#. translators: %s: comma-separated list of missing file paths.
+#: woocommerce-payforpayment.php:168
+#, php-format
+msgid ""
+"Pay for Payment is missing a file it needs to run: %s. Re-installing the "
+"plugin restores it."
+msgid_plural ""
+"Pay for Payment is missing files it needs to run: %s. Re-installing the "
+"plugin restores them."
+msgstr[0] ""
+"Pay for Payment mist een bestand dat het nodig heeft om te werken: %s. De "
+"plugin opnieuw installeren herstelt het."
+msgstr[1] ""
+"Pay for Payment mist bestanden die het nodig heeft om te werken: %s. De "
+"plugin opnieuw installeren herstelt ze."
+
+#: woocommerce-payforpayment.php:327
+msgid ""
+"WooCommerce is not active, so no payment fees are being charged. Install and "
+"activate it — your fee settings are kept."
+msgstr ""
+"WooCommerce is niet actief, dus er worden geen betaaltoeslagen berekend. "
+"Installeer en activeer het — je toeslaginstellingen blijven behouden."
+
+#. translators: %s: Required WooCommerce version number
+#: woocommerce-payforpayment.php:410
+#, php-format
+msgid ""
+"The plugin requires WooCommerce version %s or higher. Please update "
+"WooCommerce!"
+msgstr ""
+"De plugin vereist WooCommerce-versie %s of hoger. Werk WooCommerce bij!"
+
+#. translators: %d: number of stored extra fee tiers; <a> links to the Pro pricing page
+#: build/settings.js:2
+msgid ""
+"%d more fee tier is stored for this method. It stays safe, but only <a>Pro</"
+"a> applies and edits it."
+msgid_plural ""
+"%d more fee tiers are stored for this method. They stay safe, but only "
+"<a>Pro</a> applies and edits them."
+msgstr[0] ""
+"Voor deze methode is nog %d toeslagniveau opgeslagen. Het blijft bewaard, "
+"maar alleen <a>Pro</a> past het toe en bewerkt het."
+msgstr[1] ""
+"Voor deze methode zijn nog %d toeslagniveaus opgeslagen. Ze blijven bewaard, "
+"maar alleen <a>Pro</a> past ze toe en bewerkt ze."
+
+#. translators: <a> links to the Pro pricing page
+#: build/settings.js:3
+msgid ""
+"Need conditional fees, multiple tiers, the fee as a product line or fees on "
+"manual orders? That’s <a>Pro</a>."
+msgstr ""
+"Heb je voorwaardelijke toeslagen, meerdere niveaus, de toeslag als "
+"productregel of toeslagen op handmatige bestellingen nodig? Dat is <a>Pro</"
+"a>."
+
+#: build/settings.js:3 build/settings.js:4
+msgid "Pro"
+msgstr "Pro"
+
+#: build/settings.js:3
+msgid ""
+"Charge customers an extra fee based on the payment method they choose at "
+"checkout, or give them a discount instead."
+msgstr ""
+"Bereken klanten een extra toeslag op basis van de betaalmethode die ze bij "
+"het afrekenen kiezen, of geef ze juist korting."
+
+#: build/settings.js:3
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: build/settings.js:3
+msgid "Support"
+msgstr "Ondersteuning"
+
+#: build/settings.js:3
+msgid "Suggest a feature"
+msgstr "Functie voorstellen"
+
+#: build/settings.js:3
+msgid "Pay for Payment sections"
+msgstr "Pay for Payment-secties"
+
+#: build/settings.js:3 build/settings.js:4
+msgid "General"
+msgstr "Algemeen"
+
+#: build/settings.js:3
+msgid "Account"
+msgstr "Account"
+
+#: build/settings.js:3
+msgid "Connect account"
+msgstr "Account koppelen"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:4
+msgid "%s off"
+msgstr "%s korting"
+
+#: build/settings.js:4
+msgid "Upgrade"
+msgstr "Upgraden"
+
+#: build/settings.js:4
+msgid "Free trial"
+msgstr "Gratis proefversie"
+
+#: build/settings.js:4
+msgid "Welcome back to Pro!"
+msgstr "Welkom terug bij Pro!"
+
+#: build/settings.js:4
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again. Have a look below so "
+"nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Je hebt al Pro-toeslagregels opgeslagen — extra niveaus, voorwaardelijke "
+"toeslagen en instellingen voor de hele winkel — en ze werken weer. Kijk "
+"hieronder even mee, zodat er bij het afrekenen of op nieuwe bestellingen "
+"niets onverwachts opduikt."
+
+#: build/settings.js:4
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+#: build/settings.js:4
+msgid "Add the fee as"
+msgstr "Toeslag toevoegen als"
+
+#: build/settings.js:4
+msgid ""
+"A fee line is WooCommerce’s standard way of adding an extra charge to an "
+"order. Only choose Product line if your accounting software can’t handle "
+"separate fee lines."
+msgstr ""
+"Een toeslagregel is de standaardmanier van WooCommerce om extra kosten aan "
+"een bestelling toe te voegen. Kies alleen Productregel als je "
+"boekhoudsoftware niet overweg kan met afzonderlijke toeslagregels."
+
+#: build/settings.js:4
+msgid "Fee line (recommended)"
+msgstr "Toeslagregel (aanbevolen)"
+
+#: build/settings.js:4 build/settings.js:19
+msgid "Product line"
+msgstr "Productregel"
+
+#: build/settings.js:4
+msgid ""
+"A hidden, virtual “Payment fee” product is created on first use. You may "
+"rename it or give it your own SKU — the fee amount and title always come "
+"from the fee settings."
+msgstr ""
+"Bij het eerste gebruik wordt een verborgen, virtueel product 'Betaaltoeslag' "
+"aangemaakt. Je mag het hernoemen of er je eigen SKU aan geven — bedrag en "
+"naam van de toeslag komen altijd uit de toeslaginstellingen."
+
+#: build/settings.js:4
+msgid "Fee behaviour"
+msgstr "Gedrag van de toeslag"
+
+#: build/settings.js:4
+msgid "Charge the fee on manual & order-pay orders"
+msgstr ""
+"Toeslag ook berekenen bij handmatige bestellingen en bestelling-betalen"
+
+#: build/settings.js:4
+msgid ""
+"WooCommerce only charges payment fees at checkout. Enable this to also "
+"charge the fee on orders you create in the admin, and when a customer pays "
+"from the order-pay page — for example after a failed payment with another "
+"method. When disabled, no fee is added on those pages, but a fee from an "
+"earlier method is still removed when the customer switches."
+msgstr ""
+"WooCommerce berekent betaaltoeslagen alleen bij het afrekenen. Schakel dit "
+"in om de toeslag ook te berekenen bij bestellingen die je in het beheer "
+"aanmaakt en wanneer een klant betaalt via de betaalpagina van de bestelling "
+"— bijvoorbeeld na een mislukte betaling met een andere methode. Wanneer dit "
+"uitstaat, wordt op die pagina's geen toeslag toegevoegd, maar de toeslag van "
+"een eerdere methode wordt nog steeds verwijderd als de klant wisselt."
+
+#: build/settings.js:4
+msgid "Show each method’s fee beside its name at checkout"
+msgstr "Toon de toeslag van elke methode naast de naam bij het afrekenen"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, each payment method shows its fee beside its own name, so "
+"the customer can compare before choosing; a method with no fee shows "
+"nothing. If disabled, the fee appears only once a method has been selected."
+msgstr ""
+"Als dit aanstaat, toont elke betaalmethode haar toeslag naast haar eigen "
+"naam, zodat de klant kan vergelijken voordat hij kiest; bij een methode "
+"zonder toeslag wordt niets getoond. Staat het uit, dan verschijnt de toeslag "
+"pas nadat een methode is gekozen."
+
+#: build/settings.js:4
+msgid "Do not show the fee on the cart page"
+msgstr "Toeslag niet tonen op de winkelwagenpagina"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, the payment fee is only shown at checkout. If disabled, "
+"the cart may show a fee before the customer has chosen a payment method, "
+"since WooCommerce can default to one automatically. This setting only "
+"affects where the fee is shown; it does not change the amount charged."
+msgstr ""
+"Als dit aanstaat, wordt de betaaltoeslag alleen bij het afrekenen getoond. "
+"Staat het uit, dan kan de winkelwagen al een toeslag tonen voordat de klant "
+"een betaalmethode heeft gekozen, omdat WooCommerce er automatisch een kan "
+"selecteren. Deze instelling bepaalt alleen waar de toeslag wordt getoond; "
+"het berekende bedrag verandert niet."
+
+#: build/settings.js:4
+msgid "Fixed fee"
+msgstr "Vaste toeslag"
+
+#: build/settings.js:4
+msgid "A fixed amount added to the cart when this payment method is selected."
+msgstr ""
+"Een vast bedrag dat aan de winkelwagen wordt toegevoegd wanneer deze "
+"betaalmethode is geselecteerd."
+
+#: build/settings.js:4
+msgid "Fees"
+msgstr "Toeslagen"
+
+#: build/settings.js:4
+msgid "Coupons"
+msgstr "Kortingsbonnen"
+
+#: build/settings.js:4
+msgid "Shipping"
+msgstr "Verzending"
+
+#: build/settings.js:4 build/settings.js:9
+msgid "Taxes"
+msgstr "Belasting"
+
+#: build/settings.js:4
+msgid "Percentage fee"
+msgstr "Procentuele toeslag"
+
+#: build/settings.js:4
+msgid "Percentage of the cart total added to the cart."
+msgstr ""
+"Percentage van het winkelwagentotaal dat aan de winkelwagen wordt toegevoegd."
+
+#: build/settings.js:4
+msgid "%"
+msgstr "%"
+
+#: build/settings.js:4
+msgid "Include in the percentage calculation"
+msgstr "Meenemen in de percentageberekening"
+
+#: build/settings.js:4
+msgid "Minimum fee"
+msgstr "Minimumtoeslag"
+
+#: build/settings.js:4
+msgid "The fee never drops below this amount. Enter 0 for no minimum."
+msgstr "De toeslag komt nooit onder dit bedrag. Vul 0 in voor geen minimum."
+
+#: build/settings.js:4
+msgid "Maximum fee"
+msgstr "Maximumtoeslag"
+
+#: build/settings.js:4
+msgid "The fee never exceeds this amount. Enter 0 for no maximum."
+msgstr "De toeslag komt nooit boven dit bedrag. Vul 0 in voor geen maximum."
+
+#: build/settings.js:4
+msgid "the fixed charge, money-formatted"
+msgstr "de vaste toeslag, als bedrag opgemaakt"
+
+#: build/settings.js:4
+msgid "the percentage rate"
+msgstr "het percentage"
+
+#: build/settings.js:4
+msgid "the amount the percentage is calculated from, money-formatted"
+msgstr ""
+"het bedrag waarover het percentage wordt berekend, als bedrag opgemaakt"
+
+#: build/settings.js:4
+msgid "the minimum percentage fee, money-formatted"
+msgstr "de minimale procentuele toeslag, als bedrag opgemaakt"
+
+#: build/settings.js:4
+msgid "the maximum percentage fee, money-formatted"
+msgstr "de maximale procentuele toeslag, als bedrag opgemaakt"
+
+#. translators: %s: a placeholder token such as [FIXED_AMOUNT]
+#: build/settings.js:5
+msgid "Insert %s"
+msgstr "%s invoegen"
+
+#: build/settings.js:5
+msgid "Hide available placeholders"
+msgstr "Beschikbare plaatshouders verbergen"
+
+#: build/settings.js:5
+msgid "Show available placeholders"
+msgstr "Beschikbare plaatshouders tonen"
+
+#: build/settings.js:5
+msgid ""
+"Click a placeholder to drop it where you left off in the label, or drag it "
+"into the field."
+msgstr ""
+"Klik op een tijdelijke aanduiding om deze in te voegen waar je in de naam "
+"was gebleven, of sleep deze naar het veld."
+
+#: build/settings.js:5
+msgid "Example:"
+msgstr "Voorbeeld:"
+
+#: build/settings.js:5
+msgid "Cart total"
+msgstr "Winkelwagentotaal"
+
+#: build/settings.js:5
+msgid "Compare against the cart total the customer sees."
+msgstr "Wordt vergeleken met het winkelwagentotaal dat de klant ziet."
+
+#: build/settings.js:5
+msgid "Coupon applied"
+msgstr "Toegepaste coupon"
+
+#: build/settings.js:5
+msgid "Coupon"
+msgstr "Coupon"
+
+#: build/settings.js:5
+msgid "Select or type coupon codes…"
+msgstr "Selecteer of typ couponcodes…"
+
+#: build/settings.js:5
+msgid ""
+"Match applied coupon codes — typed codes and * patterns (SUMMER*, *SALE*) "
+"work too."
+msgstr ""
+"Vergelijkt toegepaste couponcodes — zelf getypte codes en patronen met * "
+"(ZOMER*, *SALE*) werken ook."
+
+#: build/settings.js:5
+msgid ""
+"No coupons found in your store yet — you can still type codes or patterns "
+"like SUMMER*."
+msgstr ""
+"Nog geen coupons in je winkel — je kunt wel codes of patronen zoals ZOMER* "
+"typen."
+
+#: build/settings.js:5
+msgid "Shipping method"
+msgstr "Verzendmethode"
+
+#: build/settings.js:5
+msgid "Select shipping methods…"
+msgstr "Selecteer verzendmethoden…"
+
+#: build/settings.js:5
+msgid ""
+"Match the chosen shipping method — one zone instance, or any instance of a "
+"method type."
+msgstr ""
+"Vergelijkt de gekozen verzendmethode — één specifieke zone-instantie, of "
+"elke instantie van een methodetype."
+
+#: build/settings.js:5
+msgid "No shipping methods are configured yet."
+msgstr "Er zijn nog geen verzendmethoden ingesteld."
+
+#: build/settings.js:5
+msgid "Shipping zone"
+msgstr "Verzendzone"
+
+#: build/settings.js:5
+msgid "Select shipping zones…"
+msgstr "Selecteer verzendzones…"
+
+#: build/settings.js:5
+msgid "Match the shipping zone serving the chosen shipping method."
+msgstr "Vergelijkt de verzendzone waar de gekozen verzendmethode bij hoort."
+
+#: build/settings.js:5
+msgid "No shipping zones are configured yet."
+msgstr "Er zijn nog geen verzendzones ingesteld."
+
+#: build/settings.js:5
+msgid "Shipping class in cart"
+msgstr "Verzendklasse in winkelwagen"
+
+#: build/settings.js:5
+msgid "Shipping class"
+msgstr "Verzendklasse"
+
+#: build/settings.js:5
+msgid "Select shipping classes…"
+msgstr "Selecteer verzendklassen…"
+
+#: build/settings.js:5
+msgid "Match when a cart item has any of these shipping classes."
+msgstr ""
+"Geldt wanneer een artikel in de winkelwagen een van deze verzendklassen "
+"heeft."
+
+#: build/settings.js:5
+msgid "No shipping classes are configured yet."
+msgstr "Er zijn nog geen verzendklassen ingesteld."
+
+#: build/settings.js:5
+msgid "Country / state"
+msgstr "Land / provincie"
+
+#: build/settings.js:5
+msgid "Country"
+msgstr "Land"
+
+#: build/settings.js:5
+msgid "Select countries or states…"
+msgstr "Selecteer landen of provincies…"
+
+#: build/settings.js:5
+msgid ""
+"Match the delivery country or state — a country also covers all its states."
+msgstr ""
+"Vergelijkt het land of de provincie van bezorging — een land omvat ook al "
+"zijn provincies."
+
+#: build/settings.js:5
+msgid "No selling countries are configured yet."
+msgstr "Er zijn nog geen verkooplanden ingesteld."
+
+#: build/settings.js:5
+msgid "User role"
+msgstr "Gebruikersrol"
+
+#: build/settings.js:5
+msgid "Role"
+msgstr "Rol"
+
+#: build/settings.js:5
+msgid "Select user roles…"
+msgstr "Selecteer gebruikersrollen…"
+
+#: build/settings.js:5
+msgid "Match the signed-in customer’s role."
+msgstr "Vergelijkt de rol van de ingelogde klant."
+
+#: build/settings.js:5
+msgid "No user roles found."
+msgstr "Geen gebruikersrollen gevonden."
+
+#: build/settings.js:5
+msgid "Product in cart"
+msgstr "Product in winkelwagen"
+
+#: build/settings.js:5
+msgid "Product"
+msgstr "Product"
+
+#: build/settings.js:5
+msgid "Search products…"
+msgstr "Producten zoeken…"
+
+#: build/settings.js:5
+msgid "Match when any of these products is in the cart."
+msgstr "Geldt wanneer een van deze producten in de winkelwagen zit."
+
+#: build/settings.js:5
+msgid "Product category in cart"
+msgstr "Productcategorie in winkelwagen"
+
+#: build/settings.js:5
+msgid "Category"
+msgstr "Categorie"
+
+#: build/settings.js:5
+msgid "Select categories…"
+msgstr "Selecteer categorieën…"
+
+#: build/settings.js:5
+msgid "Match when the cart contains a product from any of these categories."
+msgstr ""
+"Geldt wanneer de winkelwagen een product uit een van deze categorieën bevat."
+
+#: build/settings.js:5
+msgid "No product categories found."
+msgstr "Geen productcategorieën gevonden."
+
+#: build/settings.js:5
+msgid "Matches"
+msgstr "Komt overeen met"
+
+#: build/settings.js:5
+msgid "Excludes"
+msgstr "Sluit uit"
+
+#: build/settings.js:5
+msgid "At least"
+msgstr "Minimaal"
+
+#: build/settings.js:5
+msgid "At most"
+msgstr "Maximaal"
+
+#: build/settings.js:5
+msgid "of cart totals"
+msgstr "van het winkelwagentotaal"
+
+#: build/settings.js:5
+msgid "min."
+msgstr "min."
+
+#: build/settings.js:5
+msgid "max."
+msgstr "max."
+
+#. translators: 1: first few values, 2: count of remaining
+#: build/settings.js:6
+msgid "%1$s +%2$d"
+msgstr "%1$s +%2$d"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:7
+msgid "%1$s: not %2$s"
+msgstr "%1$s: behalve %2$s"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:8
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: build/settings.js:8
+msgid "No fee set yet"
+msgstr "Nog geen toeslag ingesteld"
+
+#: build/settings.js:9
+msgid "When:"
+msgstr "Wanneer:"
+
+#: build/settings.js:9
+msgid "When all match:"
+msgstr "Wanneer alles klopt:"
+
+#: build/settings.js:9
+msgid "Fee label"
+msgstr "Naam van de toeslag"
+
+#: build/settings.js:9
+msgid "Shown to customers on the checkout page."
+msgstr "Wordt aan klanten getoond op de afrekenpagina."
+
+#: build/settings.js:9
+msgid "Inherit from cart items"
+msgstr "Overnemen van de artikelen in de winkelwagen"
+
+#: build/settings.js:9
+msgid ""
+"One of this method’s fees is negative. WooCommerce treats a negative fee as "
+"a discount and works its tax out from the cart items, so these settings do "
+"not apply to it."
+msgstr ""
+"Een van de toeslagen van deze methode is negatief. WooCommerce behandelt een "
+"negatieve toeslag als korting en berekent de btw ervan op basis van de "
+"artikelen in de winkelwagen, dus deze instellingen gelden er niet voor."
+
+#: build/settings.js:9
+msgid "Payment fee is taxable"
+msgstr "Toeslag is belastbaar"
+
+#: build/settings.js:9
+msgid "Fee amount already includes tax"
+msgstr "Het toeslagbedrag is al inclusief belasting"
+
+#: build/settings.js:9
+msgid "When unchecked, tax is calculated on top of the fee."
+msgstr ""
+"Indien niet aangevinkt, wordt de belasting bovenop de toeslag berekend."
+
+#: build/settings.js:9
+msgid "Tax class"
+msgstr "Belastingklasse"
+
+#: build/settings.js:9
+msgid "Tax class applied to the fee."
+msgstr "Belastingklasse toegepast op de toeslag."
+
+#: build/settings.js:9
+msgid "Free shipping is chosen"
+msgstr "Gratis verzending is gekozen"
+
+#: build/settings.js:9
+msgid "Shipping costs nothing"
+msgstr "Verzending kost niets"
+
+#: build/settings.js:9
+msgid "Don’t charge the fee when"
+msgstr "Geen toeslag berekenen wanneer"
+
+#: build/settings.js:9
+msgid "Loading…"
+msgstr "Laden…"
+
+#: build/settings.js:9
+msgid "Amount"
+msgstr "Bedrag"
+
+#: build/settings.js:9
+msgid "Conditions"
+msgstr "Voorwaarden"
+
+#: build/settings.js:9
+msgid "No conditions — this fee applies to every order."
+msgstr "Geen voorwaarden — deze toeslag geldt voor elke bestelling."
+
+#: build/settings.js:9
+msgid "The fee applies when all conditions match."
+msgstr "De toeslag geldt wanneer aan alle voorwaarden is voldaan."
+
+#: build/settings.js:9
+msgid "Condition"
+msgstr "Voorwaarde"
+
+#: build/settings.js:9
+msgid "Mode"
+msgstr "Modus"
+
+#: build/settings.js:9
+msgid "Values"
+msgstr "Waarden"
+
+#: build/settings.js:9
+msgid "Remove condition"
+msgstr "Voorwaarde verwijderen"
+
+#: build/settings.js:9
+msgid "Add condition"
+msgstr "Voorwaarde toevoegen"
+
+#. translators: %s: fee name
+#: build/settings.js:10
+msgid "Reorder %s. Use the arrow keys to move it."
+msgstr "Volgorde wijzigen: %s. Gebruik de pijltjestoetsen om te verplaatsen."
+
+#: build/settings.js:10
+msgid "Remove fee"
+msgstr "Toeslag verwijderen"
+
+#. translators: 1: new position, 2: total number of fees
+#: build/settings.js:11
+msgid "Fee moved to position %1$d of %2$d"
+msgstr "Toeslag verplaatst naar positie %1$d van %2$d"
+
+#: build/settings.js:11
+msgid ""
+"Fees are evaluated top to bottom — the first one whose conditions match the "
+"order is charged."
+msgstr ""
+"Toeslagen worden van boven naar beneden beoordeeld — de eerste waarvan de "
+"voorwaarden op de bestelling passen wordt berekend."
+
+#: build/settings.js:11
+msgid "Add fee"
+msgstr "Toeslag toevoegen"
+
+#: build/settings.js:11
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: build/settings.js:11
+msgid "Cancel"
+msgstr "Annuleren"
+
+#. translators: %s: fee label
+#: build/settings.js:12
+msgid "Remove “%s”?"
+msgstr "'%s' verwijderen?"
+
+#. translators: %s: payment method title
+#: build/settings.js:13
+msgid "Customers paying with %s will no longer be charged this fee."
+msgstr ""
+"Klanten die met %s betalen krijgen deze toeslag niet meer in rekening "
+"gebracht."
+
+#: build/settings.js:13 build/settings.js:16
+msgid "Fee active"
+msgstr "Toeslag actief"
+
+#: build/settings.js:13 build/settings.js:16
+msgid "No fee"
+msgstr "Geen toeslag"
+
+#: build/settings.js:13
+msgid ""
+"This payment method is currently not active in WooCommerce, but you can "
+"still set the extra fee."
+msgstr ""
+"Deze betaalmethode is momenteel niet actief in WooCommerce, maar je kunt de "
+"toeslag nu al instellen."
+
+#: build/settings.js:13
+msgid "Extra fee"
+msgstr "Toeslag"
+
+#. translators: %s: payment method title
+#: build/settings.js:14
+msgid "Charge an extra fee when customers pay with %s"
+msgstr "Extra toeslag berekenen wanneer klanten betalen met %s"
+
+#: build/settings.js:14
+msgid "Payment methods"
+msgstr "Betaalmethoden"
+
+#. translators: %s: payment method title
+#: build/settings.js:15
+msgid "— %s has a fee"
+msgstr "— %s heeft een toeslag"
+
+#. translators: %s: payment method title
+#: build/settings.js:16
+msgid "— %s has no fee"
+msgstr "— %s heeft geen toeslag"
+
+#: build/settings.js:16
+msgid "cart total"
+msgstr "winkelwagentotaal"
+
+#: build/settings.js:16
+msgid "coupon"
+msgstr "coupon"
+
+#: build/settings.js:16
+msgid "product"
+msgstr "product"
+
+#: build/settings.js:16
+msgid "category"
+msgstr "categorie"
+
+#: build/settings.js:16
+msgid "country or state"
+msgstr "land of regio"
+
+#: build/settings.js:16
+msgid "user role"
+msgstr "gebruikersrol"
+
+#: build/settings.js:16
+msgid "shipping method"
+msgstr "verzendmethode"
+
+#: build/settings.js:16
+msgid "shipping zone"
+msgstr "verzendzone"
+
+#: build/settings.js:16
+msgid "shipping class"
+msgstr "verzendklasse"
+
+#: build/settings.js:16
+msgid "Pay for Payment Pro"
+msgstr "Pay for Payment Pro"
+
+#: build/settings.js:16
+msgid "Do more with PRO"
+msgstr "Doe meer met PRO"
+
+#: build/settings.js:16
+msgid "Everything free does, plus rules & automation."
+msgstr "Alles wat de gratis versie doet, plus regels en automatisering."
+
+#. translators: 1: star rating, 2: active install count
+#: build/settings.js:17
+msgid "%1$s · %2$s active installs"
+msgstr "%1$s · %2$s actieve installaties"
+
+#: build/settings.js:17
+msgid "Conditional fees"
+msgstr "Voorwaardelijke toeslagen"
+
+#: build/settings.js:17
+msgid "Charge only when it fits."
+msgstr "Bereken alleen wanneer het past."
+
+#. translators: %s: an example cart amount, e.g. "5 000 Kč"
+#: build/settings.js:18
+msgid "if cart > %s"
+msgstr "als winkelwagen > %s"
+
+#. translators: %s: an example fee percentage such as "2%"
+#: build/settings.js:19
+msgctxt "Pro feature example chip"
+msgid "%s fee"
+msgstr "%s toeslag"
+
+#: build/settings.js:19
+msgid "Match by"
+msgstr "Voorwaarde op"
+
+#: build/settings.js:19
+msgid "Multiple fee tiers"
+msgstr "Meerdere toeslagniveaus"
+
+#: build/settings.js:19
+msgid "Stack more than one fee rule per payment method."
+msgstr "Stel meer dan één toeslagregel per betaalmethode in."
+
+#: build/settings.js:19
+msgid "Fee 1"
+msgstr "Toeslag 1"
+
+#: build/settings.js:19
+msgid "Fee 2"
+msgstr "Toeslag 2"
+
+#: build/settings.js:19
+msgid "Fee as a product line"
+msgstr "Toeslag als productregel"
+
+#: build/settings.js:19
+msgid ""
+"Write the fee as a product instead of a fee line, for invoicing and ERP "
+"exports that skip fee lines."
+msgstr ""
+"Registreer de toeslag als product in plaats van als toeslagregel, voor "
+"facturatie en ERP-exports die toeslagregels overslaan."
+
+#: build/settings.js:19
+msgid "Display controls"
+msgstr "Weergaveopties"
+
+#: build/settings.js:19
+msgid ""
+"Hide the fee on the cart, or show each method’s fee beside its name at "
+"checkout."
+msgstr ""
+"Verberg de toeslag in de winkelwagen, of toon de toeslag van elke methode "
+"naast de naam bij het afrekenen."
+
+#: build/settings.js:19
+msgid "Cart: hidden"
+msgstr "Winkelwagen: verborgen"
+
+#: build/settings.js:19
+msgid "Fees on manual & order-pay orders"
+msgstr "Toeslagen bij handmatige bestellingen en bestelling-betalen"
+
+#: build/settings.js:19
+msgid ""
+"Charge the fee beyond checkout — on the order-pay page and on orders you "
+"create by hand."
+msgstr ""
+"Bereken de toeslag ook buiten het afrekenen — op de betaalpagina van de "
+"bestelling en bij handmatig aangemaakte bestellingen."
+
+#: build/settings.js:19
+msgid "Upgrade to PRO"
+msgstr "Upgraden naar PRO"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:20
+msgid "Launch offer — %s off with code"
+msgstr "Introductieaanbieding — %s korting met code"
+
+#: build/settings.js:20
+msgid "Keep free forever — upgrade any time."
+msgstr "Voor altijd gratis — upgraden kan altijd nog."
+
+#: build/settings.js:20
+msgid "Questions or a feature request?"
+msgstr "Vragen of een wens voor een functie?"
+
+#: build/settings.js:20
+msgid ""
+"Pro customers get direct support from me — write any time. You can reach out "
+"at the <a>support forum</a>."
+msgstr ""
+"Pro-klanten krijgen rechtstreeks ondersteuning van mij — schrijf gerust. Je "
+"bereikt me op het <a>ondersteuningsforum</a>."
+
+#: build/settings.js:20
+msgid "Loading payment methods…"
+msgstr "Betaalmethoden laden…"
+
+#: build/settings.js:20
+msgid "No payment methods found"
+msgstr "Geen betaalmethoden gevonden"
+
+#: build/settings.js:20
+msgid ""
+"Fees are set per payment method. Add and enable payment methods in "
+"WooCommerce first, then come back here to charge a fee for them."
+msgstr ""
+"Toeslagen stel je per betaalmethode in. Voeg eerst betaalmethoden toe in "
+"WooCommerce en zet ze aan, kom dan hier terug om er een toeslag voor te "
+"berekenen."
+
+#: build/settings.js:20
+msgid "Manage payment methods"
+msgstr "Betaalmethoden beheren"
+
+#: build/settings.js:20
+msgid "Payment methods could not be loaded. Reload the page to try again."
+msgstr ""
+"Betaalmethoden konden niet worden geladen. Herlaad de pagina om het opnieuw "
+"te proberen."
+
+#: build/settings.js:20
+msgid ""
+"None of your payment methods is enabled in WooCommerce yet. You can still "
+"set up fees now — they apply as soon as a method is enabled. <a>Manage "
+"payment methods</a>"
+msgstr ""
+"Je hebt nog geen enkele betaalmethode aangezet in WooCommerce. Je kunt de "
+"toeslagen nu al instellen — ze gelden zodra je een methode aanzet. "
+"<a>Betaalmethoden beheren</a>"
+
+#: build/settings.js:20
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+#: build/settings.js:20
+msgid "Please fix the validation errors above before saving."
+msgstr "Corrigeer eerst de bovenstaande validatiefouten voordat je opslaat."
+
+#: build/settings.js:20
+msgid "Unsaved changes"
+msgstr "Niet-opgeslagen wijzigingen"
+
+#: build/settings.js:20
+msgid "No changes to save"
+msgstr "Geen wijzigingen om op te slaan"
+
+#: build/settings.js:20
+msgid "Settings saved."
+msgstr "Instellingen opgeslagen."
+
+#. translators: %s: the field messages, one per problem
+#: build/settings.js:21
+msgid "Validation failed: %s"
+msgstr "Validatie mislukt: %s"
+
+#: build/settings.js:21
+msgid "Something went wrong"
+msgstr "Er is iets misgegaan"
+
+#: build/settings.js:21
+msgid ""
+"An error occurred while loading the settings. Please try reloading the page."
+msgstr ""
+"Er is een fout opgetreden bij het laden van de instellingen. Probeer de "
+"pagina te herladen."
+
+#: build/settings.js:21
+msgid "Reload Page"
+msgstr "Pagina opnieuw laden"
+
+#: build/settings.js:21
+msgid "Try Again"
+msgstr "Opnieuw proberen"
+
+#~ msgid "The plugin files are corrupted. Please re-install the plugin."
+#~ msgstr "De pluginbestanden zijn beschadigd. Installeer de plugin opnieuw."
+
+#~ msgid "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+#~ msgstr "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+
+#~ msgid "Extra Charge"
+#~ msgstr "Toeslag"
+
+#, php-format
+#~ msgctxt "Gateway list column"
+#~ msgid "%s %% of cart totals"
+#~ msgstr "%s %% van winkelmand-totalen"
+
+#~ msgid "Invalid off-checkout fee mode"
+#~ msgstr "Ongeldige toeslagmodus buiten de afrekenpagina"
+
+#~ msgid "Note shown on the cart when the payment fee is deferred to checkout."
+#~ msgstr ""
+#~ "Notitie in de winkelwagen wanneer de betaaltoeslag pas bij het afrekenen "
+#~ "wordt bepaald."
+
+#, php-format
+#~ msgid "Payment fee: %1$s · Total with this method: %2$s"
+#~ msgstr "Betaaltoeslag: %1$s · Totaal met deze methode: %2$s"
+
+#~ msgid ""
+#~ "The plugin requires WooCommerce plugin and without it doesn't work. "
+#~ "Install and activate it first."
+#~ msgstr ""
+#~ "De plugin vereist WooCommerce en werkt daar niet zonder. Installeer en "
+#~ "activeer het eerst."
+
+#~ msgid ""
+#~ "Product line — for ERP & invoicing exports that skip fee lines "
+#~ "(experimental)"
+#~ msgstr ""
+#~ "Productregel — voor ERP- en facturatie-exports die toeslagregels "
+#~ "overslaan (experimenteel)"
+
+#~ msgid "Also convert checkout orders’ fee to the product line"
+#~ msgstr ""
+#~ "Zet ook de toeslag van bestellingen via het afrekenen om naar de "
+#~ "productregel"
+
+#~ msgid ""
+#~ "Every order then carries the fee the same way. Checkout itself is "
+#~ "unchanged — the fee line is swapped for the product line once the order "
+#~ "is created."
+#~ msgstr ""
+#~ "Elke bestelling draagt de toeslag dan op dezelfde manier. Het afrekenen "
+#~ "zelf verandert niet — de toeslagregel wordt pas na het aanmaken van de "
+#~ "bestelling vervangen door de productregel."
+
+#~ msgid "Hide the fee on the cart page until a payment method is chosen"
+#~ msgstr ""
+#~ "Verberg de toeslag in de winkelwagen totdat een betaalmethode is gekozen"
+
+#~ msgid ""
+#~ "Without a chosen payment method the cart would show the default method’s "
+#~ "fee, which confuses customers. The cart shows a short note instead; the "
+#~ "fee appears the moment a payment method is selected at checkout — the "
+#~ "amount charged never changes."
+#~ msgstr ""
+#~ "Zonder gekozen betaalmethode zou de winkelwagen de toeslag van de "
+#~ "standaardmethode tonen, wat klanten verwart. In plaats daarvan verschijnt "
+#~ "een korte notitie; de toeslag verschijnt zodra bij het afrekenen een "
+#~ "betaalmethode wordt gekozen — het berekende bedrag verandert nooit."
+
+#~ msgid "Display"
+#~ msgstr "Weergave"
+
+#~ msgid "Show the fee in this payment method’s description at checkout"
+#~ msgstr ""
+#~ "Toon de toeslag in de beschrijving van deze betaalmethode bij het "
+#~ "afrekenen"
+
+#~ msgid ""
+#~ "Customers see what each method costs before selecting one. Zero fees show "
+#~ "nothing."
+#~ msgstr ""
+#~ "Klanten zien wat elke methode kost voordat ze kiezen. Toeslagen van nul "
+#~ "worden niet getoond."
+
+#~ msgid "country"
+#~ msgstr "land"
+
+#~ msgid "Fee watchdog"
+#~ msgstr "Toeslagbewaking"
+
+#~ msgid "Get warned before an oddly high or broken fee reaches a customer."
+#~ msgstr ""
+#~ "Word gewaarschuwd voordat een vreemd hoge of kapotte toeslag bij een "
+#~ "klant terechtkomt."
+
+#~ msgid "Check fee"
+#~ msgstr "Toeslag controleren"
+
+#~ msgid "Minimum charge cannot be negative"
+#~ msgstr "De minimumtoeslag kan niet negatief zijn"
+
+#~ msgid "Maximum charge cannot be negative"
+#~ msgstr "De maximumtoeslag kan niet negatief zijn"
+
+#~ msgid "Fee"
+#~ msgstr "Toeslag"
+
+#~ msgid "Limits"
+#~ msgstr "Limieten"
+
+#~ msgid "Charge at most"
+#~ msgstr "Maximum toeslag"
+
+#~ msgid ""
+#~ "Maximum extra charge to be added to cart when this payment method is "
+#~ "selected. Enter zero to disable."
+#~ msgstr ""
+#~ "Maximum toeslag wanneer deze betaalmethode is geselecteerd. Voer nul in "
+#~ "om uit te schakelen."
+
+#~ msgid "Inclusive Taxes"
+#~ msgstr "Inclusief belasting"

@@ -1,235 +1,1553 @@
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce Pay for Payment v0.0.3\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-03 10:09+0200\n"
-"PO-Revision-Date: 2021-06-03 10:09+0200\n"
+"Report-Msgid-Bugs-To: https://kybernaut.cz/kontakt/\n"
+"POT-Creation-Date: 2026-09-23T15:42:14+02:00\n"
+"PO-Revision-Date: 2026-08-19 10:30+0200\n"
 "Last-Translator: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
-"Language-Team: \n"
+"Language-Team: Karolína Vyskočilová <karolina@kybernaut.cz>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 2.4.2\n"
-"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
-"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;"
-"__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;"
-"_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;"
-"esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;"
-"transChoice:1,2\n"
-"X-Poedit-Basepath: ..\n"
-"X-Textdomain-Support: yes\n"
 "X-Loco-Target-Locale: de_DE\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: "
+"_:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Textdomain-Support: yes\n"
 
-#: inc/class-pay4pay-admin.php:55 inc/class-pay4pay.php:62
-#, fuzzy, php-format
-#| msgid ""
-#| "WooCommerce Pay4Payment requires at least WooCommerce %s. Please update!"
-msgid ""
-"Pay for Payment for WooCommerce requires at least WooCommerce %s. Please "
-"update!"
+#. Plugin Name of the plugin
+#: woocommerce-payforpayment.php
+msgid "Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts"
 msgstr ""
-"WooCommerce Pay4Payment erfordert mindestens WooCommerce %s. Bitte updaten!"
+"Pay for Payment for WooCommerce – Gebühren und Rabatte je Zahlungsmethode"
 
-#: inc/class-pay4pay-admin.php:73 inc/class-pay4pay-admin.php:344
-#: inc/class-pay4pay.php:22
-msgid "Extra Charge"
-msgstr "Extra Gebühr"
+#. Plugin URI of the plugin
+#: woocommerce-payforpayment.php
+msgid "https://payforpayment.com/"
+msgstr "https://payforpayment.com/"
 
-#: inc/class-pay4pay-admin.php:79
-msgid "Item Title"
-msgstr "Bezeichnung"
+#. Description of the plugin
+#: woocommerce-payforpayment.php
+msgid ""
+"Charge a fee or give a discount on any WooCommerce payment method. Fixed or "
+"percentage, tax aware, with min and max caps."
+msgstr ""
+"Berechne eine Gebühr oder gewähre einen Rabatt bei jeder WooCommerce-"
+"Zahlungsmethode. Fest oder prozentual, steuerbewusst, mit Mindest- und "
+"Höchstbetrag."
 
-#: inc/class-pay4pay-admin.php:81
-msgid "This will show up in the shopping basket."
-msgstr "Wird im Warenkorb angezeigt."
+#. Author of the plugin
+#: woocommerce-payforpayment.php
+msgid "Karolína Vyskočilová"
+msgstr "Karolína Vyskočilová"
 
-#: inc/class-pay4pay-admin.php:85
-msgid "Fixed charge"
+#. Author URI of the plugin
+#: woocommerce-payforpayment.php
+msgid "https://kybernaut.cz"
+msgstr "https://kybernaut.cz"
+
+#. translators: %s: plugin name.
+#: src/Admin.php:305
+#, php-format
+msgid "Thank you for using %s!"
+msgstr "Danke, dass du %s verwendest!"
+
+#. translators: 1: plugin name, 2: five-star rating link.
+#: src/Admin.php:312
+#, php-format
+msgid ""
+"If you like %1$s please leave us a %2$s rating. A huge thanks in advance!"
+msgstr ""
+"Wenn dir %1$s gefällt, hinterlasse uns bitte eine %2$s-Bewertung. Vielen "
+"Dank im Voraus!"
+
+#. translators: %s: plugin version.
+#: src/Admin.php:328
+#, php-format
+msgid "Version %s"
+msgstr "Version %s"
+
+#: src/Admin.php:339
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: src/Admin/AdminPostActions.php:43
+msgid "You are not allowed to do this."
+msgstr "Dazu hast du keine Berechtigung."
+
+#. translators: 1: filter name, 2: comma-separated payment method names.
+#: src/Admin/LegacyFilterNotice.php:80
+#, php-format
+msgid ""
+"Code on this site filters %1$s for payment methods whose fee is switched off "
+"here, so it cannot charge anything: %2$s. Switch a method on — leaving its "
+"amounts at zero — to let your code set the fee."
+msgstr ""
+"Code auf dieser Website filtert %1$s für Zahlungsmethoden, deren Gebühr hier "
+"ausgeschaltet ist — er kann also nichts berechnen: %2$s. Schalte eine "
+"Methode ein (die Beträge dürfen auf null bleiben), damit dein Code die "
+"Gebühr setzen kann."
+
+#: src/Admin/OptinNotice.php:73
+msgid "One more thing."
+msgstr "Noch eine Sache."
+
+
+#: src/Admin/OptinNotice.php:74
+msgid ""
+"Sharing basic usage data tells me which gateways and settings people "
+"actually use, and it is how you get security and update notices."
+msgstr "Das Teilen grundlegender Nutzungsdaten zeigt mir, welche Zahlungsarten und Einstellungen wirklich verwendet werden, und darüber bekommst du Sicherheits- und Update-Hinweise."
+
+
+#: src/Admin/OptinNotice.php:77
+msgid "Opt in"
+msgstr "Zustimmen"
+
+#: src/Admin/OptinNotice.php:79
+msgid "No thanks"
+msgstr "Nein danke"
+
+
+#: src/Admin/RestApi.php:154
+msgid "Invalid parameters"
+msgstr "Ungültige Parameter"
+
+#: src/Admin/RestApi.php:198
+msgid "Validation failed. Please check your input and try again."
+msgstr ""
+"Validierung fehlgeschlagen. Bitte überprüfe deine Eingaben und versuche es "
+"erneut."
+
+#: src/Admin/Settings.php:317 build/settings.js:3 build/settings.js:16
+msgid "Pay for Payment"
+msgstr "Pay for Payment"
+
+#. translators: %s: payment method title
+#: src/Admin/SettingsSerializer.php:327 build/settings.js:9
+#, php-format
+msgid "%s fee"
+msgstr "Gebühr – %s"
+
+#: src/Admin/SettingsValidator.php:124
+msgid "Enabled methods must be a list of payment method ids"
+msgstr "Aktivierte Methoden müssen eine Liste von Zahlungsmethoden-IDs sein"
+
+#: src/Admin/SettingsValidator.php:128
+msgid "Invalid fee line type"
+msgstr "Ungültiger Typ der Gebührenposition"
+
+#: src/Admin/SettingsValidator.php:151
+msgid "Fee tiers must be a list"
+msgstr "Gebührenstufen müssen eine Liste sein"
+
+#. translators: %d: maximum number of fee tiers per payment method
+#: src/Admin/SettingsValidator.php:157
+#, php-format
+msgid "A payment method can have at most %d fee tiers"
+msgstr "Eine Zahlungsmethode kann höchstens %d Gebührenstufen haben"
+
+#: src/Admin/SettingsValidator.php:166
+msgid "Tier must be an object"
+msgstr "Die Gebührenstufe muss ein Objekt sein"
+
+#: src/Admin/SettingsValidator.php:206 build/settings.js:5
+msgid "Fixed fee must be a valid number"
+msgstr "Feste Gebühr muss eine gültige Zahl sein"
+
+#: src/Admin/SettingsValidator.php:207 build/settings.js:5
+msgid "Percentage fee must be a valid number"
+msgstr "Prozentuale Gebühr muss eine gültige Zahl sein"
+
+#: src/Admin/SettingsValidator.php:208 build/settings.js:5
+msgid "Minimum fee must be a valid number"
+msgstr "Mindestgebühr muss eine gültige Zahl sein"
+
+#: src/Admin/SettingsValidator.php:209 build/settings.js:5
+msgid "Maximum fee must be a valid number"
+msgstr "Höchstgebühr muss eine gültige Zahl sein"
+
+#: src/Admin/SettingsValidator.php:261 build/settings.js:9
+msgid "Conditions must be a list"
+msgstr "Bedingungen müssen eine Liste sein"
+
+#. translators: %d: maximum number of conditions per fee tier
+#: src/Admin/SettingsValidator.php:267
+#, php-format
+msgid "A fee tier can have at most %d conditions"
+msgstr "Eine Gebührenstufe kann höchstens %d Bedingungen haben"
+
+#: src/Admin/SettingsValidator.php:298 build/settings.js:9
+msgid "Condition must be an object"
+msgstr "Bedingung muss ein Objekt sein"
+
+#: src/Admin/SettingsValidator.php:305 build/settings.js:9
+msgid "Condition type must be a non-empty string"
+msgstr "Bedingungstyp muss eine nicht-leere Zeichenkette sein"
+
+#: src/Admin/SettingsValidator.php:315 build/settings.js:9
+msgid "Invalid operator for this condition type"
+msgstr "Ungültiger Operator für diesen Bedingungstyp"
+
+#: src/Admin/SettingsValidator.php:321 build/settings.js:9
+msgid "Cart total condition value must be a valid number"
+msgstr "Der Wert der Warenkorbsummen-Bedingung muss eine gültige Zahl sein"
+
+#: src/Admin/SettingsValidator.php:323 build/settings.js:9
+msgid "Cart total condition value cannot be negative"
+msgstr "Der Wert der Warenkorbsummen-Bedingung darf nicht negativ sein"
+
+#: src/Admin/SettingsValidator.php:326 build/settings.js:9
+msgid "Condition value must be a non-empty list of choices"
+msgstr ""
+"Der Bedingungswert muss eine nicht-leere Liste von Auswahlmöglichkeiten sein"
+
+#. translators: %d: maximum number of values per condition
+#: src/Admin/SettingsValidator.php:330
+#, php-format
+msgid "A condition can list at most %d values"
+msgstr "Eine Bedingung kann höchstens %d Werte enthalten"
+
+#: src/Admin/SettingsValidator.php:359 build/settings.js:5
+msgid "Maximum fee must be greater than or equal to minimum fee"
+msgstr "Höchstgebühr muss größer oder gleich der Mindestgebühr sein"
+
+#: src/Admin/SettingsValidator.php:381
+msgid "Fee label must be a string"
+msgstr "Gebührenbezeichnung muss eine Zeichenkette sein"
+
+#: src/Admin/SettingsValidator.php:387 build/settings.js:5
+msgid "Fee label cannot be empty"
+msgstr "Gebührenbezeichnung darf nicht leer sein"
+
+#: src/Admin/SettingsValidator.php:391 build/settings.js:5
+msgid "Fee label is too long (maximum 200 characters)"
+msgstr "Gebührenbezeichnung ist zu lang (maximal 200 Zeichen)"
+
+#: src/Admin/UpgradeNotice.php:74
+msgid "Welcome to the new Pay for Payment."
+msgstr "Willkommen beim neuen Pay for Payment."
+
+#. translators: %s: comma-separated payment method names.
+#: src/Admin/UpgradeNotice.php:77
+#, php-format
+msgid ""
+"Your fee settings for %s were carried over automatically, so there is "
+"nothing to reconfigure, but you might want to double-check."
+msgstr ""
+"Deine Gebühreneinstellungen für %s wurden automatisch übernommen, es gibt "
+"also nichts neu einzurichten – ein kurzer Blick lohnt sich trotzdem."
+
+#: src/Admin/UpgradeNotice.php:84
+msgid "Go to settings"
+msgstr "Zu den Einstellungen"
+
+#: src/Admin/UpgradeNotice.php:86
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+#: src/Admin/UpgradeNotice.php:167
+msgid ""
+"P.S. I’ve built the features people asked for most: fee rules by cart total, "
+"country or shipping method, several fee tiers per payment method, and the "
+"fee as a product line for invoicing. They live in Pro, and buying it is what "
+"pays for the work on the free plugin — thank you for considering it."
+msgstr ""
+"PS: Ich habe die Funktionen gebaut, nach denen am häufigsten gefragt wurde: "
+"Gebührenregeln nach Warenkorbwert, Land oder Versandart, mehrere "
+"Gebührenstufen je Zahlungsmethode und die Gebühr als Produktposition für die "
+"Rechnungsstellung. Sie stecken in Pro, und dessen Kauf finanziert die Arbeit "
+"am kostenlosen Plugin – danke, dass du es in Betracht ziehst."
+
+#. translators: 1: discount, e.g. "50%"; 2: coupon code.
+#: src/Admin/UpgradeNotice.php:174
+#, php-format
+msgid "While the launch offer lasts it is %1$s off with the code %2$s."
+msgstr ""
+"Solange die Einführungsaktion läuft, bekommst du %1$s Rabatt mit dem Code "
+"%2$s."
+
+#: src/Admin/UpgradeNotice.php:184
+msgid "Take a look at Pro"
+msgstr "Wirf einen Blick auf Pro"
+
+#: src/Deprecated/class-pay4pay.php:58
+msgid "Payment fee tax class based on cart items"
+msgstr "Steuerklasse der Gebühr basierend auf den Warenkorb-Artikeln"
+
+#. translators: %s: the order's currency code, e.g. EUR.
+#: src/Integrations/WooMultiCurrency.php:106
+#, php-format
+msgid ""
+"No payment fee was added: the active multi-currency plugin does not convert "
+"amounts in the admin, and this order is in %s rather than the shop currency. "
+"Add the fee by hand if it is due."
+msgstr ""
+"Es wurde keine Zahlungsgebühr hinzugefügt: Das aktive Mehrwährungs-Plugin "
+"rechnet Beträge im Admin nicht um, und diese Bestellung ist in %s statt in "
+"der Shop-Währung. Füge die Gebühr von Hand hinzu, wenn sie anfällt."
+
+#. translators: 1: fee line title(s), 2: payment method the fee belongs to, 3: order total once the fee is removed.
+#: src/OrderFeeSync.php:209
+#, php-format
+msgid ""
+"“%1$s” applies to %2$s. Pay with another method and it is removed — your "
+"total is then %3$s."
+msgstr ""
+"„%1$s“ gilt für %2$s. Bei Zahlung mit einer anderen Methode entfällt die "
+"Gebühr – Ihr Gesamtbetrag beträgt dann %3$s."
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:473
+#, php-format
+msgid "\"%s\" removed"
+msgstr "„%s“ entfernt"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:483
+#, php-format
+msgid "\"%s\" updated"
+msgstr "„%s“ aktualisiert"
+
+#. translators: %s: fee line title.
+#: src/OrderFeeSync.php:494
+#, php-format
+msgid "\"%s\" added"
+msgstr "„%s“ hinzugefügt"
+
+#. translators: 1: where the sync ran (order-pay page / admin / checkout), 2: what changed.
+#: src/OrderFeeSync.php:525
+#, php-format
+msgid "Payment fee synced (%1$s): %2$s."
+msgstr "Zahlungsgebühr synchronisiert (%1$s): %2$s."
+
+#: src/OrderFeeSync.php:542
+msgid "admin order edit"
+msgstr "Bestellbearbeitung im Adminbereich"
+
+#: src/OrderFeeSync.php:545
+msgid "blocks checkout"
+msgstr "Block-Bestellvorgang"
+
+#: src/OrderFeeSync.php:548
+msgid "order-pay page"
+msgstr "Seite „Bestellung bezahlen“"
+
+#: src/PlanReview.php:198
+msgid "Welcome back to Pay for Payment Pro!"
+msgstr "Willkommen zurück bei Pay for Payment Pro!"
+
+#: src/PlanReview.php:199
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again now that Pro is active. Take "
+"a quick look so nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Du hast bereits Pro-Gebührenregeln gespeichert — zusätzliche Stufen, "
+"bedingte Gebühren und shopweite Gebühreneinstellungen — und sie sind wieder "
+"aktiv, jetzt wo Pro läuft. Sieh sie dir kurz an, damit im Bestellvorgang "
+"oder bei neuen Bestellungen nichts Unerwartetes auftaucht."
+
+#: src/PlanReview.php:202
+msgid "Review my fee settings"
+msgstr "Gebühreneinstellungen prüfen"
+
+#: src/PlanReview.php:204 build/settings.js:4
+msgid "Yes, I've reviewed — hide this notice"
+msgstr "Geprüft — diesen Hinweis ausblenden"
+
+#: src/Pro/DisplayControls.php:307
+msgid "Fee preview per payment gateway id."
+msgstr "Gebührenvorschau je Zahlungsgateway-ID."
+
+#. translators: %s: payment fee amount, shown beside the payment method.
+#: src/Pro/FeeHintFormatter.php:159
+#, php-format
+msgid "(%s)"
+msgstr "(%s)"
+
+#. translators: %s: order total including this method's payment fee.
+#: src/Pro/FeeHintFormatter.php:186
+#, php-format
+msgid "Total with this method: %s"
+msgstr "Gesamt mit dieser Methode: %s"
+
+#. translators: %s: order total without any payment fee.
+#: src/Pro/FeeHintFormatter.php:202
+#, php-format
+msgid "No payment fee · Total with this method: %s"
+msgstr "Keine Zahlungsgebühr · Gesamt mit dieser Methode: %s"
+
+#. translators: %d: number of days the watchdog sampled.
+#: src/Pro/FeeWatchdog.php:355
+#, php-format
+msgid "the last %d day"
+msgid_plural "the last %d days"
+msgstr[0] "der letzte %d Tag"
+msgstr[1] "die letzten %d Tage"
+
+#. translators: 1: orders without the fee, 2: orders checked.
+#: src/Pro/FeeWatchdog.php:366
+#, php-format
+msgid "%1$d of %2$d recent orders is missing the configured payment fee."
+msgid_plural ""
+"%1$d of %2$d recent orders are missing the configured payment fee."
+msgstr[0] ""
+"Bei %1$d von %2$d aktuellen Bestellungen fehlt die eingestellte "
+"Zahlungsgebühr."
+msgstr[1] ""
+"Bei %1$d von %2$d aktuellen Bestellungen fehlt die eingestellte "
+"Zahlungsgebühr."
+
+#: src/Pro/FeeWatchdog.php:375
+msgid "Pay for Payment: orders may be missing payment fees."
+msgstr ""
+"Pay for Payment: Bei Bestellungen fehlen möglicherweise Zahlungsgebühren."
+
+#. translators: %s: sampled period ("the last 7 days").
+#: src/Pro/FeeWatchdog.php:378
+#, php-format
+msgid ""
+"Orders placed over %s were paid with the methods below but carry no payment "
+"fee, although the current fee settings would charge one. A plugin conflict "
+"or a recent update may be dropping the fee silently."
+msgstr ""
+"Bestellungen aus %s wurden mit den unten genannten Methoden bezahlt, tragen "
+"aber keine Zahlungsgebühr, obwohl die aktuellen Einstellungen eine berechnen "
+"würden. Möglicherweise verwirft ein Plugin-Konflikt oder ein kürzliches "
+"Update die Gebühr stillschweigend."
+
+#: src/Pro/FeeWatchdog.php:383
+msgid "Review fee settings"
+msgstr "Gebühreneinstellungen prüfen"
+
+#: src/Pro/FeeWatchdog.php:385
+msgid "This is expected — don't warn again for this configuration"
+msgstr "Das ist so gewollt — bei dieser Konfiguration nicht mehr warnen"
+
+#: src/Pro/ManagedFeeProduct.php:167
+msgid "Payment fee"
+msgstr "Zahlungsgebühr"
+
+#: src/Pro/OrderPayLiveTotals.php:282
+msgid "No fee preview is available for this order."
+msgstr "Für diese Bestellung ist keine Gebührenvorschau verfügbar."
+
+#: src/Pro/OrderPayLiveTotals.php:291
+msgid "No payment method given."
+msgstr "Keine Zahlungsmethode angegeben."
+
+#. translators: 1: Required PHP version number, 2: Current PHP version number, 3: URL of PHP update help page
+#: woocommerce-payforpayment.php:117
+#, php-format
+msgid ""
+"The plugin requires PHP version %1$s or higher. This site is running PHP "
+"version %2$s. <a href=\"%3$s\">Learn about updating PHP</a>."
+msgstr ""
+"Das Plugin benötigt PHP-Version %1$s oder höher. Diese Website läuft mit PHP-"
+"Version %2$s. <a href=\"%3$s\">Mehr über das Aktualisieren von PHP</a>."
+
+#. translators: %s: comma-separated list of missing file paths.
+#: woocommerce-payforpayment.php:168
+#, php-format
+msgid ""
+"Pay for Payment is missing a file it needs to run: %s. Re-installing the "
+"plugin restores it."
+msgid_plural ""
+"Pay for Payment is missing files it needs to run: %s. Re-installing the "
+"plugin restores them."
+msgstr[0] ""
+"Pay for Payment fehlt eine Datei, die es zum Starten braucht: %s. Eine "
+"Neuinstallation stellt sie wieder her."
+msgstr[1] ""
+"Pay for Payment fehlen Dateien, die es zum Starten braucht: %s. Eine "
+"Neuinstallation stellt sie wieder her."
+
+#: woocommerce-payforpayment.php:327
+msgid ""
+"WooCommerce is not active, so no payment fees are being charged. Install and "
+"activate it — your fee settings are kept."
+msgstr ""
+"WooCommerce ist nicht aktiv, daher werden keine Zahlungsgebühren berechnet. "
+"Installieren und aktivieren Sie es – Ihre Gebühreneinstellungen bleiben "
+"erhalten."
+
+#. translators: %s: Required WooCommerce version number
+#: woocommerce-payforpayment.php:410
+#, php-format
+msgid ""
+"The plugin requires WooCommerce version %s or higher. Please update "
+"WooCommerce!"
+msgstr ""
+"Das Plugin benötigt WooCommerce-Version %s oder höher. Bitte aktualisiere "
+"WooCommerce!"
+
+#. translators: %d: number of stored extra fee tiers; <a> links to the Pro pricing page
+#: build/settings.js:2
+msgid ""
+"%d more fee tier is stored for this method. It stays safe, but only <a>Pro</"
+"a> applies and edits it."
+msgid_plural ""
+"%d more fee tiers are stored for this method. They stay safe, but only "
+"<a>Pro</a> applies and edits them."
+msgstr[0] ""
+"Für diese Methode ist %d weitere Gebührenstufe gespeichert. Sie bleibt "
+"erhalten, aber nur <a>Pro</a> wendet sie an und bearbeitet sie."
+msgstr[1] ""
+"Für diese Methode sind %d weitere Gebührenstufen gespeichert. Sie bleiben "
+"erhalten, aber nur <a>Pro</a> wendet sie an und bearbeitet sie."
+
+#. translators: <a> links to the Pro pricing page
+#: build/settings.js:3
+msgid ""
+"Need conditional fees, multiple tiers, the fee as a product line or fees on "
+"manual orders? That’s <a>Pro</a>."
+msgstr ""
+"Brauchen Sie bedingte Gebühren, mehrere Stufen, die Gebühr als "
+"Produktposition oder Gebühren bei manuell angelegten Bestellungen? Das kann "
+"<a>Pro</a>."
+
+#: build/settings.js:3 build/settings.js:4
+msgid "Pro"
+msgstr "Pro"
+
+#: build/settings.js:3
+msgid ""
+"Charge customers an extra fee based on the payment method they choose at "
+"checkout, or give them a discount instead."
+msgstr ""
+"Berechnen Sie Kunden eine zusätzliche Gebühr je nach der an der Kasse "
+"gewählten Zahlungsmethode – oder gewähren Sie ihnen stattdessen einen Rabatt."
+
+#: build/settings.js:3
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: build/settings.js:3
+msgid "Support"
+msgstr "Support"
+
+#: build/settings.js:3
+msgid "Suggest a feature"
+msgstr "Funktion vorschlagen"
+
+#: build/settings.js:3
+msgid "Pay for Payment sections"
+msgstr "Pay-for-Payment-Bereiche"
+
+#: build/settings.js:3 build/settings.js:4
+msgid "General"
+msgstr "Allgemein"
+
+#: build/settings.js:3
+msgid "Account"
+msgstr "Konto"
+
+#: build/settings.js:3
+msgid "Connect account"
+msgstr "Konto verbinden"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:4
+msgid "%s off"
+msgstr "%s Rabatt"
+
+#: build/settings.js:4
+msgid "Upgrade"
+msgstr "Upgrade"
+
+#: build/settings.js:4
+msgid "Free trial"
+msgstr "Kostenlos testen"
+
+#: build/settings.js:4
+msgid "Welcome back to Pro!"
+msgstr "Willkommen zurück bei Pro!"
+
+#: build/settings.js:4
+msgid ""
+"You already have Pro fee rules saved — extra tiers, conditional fees and "
+"store-wide fee options — and they're live again. Have a look below so "
+"nothing unexpected shows up at checkout or on new orders."
+msgstr ""
+"Du hast bereits Pro-Gebührenregeln gespeichert — zusätzliche Stufen, "
+"bedingte Gebühren und shopweite Gebühreneinstellungen — und sie sind wieder "
+"aktiv. Sieh unten nach, damit im Bestellvorgang oder bei neuen Bestellungen "
+"nichts Unerwartetes auftaucht."
+
+#: build/settings.js:4
+msgid "General settings"
+msgstr "Allgemeine Einstellungen"
+
+#: build/settings.js:4
+msgid "Add the fee as"
+msgstr "Gebühr hinzufügen als"
+
+#: build/settings.js:4
+msgid ""
+"A fee line is WooCommerce’s standard way of adding an extra charge to an "
+"order. Only choose Product line if your accounting software can’t handle "
+"separate fee lines."
+msgstr ""
+"Eine Gebührenposition ist der Standardweg von WooCommerce, einer Bestellung "
+"einen Zuschlag hinzuzufügen. Wählen Sie Produktposition nur dann, wenn Ihre "
+"Buchhaltungssoftware mit separaten Gebührenpositionen nicht umgehen kann."
+
+#: build/settings.js:4
+msgid "Fee line (recommended)"
+msgstr "Gebührenposition (empfohlen)"
+
+#: build/settings.js:4 build/settings.js:19
+msgid "Product line"
+msgstr "Produktposition"
+
+#: build/settings.js:4
+msgid ""
+"A hidden, virtual “Payment fee” product is created on first use. You may "
+"rename it or give it your own SKU — the fee amount and title always come "
+"from the fee settings."
+msgstr ""
+"Bei der ersten Verwendung wird ein verstecktes, virtuelles Produkt "
+"„Zahlungsgebühr“ angelegt. Du kannst es umbenennen oder ihm eine eigene "
+"Artikelnummer geben — Betrag und Bezeichnung der Gebühr stammen immer aus "
+"den Gebühreneinstellungen."
+
+#: build/settings.js:4
+msgid "Fee behaviour"
+msgstr "Verhalten der Gebühr"
+
+#: build/settings.js:4
+msgid "Charge the fee on manual & order-pay orders"
+msgstr ""
+"Gebühr auch bei manuellen Bestellungen und „Bestellung bezahlen“ berechnen"
+
+#: build/settings.js:4
+msgid ""
+"WooCommerce only charges payment fees at checkout. Enable this to also "
+"charge the fee on orders you create in the admin, and when a customer pays "
+"from the order-pay page — for example after a failed payment with another "
+"method. When disabled, no fee is added on those pages, but a fee from an "
+"earlier method is still removed when the customer switches."
+msgstr ""
+"WooCommerce berechnet Zahlungsgebühren nur an der Kasse. Aktivieren Sie "
+"dies, um die Gebühr auch bei Bestellungen zu berechnen, die Sie im "
+"Adminbereich anlegen, sowie wenn ein Kunde über die Bezahlseite der "
+"Bestellung zahlt – etwa nach einer fehlgeschlagenen Zahlung mit einer "
+"anderen Methode. Ist die Option deaktiviert, wird auf diesen Seiten keine "
+"Gebühr hinzugefügt; die Gebühr einer zuvor gewählten Methode wird beim "
+"Wechsel dennoch entfernt."
+
+#: build/settings.js:4
+msgid "Show each method’s fee beside its name at checkout"
+msgstr "Gebühr jeder Methode an der Kasse neben ihrem Namen anzeigen"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, each payment method shows its fee beside its own name, so "
+"the customer can compare before choosing; a method with no fee shows "
+"nothing. If disabled, the fee appears only once a method has been selected."
+msgstr ""
+"Ist diese Option aktiviert, zeigt jede Zahlungsmethode ihre Gebühr neben "
+"ihrem eigenen Namen, sodass Kunden vor der Wahl vergleichen können; bei "
+"einer Methode ohne Gebühr wird nichts angezeigt. Ist sie deaktiviert, "
+"erscheint die Gebühr erst nach Auswahl einer Methode."
+
+#: build/settings.js:4
+msgid "Do not show the fee on the cart page"
+msgstr "Gebühr auf der Warenkorbseite nicht anzeigen"
+
+#: build/settings.js:4
+msgid ""
+"With this enabled, the payment fee is only shown at checkout. If disabled, "
+"the cart may show a fee before the customer has chosen a payment method, "
+"since WooCommerce can default to one automatically. This setting only "
+"affects where the fee is shown; it does not change the amount charged."
+msgstr ""
+"Ist diese Option aktiviert, wird die Zahlungsgebühr nur an der Kasse "
+"angezeigt. Ist sie deaktiviert, kann der Warenkorb bereits eine Gebühr "
+"anzeigen, bevor der Kunde eine Zahlungsmethode gewählt hat, da WooCommerce "
+"automatisch eine vorauswählen kann. Diese Einstellung betrifft nur, wo die "
+"Gebühr angezeigt wird; der berechnete Betrag ändert sich nicht."
+
+#: build/settings.js:4
+msgid "Fixed fee"
 msgstr "Feste Gebühr"
 
-#: inc/class-pay4pay-admin.php:87
-msgid "Extra charge to be added to cart when this payment method is selected."
+#: build/settings.js:4
+msgid "A fixed amount added to the cart when this payment method is selected."
 msgstr ""
-"Ein fester Betrag für diese Zahlungsweise, der dem Warenkorb hinzugefügt "
-"wird."
+"Ein fester Betrag, der dem Warenkorb hinzugefügt wird, wenn diese "
+"Zahlungsmethode gewählt ist."
 
-#: inc/class-pay4pay-admin.php:94
-msgid "Percent charge"
-msgstr "Prozentuale Gebühr"
-
-#: inc/class-pay4pay-admin.php:96
-msgid "Percentage of cart total to be added to payment."
-msgstr "Prozentsatz des Auftragswertes"
-
-#: inc/class-pay4pay-admin.php:107
-msgid "Charge at least"
-msgstr "Mindestgebühr"
-
-#: inc/class-pay4pay-admin.php:109
-msgid ""
-"Minimum extra charge to be added to cart when this payment method is "
-"selected."
-msgstr "Mindestens diesen Betrag für die gewählte Zahlungsmethode berechnen."
-
-#: inc/class-pay4pay-admin.php:117
-msgid "Charge at most"
-msgstr "Höchstgebühr"
-
-#: inc/class-pay4pay-admin.php:119
-msgid ""
-"Maximum extra charge to be added to cart when this payment method is "
-"selected. Enter zero to disable."
-msgstr ""
-"Höchstens diesen Betrag für die gewählte Zahlungsmethode berechnen. Zum "
-"deaktivieren Null eintragen."
-
-#: inc/class-pay4pay-admin.php:127
-msgid "Disable on Free Shipping"
-msgstr "Deaktivieren bei Versandkostenfrei"
-
-#: inc/class-pay4pay-admin.php:128
-msgid "Don’t charge this fee when free shipping is available."
-msgstr "Gebühr wird nicht berechnet wenn Versandkostenfrei verfügbar ist."
-
-#: inc/class-pay4pay-admin.php:133
-#, fuzzy
-#| msgid "Disable on Free Shipping"
-msgid "Disable on Zero Shipping"
-msgstr "Deaktivieren bei Versandkostenfrei"
-
-#: inc/class-pay4pay-admin.php:134
-#, fuzzy
-#| msgid "Don’t charge this fee when free shipping is available."
-msgid "Don’t charge this fee when zero shipping is available."
-msgstr "Gebühr wird nicht berechnet wenn Versandkostenfrei verfügbar ist."
-
-#: inc/class-pay4pay-admin.php:144
-msgid "Extra Charge Taxes"
-msgstr "Steuern"
-
-#: inc/class-pay4pay-admin.php:149
-msgid "Taxable"
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:151
-msgid "Payment fee is taxable"
-msgstr "Gebühr wird besteuert"
-
-#: inc/class-pay4pay-admin.php:158
-msgid "Inclusive Taxes"
-msgstr "Inclusive Steuern"
-
-#: inc/class-pay4pay-admin.php:160
-msgid "The payment fee is inclusive of taxes."
-msgstr "Die Gebühr enthält Steuern"
-
-#: inc/class-pay4pay-admin.php:161
-msgid ""
-"If you leave this unchecked taxes will be calculated on top of the payment "
-"fee."
-msgstr ""
-"Wenn Du den Haken weglässt, werden die Steuern zu der Gebühr hinzuaddiert."
-
-#: inc/class-pay4pay-admin.php:167
-msgid "Tax class"
-msgstr "Steuerklasse"
-
-#: inc/class-pay4pay-admin.php:169
-msgid "Select a the tax class applied to the extra charge."
-msgstr "Wähle aus, welche Steuerklasse auf diese Gebühr angewendet wir."
-
-#: inc/class-pay4pay-admin.php:182
-msgid "Include in percental payment fee calculation:"
-msgstr "In prozentualer Gebühr berücksichtigen:"
-
-#: inc/class-pay4pay-admin.php:188
+#: build/settings.js:4
 msgid "Fees"
 msgstr "Andere Gebühren"
 
-#: inc/class-pay4pay-admin.php:190
-msgid "Include fees in calculation."
-msgstr "Andere Gebühren in die Berechnung einbeziehen"
-
-#: inc/class-pay4pay-admin.php:196
+#: build/settings.js:4
 msgid "Coupons"
 msgstr "Gutscheine"
 
-#: inc/class-pay4pay-admin.php:198
-msgid "Include Coupons in calculation."
-msgstr "Gutscheine bei der Berechnung berücksichtigen"
-
-#: inc/class-pay4pay-admin.php:204
+#: build/settings.js:4
 msgid "Shipping"
 msgstr "Versandkosten"
 
-#: inc/class-pay4pay-admin.php:206
-msgid "Include shipping cost in calculation."
-msgstr "Versandkosten bei der Berechnung berücksichtigen"
-
-#: inc/class-pay4pay-admin.php:215
+#: build/settings.js:4 build/settings.js:9
 msgid "Taxes"
 msgstr "Steuern"
 
-#: inc/class-pay4pay-admin.php:217
-msgid "Include taxes in calculation."
-msgstr "Steuern bei der Berechnung berücksichtigen"
+#: build/settings.js:4
+msgid "Percentage fee"
+msgstr "Prozentuale Gebühr"
 
-#: inc/class-pay4pay-admin.php:309
-msgid ""
-"There has been an error within the Pay for Payment for WooCommerce plugin "
-"and settings can't be saved."
+#: build/settings.js:4
+msgid "Percentage of the cart total added to the cart."
+msgstr "Prozentsatz der Warenkorbsumme, der dem Warenkorb hinzugefügt wird."
+
+#: build/settings.js:4
+msgid "%"
+msgstr "%"
+
+#: build/settings.js:4
+msgid "Include in the percentage calculation"
+msgstr "In die Prozentberechnung einbeziehen"
+
+#: build/settings.js:4
+msgid "Minimum fee"
+msgstr "Mindestgebühr"
+
+#: build/settings.js:4
+msgid "The fee never drops below this amount. Enter 0 for no minimum."
 msgstr ""
+"Die Gebühr fällt nie unter diesen Betrag. Gib 0 ein, wenn es keinen "
+"Mindestbetrag geben soll."
 
-#: inc/class-pay4pay-admin.php:309
+#: build/settings.js:4
+msgid "Maximum fee"
+msgstr "Höchstgebühr"
+
+#: build/settings.js:4
+msgid "The fee never exceeds this amount. Enter 0 for no maximum."
+msgstr ""
+"Die Gebühr übersteigt diesen Betrag nie. Gib 0 ein, wenn es keinen "
+"Höchstbetrag geben soll."
+
+#: build/settings.js:4
+msgid "the fixed charge, money-formatted"
+msgstr "die feste Gebühr, als Betrag formatiert"
+
+#: build/settings.js:4
+msgid "the percentage rate"
+msgstr "der Prozentsatz"
+
+#: build/settings.js:4
+msgid "the amount the percentage is calculated from, money-formatted"
+msgstr ""
+"der Betrag, aus dem der Prozentsatz berechnet wird, als Betrag formatiert"
+
+#: build/settings.js:4
+msgid "the minimum percentage fee, money-formatted"
+msgstr "die prozentuale Mindestgebühr, als Betrag formatiert"
+
+#: build/settings.js:4
+msgid "the maximum percentage fee, money-formatted"
+msgstr "die prozentuale Höchstgebühr, als Betrag formatiert"
+
+#. translators: %s: a placeholder token such as [FIXED_AMOUNT]
+#: build/settings.js:5
+msgid "Insert %s"
+msgstr "%s einfügen"
+
+#: build/settings.js:5
+msgid "Hide available placeholders"
+msgstr "Verfügbare Platzhalter ausblenden"
+
+#: build/settings.js:5
+msgid "Show available placeholders"
+msgstr "Verfügbare Platzhalter anzeigen"
+
+#: build/settings.js:5
+msgid ""
+"Click a placeholder to drop it where you left off in the label, or drag it "
+"into the field."
+msgstr ""
+"Klicken Sie auf einen Platzhalter, um ihn dort einzufügen, wo Sie in der "
+"Bezeichnung aufgehört haben – oder ziehen Sie ihn in das Feld."
+
+#: build/settings.js:5
+msgid "Example:"
+msgstr "Beispiel:"
+
+#: build/settings.js:5
+msgid "Cart total"
+msgstr "Warenkorbsumme"
+
+#: build/settings.js:5
+msgid "Compare against the cart total the customer sees."
+msgstr "Wird mit der Warenkorbsumme verglichen, die der Kunde sieht."
+
+#: build/settings.js:5
+msgid "Coupon applied"
+msgstr "Angewendeter Gutschein"
+
+#: build/settings.js:5
+msgid "Coupon"
+msgstr "Gutschein"
+
+#: build/settings.js:5
+msgid "Select or type coupon codes…"
+msgstr "Gutscheincodes wählen oder eingeben…"
+
+#: build/settings.js:5
+msgid ""
+"Match applied coupon codes — typed codes and * patterns (SUMMER*, *SALE*) "
+"work too."
+msgstr ""
+"Vergleicht angewendete Gutscheincodes — eingegebene Codes und Muster mit * "
+"(SOMMER*, *SALE*) funktionieren ebenfalls."
+
+#: build/settings.js:5
+msgid ""
+"No coupons found in your store yet — you can still type codes or patterns "
+"like SUMMER*."
+msgstr ""
+"In deinem Shop gibt es noch keine Gutscheine — Codes oder Muster wie SOMMER* "
+"kannst du trotzdem eingeben."
+
+#: build/settings.js:5
+msgid "Shipping method"
+msgstr "Versandmethode"
+
+#: build/settings.js:5
+msgid "Select shipping methods…"
+msgstr "Versandmethoden wählen…"
+
+#: build/settings.js:5
+msgid ""
+"Match the chosen shipping method — one zone instance, or any instance of a "
+"method type."
+msgstr ""
+"Vergleicht die gewählte Versandmethode — eine bestimmte Zoneninstanz oder "
+"jede Instanz eines Methodentyps."
+
+#: build/settings.js:5
+msgid "No shipping methods are configured yet."
+msgstr "Es sind noch keine Versandmethoden eingerichtet."
+
+#: build/settings.js:5
+msgid "Shipping zone"
+msgstr "Versandzone"
+
+#: build/settings.js:5
+msgid "Select shipping zones…"
+msgstr "Versandzonen wählen…"
+
+#: build/settings.js:5
+msgid "Match the shipping zone serving the chosen shipping method."
+msgstr "Vergleicht die Versandzone, zu der die gewählte Versandmethode gehört."
+
+#: build/settings.js:5
+msgid "No shipping zones are configured yet."
+msgstr "Es sind noch keine Versandzonen eingerichtet."
+
+#: build/settings.js:5
+msgid "Shipping class in cart"
+msgstr "Versandklasse im Warenkorb"
+
+#: build/settings.js:5
+msgid "Shipping class"
+msgstr "Versandklasse"
+
+#: build/settings.js:5
+msgid "Select shipping classes…"
+msgstr "Versandklassen wählen…"
+
+#: build/settings.js:5
+msgid "Match when a cart item has any of these shipping classes."
+msgstr ""
+"Trifft zu, wenn eine Position im Warenkorb eine dieser Versandklassen hat."
+
+#: build/settings.js:5
+msgid "No shipping classes are configured yet."
+msgstr "Es sind noch keine Versandklassen eingerichtet."
+
+#: build/settings.js:5
+msgid "Country / state"
+msgstr "Land / Bundesland"
+
+#: build/settings.js:5
+msgid "Country"
+msgstr "Land"
+
+#: build/settings.js:5
+msgid "Select countries or states…"
+msgstr "Länder oder Bundesländer wählen…"
+
+#: build/settings.js:5
+msgid ""
+"Match the delivery country or state — a country also covers all its states."
+msgstr ""
+"Vergleicht Lieferland oder Bundesland — ein Land umfasst auch alle seine "
+"Bundesländer."
+
+#: build/settings.js:5
+msgid "No selling countries are configured yet."
+msgstr "Es sind noch keine Verkaufsländer eingerichtet."
+
+#: build/settings.js:5
+msgid "User role"
+msgstr "Benutzerrolle"
+
+#: build/settings.js:5
+msgid "Role"
+msgstr "Rolle"
+
+#: build/settings.js:5
+msgid "Select user roles…"
+msgstr "Benutzerrollen wählen…"
+
+#: build/settings.js:5
+msgid "Match the signed-in customer’s role."
+msgstr "Vergleicht die Rolle des angemeldeten Kunden."
+
+#: build/settings.js:5
+msgid "No user roles found."
+msgstr "Keine Benutzerrollen gefunden."
+
+#: build/settings.js:5
+msgid "Product in cart"
+msgstr "Produkt im Warenkorb"
+
+#: build/settings.js:5
+msgid "Product"
+msgstr "Produkt"
+
+#: build/settings.js:5
+msgid "Search products…"
+msgstr "Produkte suchen…"
+
+#: build/settings.js:5
+msgid "Match when any of these products is in the cart."
+msgstr "Trifft zu, wenn eines dieser Produkte im Warenkorb liegt."
+
+#: build/settings.js:5
+msgid "Product category in cart"
+msgstr "Produktkategorie im Warenkorb"
+
+#: build/settings.js:5
+msgid "Category"
+msgstr "Kategorie"
+
+#: build/settings.js:5
+msgid "Select categories…"
+msgstr "Kategorien wählen…"
+
+#: build/settings.js:5
+msgid "Match when the cart contains a product from any of these categories."
+msgstr ""
+"Trifft zu, wenn der Warenkorb ein Produkt aus einer dieser Kategorien "
+"enthält."
+
+#: build/settings.js:5
+msgid "No product categories found."
+msgstr "Keine Produktkategorien gefunden."
+
+#: build/settings.js:5
+msgid "Matches"
+msgstr "Entspricht"
+
+#: build/settings.js:5
+msgid "Excludes"
+msgstr "Entspricht nicht"
+
+#: build/settings.js:5
+msgid "At least"
+msgstr "Mindestens"
+
+#: build/settings.js:5
+msgid "At most"
+msgstr "Höchstens"
+
+#: build/settings.js:5
+msgid "of cart totals"
+msgstr "der Warenkorbsumme"
+
+#: build/settings.js:5
+msgid "min."
+msgstr "min."
+
+#: build/settings.js:5
+msgid "max."
+msgstr "max."
+
+#. translators: 1: first few values, 2: count of remaining
+#: build/settings.js:6
+msgid "%1$s +%2$d"
+msgstr "%1$s +%2$d"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:7
+msgid "%1$s: not %2$s"
+msgstr "%1$s: außer %2$s"
+
+#. translators: 1: condition type, 2: values
+#: build/settings.js:8
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: build/settings.js:8
+msgid "No fee set yet"
+msgstr "Noch keine Gebühr festgelegt"
+
+#: build/settings.js:9
+msgid "When:"
+msgstr "Wenn:"
+
+#: build/settings.js:9
+msgid "When all match:"
+msgstr "Wenn alles zutrifft:"
+
+#: build/settings.js:9
+msgid "Fee label"
+msgstr "Gebührenbezeichnung"
+
+#: build/settings.js:9
+msgid "Shown to customers on the checkout page."
+msgstr "Wird Kunden auf der Kassenseite angezeigt."
+
+#: build/settings.js:9
+msgid "Inherit from cart items"
+msgstr "Von den Warenkorb-Artikeln übernehmen"
+
+#: build/settings.js:9
+msgid ""
+"One of this method’s fees is negative. WooCommerce treats a negative fee as "
+"a discount and works its tax out from the cart items, so these settings do "
+"not apply to it."
+msgstr ""
+"Eine der Gebühren dieser Methode ist negativ. WooCommerce behandelt eine "
+"negative Gebühr als Rabatt und ermittelt die Steuer dafür aus den "
+"Warenkorbpositionen; diese Einstellungen gelten daher nicht für sie."
+
+#: build/settings.js:9
+msgid "Payment fee is taxable"
+msgstr "Gebühr wird besteuert"
+
+#: build/settings.js:9
+msgid "Fee amount already includes tax"
+msgstr "Der Gebührenbetrag enthält bereits die Steuer"
+
+#: build/settings.js:9
+msgid "When unchecked, tax is calculated on top of the fee."
+msgstr "Wenn nicht angehakt, wird die Steuer auf die Gebühr aufgeschlagen."
+
+#: build/settings.js:9
+msgid "Tax class"
+msgstr "Steuerklasse"
+
+#: build/settings.js:9
+msgid "Tax class applied to the fee."
+msgstr "Steuerklasse, die auf die Gebühr angewendet wird."
+
+#: build/settings.js:9
+msgid "Free shipping is chosen"
+msgstr "Kostenloser Versand ist gewählt"
+
+#: build/settings.js:9
+msgid "Shipping costs nothing"
+msgstr "Der Versand kostet nichts"
+
+#: build/settings.js:9
+msgid "Don’t charge the fee when"
+msgstr "Gebühr nicht berechnen, wenn"
+
+#: build/settings.js:9
+msgid "Loading…"
+msgstr "Wird geladen…"
+
+#: build/settings.js:9
+msgid "Amount"
+msgstr "Betrag"
+
+#: build/settings.js:9
+msgid "Conditions"
+msgstr "Bedingungen"
+
+#: build/settings.js:9
+msgid "No conditions — this fee applies to every order."
+msgstr "Keine Bedingungen — diese Gebühr gilt für jede Bestellung."
+
+#: build/settings.js:9
+msgid "The fee applies when all conditions match."
+msgstr "Die Gebühr gilt, wenn alle Bedingungen zutreffen."
+
+#: build/settings.js:9
+msgid "Condition"
+msgstr "Bedingung"
+
+#: build/settings.js:9
+msgid "Mode"
+msgstr "Modus"
+
+#: build/settings.js:9
+msgid "Values"
+msgstr "Werte"
+
+#: build/settings.js:9
+msgid "Remove condition"
+msgstr "Bedingung entfernen"
+
+#: build/settings.js:9
+msgid "Add condition"
+msgstr "Bedingung hinzufügen"
+
+#. translators: %s: fee name
+#: build/settings.js:10
+msgid "Reorder %s. Use the arrow keys to move it."
+msgstr "Reihenfolge ändern: %s. Zum Verschieben die Pfeiltasten verwenden."
+
+#: build/settings.js:10
+msgid "Remove fee"
+msgstr "Gebühr entfernen"
+
+#. translators: 1: new position, 2: total number of fees
+#: build/settings.js:11
+msgid "Fee moved to position %1$d of %2$d"
+msgstr "Gebühr auf Position %1$d von %2$d verschoben"
+
+#: build/settings.js:11
+msgid ""
+"Fees are evaluated top to bottom — the first one whose conditions match the "
+"order is charged."
+msgstr ""
+"Gebühren werden von oben nach unten geprüft — berechnet wird die erste, "
+"deren Bedingungen auf die Bestellung zutreffen."
+
+#: build/settings.js:11
+msgid "Add fee"
+msgstr "Gebühr hinzufügen"
+
+#: build/settings.js:11
+msgid "Remove"
+msgstr "Entfernen"
+
+#: build/settings.js:11
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. translators: %s: fee label
+#: build/settings.js:12
+msgid "Remove “%s”?"
+msgstr "„%s“ entfernen?"
+
+#. translators: %s: payment method title
+#: build/settings.js:13
+msgid "Customers paying with %s will no longer be charged this fee."
+msgstr "Kunden, die mit %s bezahlen, wird diese Gebühr nicht mehr berechnet."
+
+#: build/settings.js:13 build/settings.js:16
+msgid "Fee active"
+msgstr "Gebühr aktiv"
+
+#: build/settings.js:13 build/settings.js:16
+msgid "No fee"
+msgstr "Keine Gebühr"
+
+#: build/settings.js:13
+msgid ""
+"This payment method is currently not active in WooCommerce, but you can "
+"still set the extra fee."
+msgstr ""
+"Diese Zahlungsmethode ist in WooCommerce derzeit nicht aktiv, du kannst die "
+"Gebühr aber trotzdem festlegen."
+
+#: build/settings.js:13
+msgid "Extra fee"
+msgstr "Extra Gebühr"
+
+#. translators: %s: payment method title
+#: build/settings.js:14
+msgid "Charge an extra fee when customers pay with %s"
+msgstr "Zusätzliche Gebühr berechnen, wenn Kunden mit %s bezahlen"
+
+#: build/settings.js:14
+msgid "Payment methods"
+msgstr "Zahlungsmethoden"
+
+#. translators: %s: payment method title
+#: build/settings.js:15
+msgid "— %s has a fee"
+msgstr "— %s hat eine Gebühr"
+
+#. translators: %s: payment method title
+#: build/settings.js:16
+msgid "— %s has no fee"
+msgstr "— %s hat keine Gebühr"
+
+#: build/settings.js:16
+msgid "cart total"
+msgstr "Warenkorbsumme"
+
+#: build/settings.js:16
+msgid "coupon"
+msgstr "Gutschein"
+
+#: build/settings.js:16
+msgid "product"
+msgstr "Produkt"
+
+#: build/settings.js:16
+msgid "category"
+msgstr "Kategorie"
+
+#: build/settings.js:16
+msgid "country or state"
+msgstr "Land oder Region"
+
+#: build/settings.js:16
+msgid "user role"
+msgstr "Benutzerrolle"
+
+#: build/settings.js:16
+msgid "shipping method"
+msgstr "Versandmethode"
+
+#: build/settings.js:16
+msgid "shipping zone"
+msgstr "Versandzone"
+
+#: build/settings.js:16
+msgid "shipping class"
+msgstr "Versandklasse"
+
+#: build/settings.js:16
+msgid "Pay for Payment Pro"
+msgstr "Pay for Payment Pro"
+
+#: build/settings.js:16
+msgid "Do more with PRO"
+msgstr "Mehr möglich mit PRO"
+
+#: build/settings.js:16
+msgid "Everything free does, plus rules & automation."
+msgstr "Alles aus der kostenlosen Version, plus Regeln und Automatisierung."
+
+#. translators: 1: star rating, 2: active install count
+#: build/settings.js:17
+msgid "%1$s · %2$s active installs"
+msgstr "%1$s · %2$s aktive Installationen"
+
+#: build/settings.js:17
+msgid "Conditional fees"
+msgstr "Bedingte Gebühren"
+
+#: build/settings.js:17
+msgid "Charge only when it fits."
+msgstr "Berechne nur dann, wenn es passt."
+
+#. translators: %s: an example cart amount, e.g. "5 000 Kč"
+#: build/settings.js:18
+msgid "if cart > %s"
+msgstr "wenn Warenkorb > %s"
+
+#. translators: %s: an example fee percentage such as "2%"
+#: build/settings.js:19
+msgctxt "Pro feature example chip"
+msgid "%s fee"
+msgstr "%s Gebühr"
+
+#: build/settings.js:19
+msgid "Match by"
+msgstr "Bedingung nach"
+
+#: build/settings.js:19
+msgid "Multiple fee tiers"
+msgstr "Mehrere Gebührenstufen"
+
+#: build/settings.js:19
+msgid "Stack more than one fee rule per payment method."
+msgstr "Mehr als eine Gebührenregel pro Zahlungsmethode hinterlegen."
+
+#: build/settings.js:19
+msgid "Fee 1"
+msgstr "Gebühr 1"
+
+#: build/settings.js:19
+msgid "Fee 2"
+msgstr "Gebühr 2"
+
+#: build/settings.js:19
+msgid "Fee as a product line"
+msgstr "Gebühr als Produktposition"
+
+#: build/settings.js:19
+msgid ""
+"Write the fee as a product instead of a fee line, for invoicing and ERP "
+"exports that skip fee lines."
+msgstr ""
+"Die Gebühr als Produkt statt als Gebührenposition schreiben – für "
+"Rechnungsstellung und ERP-Exporte, die Gebührenpositionen auslassen."
+
+#: build/settings.js:19
+msgid "Display controls"
+msgstr "Anzeigeoptionen"
+
+#: build/settings.js:19
+msgid ""
+"Hide the fee on the cart, or show each method’s fee beside its name at "
+"checkout."
+msgstr ""
+"Die Gebühr im Warenkorb ausblenden oder die Gebühr jeder Methode an der "
+"Kasse neben ihrem Namen anzeigen."
+
+#: build/settings.js:19
+msgid "Cart: hidden"
+msgstr "Warenkorb: ausgeblendet"
+
+#: build/settings.js:19
+msgid "Fees on manual & order-pay orders"
+msgstr "Gebühren bei manuellen Bestellungen und „Bestellung bezahlen“"
+
+#: build/settings.js:19
+msgid ""
+"Charge the fee beyond checkout — on the order-pay page and on orders you "
+"create by hand."
+msgstr ""
+"Die Gebühr auch außerhalb der Kasse berechnen – auf der Bezahlseite der "
+"Bestellung und bei manuell angelegten Bestellungen."
+
+#: build/settings.js:19
+msgid "Upgrade to PRO"
+msgstr "Auf PRO upgraden"
+
+#. translators: %s: discount amount, e.g. "50%"
+#: build/settings.js:20
+msgid "Launch offer — %s off with code"
+msgstr "Einführungsangebot — %s Rabatt mit Code"
+
+#: build/settings.js:20
+msgid "Keep free forever — upgrade any time."
+msgstr "Für immer kostenlos — upgraden kannst du jederzeit."
+
+#: build/settings.js:20
+msgid "Questions or a feature request?"
+msgstr "Fragen oder ein Funktionswunsch?"
+
+#: build/settings.js:20
+msgid ""
+"Pro customers get direct support from me — write any time. You can reach out "
+"at the <a>support forum</a>."
+msgstr ""
+"Pro-Kunden erhalten Support direkt von mir — schreib jederzeit. Du erreichst "
+"mich im <a>Support-Forum</a>."
+
+#: build/settings.js:20
+msgid "Loading payment methods…"
+msgstr "Zahlungsmethoden werden geladen …"
+
+#: build/settings.js:20
+msgid "No payment methods found"
+msgstr "Keine Zahlungsmethoden gefunden"
+
+#: build/settings.js:20
+msgid ""
+"Fees are set per payment method. Add and enable payment methods in "
+"WooCommerce first, then come back here to charge a fee for them."
+msgstr ""
+"Gebühren werden je Zahlungsmethode festgelegt. Füge zuerst Zahlungsmethoden "
+"in WooCommerce hinzu und aktiviere sie, und komm dann hierher zurück, um "
+"eine Gebühr dafür zu berechnen."
+
+#: build/settings.js:20
+msgid "Manage payment methods"
+msgstr "Zahlungsmethoden verwalten"
+
+#: build/settings.js:20
+msgid "Payment methods could not be loaded. Reload the page to try again."
+msgstr ""
+"Zahlungsmethoden konnten nicht geladen werden. Lade die Seite neu, um es "
+"erneut zu versuchen."
+
+#: build/settings.js:20
+msgid ""
+"None of your payment methods is enabled in WooCommerce yet. You can still "
+"set up fees now — they apply as soon as a method is enabled. <a>Manage "
+"payment methods</a>"
+msgstr ""
+"In WooCommerce ist noch keine deiner Zahlungsmethoden aktiviert. Du kannst "
+"Gebühren trotzdem schon einrichten — sie gelten, sobald eine Methode "
+"aktiviert ist. <a>Zahlungsmethoden verwalten</a>"
+
+#: build/settings.js:20
+msgid "Save changes"
+msgstr "Änderungen speichern"
+
+#: build/settings.js:20
+msgid "Please fix the validation errors above before saving."
+msgstr "Bitte behebe die obigen Validierungsfehler vor dem Speichern."
+
+#: build/settings.js:20
+msgid "Unsaved changes"
+msgstr "Nicht gespeicherte Änderungen"
+
+#: build/settings.js:20
+msgid "No changes to save"
+msgstr "Keine Änderungen zu speichern"
+
+#: build/settings.js:20
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#. translators: %s: the field messages, one per problem
+#: build/settings.js:21
+msgid "Validation failed: %s"
+msgstr "Validierung fehlgeschlagen: %s"
+
+#: build/settings.js:21
+msgid "Something went wrong"
+msgstr "Etwas ist schiefgelaufen"
+
+#: build/settings.js:21
+msgid ""
+"An error occurred while loading the settings. Please try reloading the page."
+msgstr ""
+"Beim Laden der Einstellungen ist ein Fehler aufgetreten. Bitte lade die "
+"Seite neu."
+
+#: build/settings.js:21
+msgid "Reload Page"
+msgstr "Seite neu laden"
+
+#: build/settings.js:21
+msgid "Try Again"
+msgstr "Erneut versuchen"
+
+#~ msgid "The plugin files are corrupted. Please re-install the plugin."
+#~ msgstr ""
+#~ "Die Plugin-Dateien sind beschädigt. Bitte installiere das Plugin erneut."
+
+#~ msgid "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+#~ msgstr "https://kybernaut.cz/pluginy/woocommerce-pay-for-payment/"
+
+#~ msgid "Extra Charge"
+#~ msgstr "Extra Gebühr"
+
 #, php-format
-msgid ""
-"To fix the issue, contact the plugin author either on %sGithub%s or "
-"%sWordPress.org%s and provide following information:"
-msgstr ""
+#~ msgctxt "Gateway list column"
+#~ msgid "%s %% of cart totals"
+#~ msgstr "%s %% der Warenkorbsumme"
 
-#: inc/class-pay4pay-admin.php:311
-msgid ""
-"Name of the payment method you are trying to save and the URL where it can "
-"be downloaded for testing."
-msgstr ""
+#~ msgid "Invalid off-checkout fee mode"
+#~ msgstr "Ungültiger Gebührenmodus außerhalb des Bestellvorgangs"
 
-#: inc/class-pay4pay-admin.php:312
-msgid "Current section ID:"
-msgstr ""
+#~ msgid "Note shown on the cart when the payment fee is deferred to checkout."
+#~ msgstr ""
+#~ "Hinweis im Warenkorb, wenn die Zahlungsgebühr erst im Bestellvorgang "
+#~ "ermittelt wird."
 
-#: inc/class-pay4pay-admin.php:313
-msgid "Anything else might be helpful (recently added/updated plugins, etc.)."
-msgstr ""
-
-#: inc/class-pay4pay-admin.php:357
 #, php-format
-msgctxt "Gateway list column"
-msgid "%s %% of cart totals"
-msgstr ""
-"WooCommerce Pay4Payment erfordert mindestens WooCommerce %s. Bitte updaten!"
+#~ msgid "Payment fee: %1$s · Total with this method: %2$s"
+#~ msgstr "Zahlungsgebühr: %1$s · Gesamt mit dieser Methode: %2$s"
 
-#: inc/class-pay4pay.php:293
-msgid "Payment fee tax class based on cart items"
-msgstr ""
+#~ msgid ""
+#~ "The plugin requires WooCommerce plugin and without it doesn't work. "
+#~ "Install and activate it first."
+#~ msgstr ""
+#~ "Das Plugin benötigt WooCommerce und funktioniert ohne es nicht. "
+#~ "Installiere und aktiviere es zuerst."
 
-#: woocommerce-payforpayment.php:52
-msgid "Pay for Payment for WooCommerce"
-msgstr ""
+#~ msgid ""
+#~ "Product line — for ERP & invoicing exports that skip fee lines "
+#~ "(experimental)"
+#~ msgstr ""
+#~ "Produktposition — für ERP- und Rechnungsexporte, die Gebührenpositionen "
+#~ "überspringen (experimentell)"
 
-#: woocommerce-payforpayment.php:53
-msgid "WooCommerce"
-msgstr ""
+#~ msgid "Also convert checkout orders’ fee to the product line"
+#~ msgstr ""
+#~ "Auch die Gebühr von Bestellungen aus dem Bestellvorgang in die "
+#~ "Produktposition umwandeln"
 
-#: woocommerce-payforpayment.php:56
-#, php-format
-msgid ""
-"%1$s requires %2$s. Please activate %2$s before activation of %1$s. This "
-"plugin has been deactivated."
-msgstr ""
+#~ msgid ""
+#~ "Every order then carries the fee the same way. Checkout itself is "
+#~ "unchanged — the fee line is swapped for the product line once the order "
+#~ "is created."
+#~ msgstr ""
+#~ "Jede Bestellung trägt die Gebühr dann auf dieselbe Weise. Der "
+#~ "Bestellvorgang selbst bleibt unverändert — die Gebührenposition wird erst "
+#~ "nach dem Anlegen der Bestellung durch die Produktposition ersetzt."
 
-#~ msgid "Standard"
-#~ msgstr "Standard"
+#~ msgid "Hide the fee on the cart page until a payment method is chosen"
+#~ msgstr ""
+#~ "Gebühr im Warenkorb ausblenden, bis eine Zahlungsmethode gewählt ist"
+
+#~ msgid ""
+#~ "Without a chosen payment method the cart would show the default method’s "
+#~ "fee, which confuses customers. The cart shows a short note instead; the "
+#~ "fee appears the moment a payment method is selected at checkout — the "
+#~ "amount charged never changes."
+#~ msgstr ""
+#~ "Ohne gewählte Zahlungsmethode würde der Warenkorb die Gebühr der "
+#~ "Standardmethode zeigen, was Kunden verwirrt. Stattdessen erscheint ein "
+#~ "kurzer Hinweis; die Gebühr wird sichtbar, sobald im Bestellvorgang eine "
+#~ "Zahlungsmethode gewählt wird — der berechnete Betrag ändert sich dabei "
+#~ "nie."
+
+#~ msgid "Display"
+#~ msgstr "Anzeige"
+
+#~ msgid "Show the fee in this payment method’s description at checkout"
+#~ msgstr ""
+#~ "Gebühr in der Beschreibung dieser Zahlungsmethode im Bestellvorgang "
+#~ "anzeigen"
+
+#~ msgid ""
+#~ "Customers see what each method costs before selecting one. Zero fees show "
+#~ "nothing."
+#~ msgstr ""
+#~ "Kunden sehen vor der Auswahl, was jede Methode kostet. Bei Gebühr null "
+#~ "wird nichts angezeigt."
+
+#~ msgid "country"
+#~ msgstr "Land"
+
+#~ msgid "Fee watchdog"
+#~ msgstr "Gebühren-Wächter"
+
+#~ msgid "Get warned before an oddly high or broken fee reaches a customer."
+#~ msgstr ""
+#~ "Werde gewarnt, bevor eine auffällig hohe oder fehlerhafte Gebühr beim "
+#~ "Kunden landet."
+
+#~ msgid "Check fee"
+#~ msgstr "Gebühr prüfen"
+
+#~ msgid "Minimum charge cannot be negative"
+#~ msgstr "Die Mindestgebühr darf nicht negativ sein"
+
+#~ msgid "Maximum charge cannot be negative"
+#~ msgstr "Die Höchstgebühr darf nicht negativ sein"
+
+#~ msgid "Fee"
+#~ msgstr "Gebühr"
+
+#~ msgid "Limits"
+#~ msgstr "Grenzen"
+
+#~ msgid "Charge at most"
+#~ msgstr "Höchstgebühr"
+
+#~ msgid ""
+#~ "Maximum extra charge to be added to cart when this payment method is "
+#~ "selected. Enter zero to disable."
+#~ msgstr ""
+#~ "Höchstens diesen Betrag für die gewählte Zahlungsmethode berechnen. Zum "
+#~ "deaktivieren Null eintragen."
+
+#~ msgid "Inclusive Taxes"
+#~ msgstr "Inclusive Steuern"
