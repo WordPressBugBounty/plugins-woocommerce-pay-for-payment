@@ -7,8 +7,8 @@ Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 8.0
 WC requires at least: 7.7.0
-WC tested up to: 11.1.2
-Stable tag: 3.0.0
+WC tested up to: 11.2.0
+Stable tag: 3.0.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -174,7 +174,12 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog ==
 
-= 3.0.0 =
+= 3.0.1 - 2026-10-09 =
+
+* Updated Freemius SDK to the latest version.
+* Tested up to WordPress 7.1.3 and WooCommerce 11.2.0.
+
+= 3.0.0 - 2026-09-23 =
 
 Rewritten from the ground up. Everything 2.x could do, it still does — same fee maths, same developer filters, and your settings move themselves.
 

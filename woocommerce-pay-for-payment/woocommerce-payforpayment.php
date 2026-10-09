@@ -6,7 +6,7 @@
  * Requires at least:    6.2
  * Requires PHP:         8.0
  * Requires Plugins:     woocommerce
- * Version:              3.0.0
+ * Version:              3.0.1
  * Author:               Karolína Vyskočilová
  * Author URI:           https://kybernaut.cz
  * Plugin URI:           https://payforpayment.com/
@@ -15,7 +15,7 @@
  * Text Domain:       	 woocommerce-pay-for-payment
  * Domain Path: 	     /languages
  * WC requires at least: 7.7.0
- * WC tested up to:      11.1.2
+ * WC tested up to:      11.2.0
  *
  */
 use Automattic\WooCommerce\Utilities\FeaturesUtil;
@@ -46,7 +46,7 @@ if ( function_exists( 'pay4payment_fs' ) ) {
     /**
      * Version of the plugin.
      */
-    define( 'PAY4PAYMENT_VERSION', '3.0.0' );
+    define( 'PAY4PAYMENT_VERSION', '3.0.1' );
     /**
      * Minimum required PHP version.
      */
