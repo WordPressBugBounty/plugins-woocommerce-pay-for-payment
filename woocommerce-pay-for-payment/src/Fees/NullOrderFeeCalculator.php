@@ -20,9 +20,11 @@ final class NullOrderFeeCalculator implements OrderFeeCalculatorInterface {
 	}
 
 	/**
-	 * Never, on any surface — express/checkout-order enforcement is Pro too
-	 * (#115). The sync can still remove another gateway's stale line on the
-	 * created order: free never overcharges, and never adds.
+	 * Never, on any surface — order-side enforcement is Pro (#115). The
+	 * Store API checkout POST does not need it: its fee comes through the
+	 * cart, for the POSTed gateway (`BlocksIntegration`). The sync can
+	 * still remove another gateway's stale line on the created order: free
+	 * never overcharges, and never adds order-side.
 	 *
 	 * @param string $source Sync surface (unused).
 	 * @return bool

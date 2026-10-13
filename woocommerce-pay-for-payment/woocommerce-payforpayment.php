@@ -6,7 +6,7 @@
  * Requires at least:    6.2
  * Requires PHP:         8.0
  * Requires Plugins:     woocommerce
- * Version:              3.0.1
+ * Version:              3.0.2
  * Author:               Karolína Vyskočilová
  * Author URI:           https://kybernaut.cz
  * Plugin URI:           https://payforpayment.com/
@@ -46,7 +46,7 @@ if ( function_exists( 'pay4payment_fs' ) ) {
     /**
      * Version of the plugin.
      */
-    define( 'PAY4PAYMENT_VERSION', '3.0.1' );
+    define( 'PAY4PAYMENT_VERSION', '3.0.2' );
     /**
      * Minimum required PHP version.
      */

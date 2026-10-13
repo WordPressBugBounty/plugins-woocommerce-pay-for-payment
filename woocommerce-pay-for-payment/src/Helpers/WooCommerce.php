@@ -32,6 +32,16 @@ class WooCommerce {
 	private $zone_ids = array();
 
 	/**
+	 * The gateway a Store API checkout request POSTed, '' outside one —
+	 * read ahead of the session by {@see get_chosen_payment_method()}. Why:
+	 * `BlocksIntegration` class docblock. Instance state, so it relies on
+	 * the container handing `BlocksIntegration` and `Frontend` the one
+	 * shared adapter (PHP-DI autowire entries are shared by default).
+	 * @var string
+	 */
+	private $request_payment_method = '';
+
+	/**
 	 * The WC() singleton, or null when WooCommerce is not (yet) loaded.
 	 *
 	 * @return \WooCommerce|null
@@ -165,15 +175,31 @@ class WooCommerce {
 	 * @return string
 	 */
 	public function get_chosen_payment_method(): string {
-		$method = $this->session_get( 'chosen_payment_method' );
+		$method = '' !== $this->request_payment_method
+			? $this->request_payment_method
+			: $this->session_get( 'chosen_payment_method' );
 
 		/**
 		 * Filters the chosen payment method id for the current request.
 		 *
 		 * @since 3.0.0
-		 * @param string $method Gateway id from the WC session, '' when none.
+		 * @param string $method Gateway id — the one a Store API checkout request POSTed, else the WC session's, '' when none.
 		 */
 		return Cast::to_string( apply_filters( 'pay4payment_chosen_payment_method', is_string( $method ) ? $method : '' ) );
+	}
+
+	/**
+	 * Pin the gateway a Store API checkout request POSTed for the rest of
+	 * this request ({@see get_chosen_payment_method()} reads it ahead of
+	 * the session). Request-scoped on purpose: the session is core's to
+	 * write, and nothing pinned here outlives the request. The caller
+	 * validates the id against the registered gateways.
+	 *
+	 * @param string $id Gateway id, '' to clear.
+	 * @return void
+	 */
+	public function set_request_payment_method( string $id ): void {
+		$this->request_payment_method = $id;
 	}
 
 	/**
@@ -371,6 +397,20 @@ class WooCommerce {
 	 */
 	public function is_cart_page(): bool {
 
+		// A request that is building an order is never "the cart", whatever
+		// URL it was posted to. WooCommerce runs the classic checkout's
+		// `wc-ajax=checkout` on `template_redirect` of the posted URL, so a
+		// form posted to the cart page's URL has `is_cart()` true while
+		// `process_checkout()` computes the totals the order is created
+		// from — and a suppression there is an order without its fee (the
+		// Store API checkout route is kept out below for the same reason).
+		// Core defines the constant on every classic order-building path
+		// (`WC_AJAX::checkout()`, `WC_Form_Handler::checkout_action()`,
+		// `WC_Checkout::process_checkout()`) before the totals run.
+		if ( self::is_processing_checkout() ) {
+			return false;
+		}
+
 		if ( function_exists( 'is_cart' ) && is_cart() ) {
 			return true;
 		}
@@ -387,6 +427,17 @@ class WooCommerce {
 
 		return self::same_path( $referer, wc_get_cart_url() );
 
+	}
+
+	/**
+	 * Whether the classic checkout is processing an order in this request
+	 * (`WOOCOMMERCE_CHECKOUT`, which core defines before it computes the
+	 * totals the order is created from).
+	 *
+	 * @return bool
+	 */
+	private static function is_processing_checkout(): bool {
+		return defined( 'WOOCOMMERCE_CHECKOUT' ) && WOOCOMMERCE_CHECKOUT;
 	}
 
 	/**

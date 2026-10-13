@@ -31,11 +31,13 @@ use Pay4Payment\Premium;
  *   synced on save/Recalculate, and (product mode) checkout orders' fee
  *   line can be converted to the product line.
  *
- * The same split covers the Store API checkout POST (#115): the POST
- * computes cart fees before the POSTed gateway reaches the session, so the
- * draft order can carry a stale gateway's fee — always, on express Pay-Now
- * flows, whose wallet gateway never enters the session. Free removes that
- * stale line; Pro corrects it to the actual gateway
+ * The same split covers the Store API checkout POST (#115). The POSTed
+ * gateway is pinned before the cart fees run (`BlocksIntegration` class
+ * docblock), so the draft order normally already carries the right line
+ * in both builds; this sync is the order-side backstop for whatever still
+ * differs (a line a third party dropped, a gateway the
+ * `pay4payment_chosen_payment_method` filter resolved differently). Free
+ * removes a stale line; Pro corrects it to the actual gateway
  * (`may_charge( SOURCE_CHECKOUT )`, licence-only — a checkout surface,
  * not gated by the off-checkout mode), before the gateway authorizes.
  * The same action's order-pay route (`/checkout/{ID}`, #131) follows the
@@ -229,14 +231,14 @@ class OrderFeeSync implements ComponentInterface {
 	}
 
 	/**
-	 * Store API checkout (blocks + express Pay-Now, #115): the POST computes
-	 * cart fees before the POSTed `payment_method` reaches the session, so
-	 * the draft order can carry the stale session gateway's fee — or none,
-	 * on express flows, where the wallet gateway never enters the session at
-	 * all. This hook fires right after core wrote the POSTed method onto the
-	 * order and into the session, before `…checkout_order_processed` (so
-	 * product-mode conversion sees the corrected line) and before
-	 * `process_payment()` (so the gateway authorizes the corrected total).
+	 * Store API checkout (blocks + express Pay-Now, #115): the cart fee —
+	 * and the draft order's line — already follow the POSTed gateway
+	 * (`BlocksIntegration::capture_checkout_payment_method()`); this hook
+	 * is the order-side check that they do. It fires right after core
+	 * wrote the POSTed method onto the order and into the session, before
+	 * `…checkout_order_processed` (so product-mode conversion sees the
+	 * corrected line) and before `process_payment()` (so the gateway
+	 * authorizes the corrected total).
 	 *
 	 * Two surfaces share the action, split on the session's draft id (the
 	 * id core stores as `store_api_draft_order` before the action fires):

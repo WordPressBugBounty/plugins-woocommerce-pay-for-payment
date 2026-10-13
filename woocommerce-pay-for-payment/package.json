@@ -1,6 +1,6 @@
 {
 	"name": "woocommerce-pay-for-payment-pro",
-	"version": "3.0.1",
+	"version": "3.0.2",
 	"author": "Karolína Vyskočilová",
 	"license": "GPL-2.0-or-later",
 	"files": [
@@ -50,14 +50,14 @@
 	},
 	"dependencies": {
 		"@woocommerce/currency": "^6.0.0",
-		"@wordpress/api-fetch": "^7.55.0",
-		"@wordpress/components": "^40.1.0",
-		"@wordpress/data": "^10.54.0",
-		"@wordpress/dom-ready": "^4.54.0",
-		"@wordpress/element": "^8.7.0",
+		"@wordpress/api-fetch": "^7.56.0",
+		"@wordpress/components": "^41.0.0",
+		"@wordpress/data": "^10.56.0",
+		"@wordpress/dom-ready": "^4.56.0",
+		"@wordpress/element": "^8.8.0",
 		"@wordpress/i18n": "^6.26.0",
-		"@wordpress/icons": "^16.0.0",
-		"@wordpress/notices": "^5.55.0"
+		"@wordpress/icons": "^17.0.0",
+		"@wordpress/notices": "^5.56.0"
 	},
 	"overrides": {
 		"serialize-javascript": "^7.1.1"

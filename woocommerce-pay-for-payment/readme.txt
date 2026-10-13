@@ -8,7 +8,7 @@ Tested up to: 7.1
 Requires PHP: 8.0
 WC requires at least: 7.7.0
 WC tested up to: 11.2.0
-Stable tag: 3.0.1
+Stable tag: 3.0.2
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,7 +121,7 @@ To tell the plugin's fee apart from other fees, every fee line it writes carries
 
 = The customer paid with another method after a failed payment — which fee is on the order? =
 
-On the free plugin, no fee at all. When the customer changes the payment method on the order-pay page ("Pay for order"), the fee line of the method they moved away from is removed, and WooCommerce doesn't run cart fees on that page, so nothing takes its place. They are never charged for a method they didn't use.
+On the free plugin, no fee at all. When the customer changes the payment method on the order-pay page ("Pay for order"), the fee line of the method they moved away from is removed, and WooCommerce doesn't run cart fees on that page, so nothing takes its place. They are never charged for a method they didn't use. Know that a customer can reach this on purpose: let the first payment fail, then pay on the order-pay page with the method that carries the fee. If that fee matters to you, Pro closes it.
 
 On Pro, with "Charge the fee on manual & order-pay orders" turned on, it's the fee of the method they actually paid with: the old fee is replaced by the new one, and the order-pay page shows each method's fee and the resulting total before they pay. Orders you create in wp-admin get their fee the same way, on save or Recalculate.
 
@@ -173,6 +173,10 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 4. Translating the fee label and fixed charge with WPML's String Translation module.
 
 == Changelog ==
+
+= 3.0.2 - 2026-10-12 =
+
+* Security: the block checkout now charges the fee of the payment method named in the place-order request itself. Before, the fee followed the method the shopper's browser had sent earlier — a request sent straight to the WooCommerce checkout API, skipping that step, placed an order on a fee-bearing method without its fee. Reported through Patchstack; thanks to the reporter.
 
 = 3.0.1 - 2026-10-09 =
 
@@ -232,6 +236,9 @@ Rewritten from the ground up. Everything 2.x could do, it still does — same fe
 Every release back to 1.0.0 (2013) is listed at [payforpayment.com/changelog](https://payforpayment.com/changelog/).
 
 == Upgrade Notice ==
+
+= 3.0.2 =
+Security fix for the block checkout: an order placed by sending a request straight to WooCommerce's checkout API could skip the fee of the payment method it named. Update now.
 
 = 3.0.0 =
 Major rewrite. Your fee settings migrate automatically, so there is nothing to reconfigure, and your 2.x settings stay where they were. Do check them once after updating at WooCommerce > Settings > Pay for payment, where every fee now lives.
