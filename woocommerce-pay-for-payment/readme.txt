@@ -7,8 +7,8 @@ Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 8.0
 WC requires at least: 7.7.0
-WC tested up to: 11.2.0
-Stable tag: 3.0.2
+WC tested up to: 11.2.1
+Stable tag: 3.0.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -174,6 +174,13 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 
 == Changelog ==
 
+= 3.0.3 - 2026-10-23 =
+
+* Accessibility: on the classic checkout, choosing a payment method with the keyboard no longer throws focus back to the top of the page on every arrow-key step while the fee updates. It stays on the payment method the shopper picked.
+* Accessibility: in the settings, an error, including a failed save, now stays on screen until you close it instead of disappearing after five seconds. A failed save is also flagged next to "Save changes", where you clicked.
+* Accessibility: red error messages and the "No changes to save" line in the settings are darker, so they are readable on the gray background. A field you reach with the Tab key no longer ends up hidden behind the save bar or the admin header.
+* Tested up to WooCommerce 11.2.1.
+
 = 3.0.2 - 2026-10-12 =
 
 * Security: the block checkout now charges the fee of the payment method named in the place-order request itself. Before, the fee followed the method the shopper's browser had sent earlier — a request sent straight to the WooCommerce checkout API, skipping that step, placed an order on a fee-bearing method without its fee. Reported through Patchstack; thanks to the reporter.
@@ -188,19 +195,23 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 Rewritten from the ground up. Everything 2.x could do, it still does — same fee maths, same developer filters, and your settings move themselves.
 
 **Upgrading from 2.x**
+
 * Your per-gateway fee settings migrate automatically the first time the plugin runs. Nothing to reconfigure. The old settings are left exactly where they were.
 * Fees are now configured in one place: WooCommerce > Settings > Pay for payment. The fields no longer appear on each gateway's own settings page.
 * Requires PHP 8.0 or newer and WooCommerce 7.7 or newer.
 * The plugin is listed as "Pay for Payment for WooCommerce – Payment Gateway Fees & Discounts" — same plugin, same slug, same settings.
 
 **New**
+
 * One settings screen for every payment method, built with WooCommerce's own admin components. It also covers gateways whose own settings screens have no room for extra fields — WooCommerce Payments, Stripe, Klarna and other React-based gateways.
 * The screen lists every payment method you have, enabled or not, so you can set a fee up before the method goes live.
 * Block checkout support: the fee is calculated and the total updates when the shopper changes payment method, the same as on the classic checkout.
 * Fee lines the plugin writes now carry `_pay4payment_fee_gateway` and `_pay4payment_fee_source` order-item meta, so accountants and exports can tell them from any other fee.
 * Uninstalling removes every option the plugin wrote, including the standalone rows 2.x left behind. The `pay4pay_*` keys stored inside each gateway's own WooCommerce settings are left untouched — those are your 2.x configuration, and keeping them is what lets you roll back to 2.x.
 
+
 **Changed**
+
 * A cart with nothing left to pay for — goods fully discounted and no shipping cost — no longer gets a payment fee. In 2.x the check looked at the cart total *before* discounts, so a 100 % coupon still paid the fee. Paid shipping on free goods still charges.
 * "Tax class based on cart items" now also applies when the fee amount excludes tax. In 2.x it only worked for tax-inclusive amounts and quietly fell back to the standard rate otherwise, so the fee's tax may change on stores that mix tax classes.
 * Fees are charged only for the payment methods you have switched on in the settings screen. Everything that charged a fee in 2.x is switched on for you during the upgrade.
@@ -208,6 +219,7 @@ Rewritten from the ground up. Everything 2.x could do, it still does — same fe
 * VAT-exempt customers now pay the net of a fee whose amount includes tax, not the full amount. A fee set to 12.10 including 21 % tax is charged to everyone as 10.00 plus tax; a VAT-exempt customer now pays 10.00 with no tax, where 2.x charged them the whole 12.10. This only affects stores that both tick "Fee amount already includes tax" and have VAT-exempt customers.
 
 **Fixed**
+
 * When a customer's payment fails and they pay the order again with a different method, the first method's fee is removed from the order instead of staying on it.
 * The previous method's fee is likewise removed from block-checkout and express (Apple Pay / Google Pay) orders, before the payment amount is authorized.
 * The checkout no longer fatals when another plugin puts a cart entry without product data in the basket while the fee's tax class is "based on cart items".
@@ -224,6 +236,7 @@ Rewritten from the ground up. Everything 2.x could do, it still does — same fe
 * Validation messages name the field they appear under ("Fee label", "Minimum fee") instead of internal field names.
 
 **Developers**
+
 * All 2.x filters keep their names and signatures: `woocommerce_pay4pay_charges_fixed`, `_charges_percentage`, `_charges_minimum`, `_charges_maximum`, `_apply`, `_applyfor_{gateway_id}` and `_{gateway_id}_amount`. They still fire inside the calculation with the same intermediate values, and the fee is still added on `woocommerce_cart_calculate_fees` at `PHP_INT_MAX - 1`.
 * Those filters now receive one extra trailing argument: the index of the fee rule being calculated. Existing callbacks are unaffected.
 * `woocommerce_pay4pay_get_current_gateway_settings` keeps working. It is rebuilt over the new settings schema and fires with the same fourteen `pay4pay_*` keys, so a 2.x snippet runs unchanged at checkout. Returning `false` still switches the fee off. (On Pro it fires on the order-pay charge and in the per-method fee preview too — those paths do not exist in the free plugin, so there is nothing for it to shape there.) Two things to know when bringing a snippet across: it shapes a fee for a method that is switched on in the settings screen (a method whose fee lives entirely in your code is switched on for you during the upgrade), and COD's `enable_for_methods` is read from the gateway rather than from the array you return.
@@ -236,6 +249,9 @@ Rewritten from the ground up. Everything 2.x could do, it still does — same fe
 Every release back to 1.0.0 (2013) is listed at [payforpayment.com/changelog](https://payforpayment.com/changelog/).
 
 == Upgrade Notice ==
+
+= 3.0.3 =
+Accessibility fixes for the classic checkout and the settings screen: keyboard focus stays where the shopper or you left it, errors stay until closed, and low-contrast text is darker.
 
 = 3.0.2 =
 Security fix for the block checkout: an order placed by sending a request straight to WooCommerce's checkout API could skip the fee of the payment method it named. Update now.

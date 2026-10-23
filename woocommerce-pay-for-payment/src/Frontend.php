@@ -24,14 +24,47 @@ class Frontend implements ComponentInterface
 	 * `$fragment_refresh` is WooCommerce's cart-fragments refresh config; the
 	 * `typeof` guard is v2 behaviour and is kept deliberately — the variable is
 	 * absent unless cart fragments are active.
+	 *
+	 * The refresh this triggers makes WooCommerce replace the payment list,
+	 * focused radio included, and core only restores focus for shipping
+	 * methods. Arrowing through the radio group fires `change` on every step,
+	 * so a keyboard user would drop to `<body>` each time (WCAG 2.4.3). When
+	 * the changed radio had focus, it is focused again once the list is back
+	 * — unless focus has meanwhile gone somewhere else, or the refresh failed
+	 * (WooCommerce has scrolled to its error notice by then). A refresh that
+	 * errors out never fires `updated_checkout`, so the remembered radio is
+	 * dropped there too, or a later, unrelated refresh would jump to it.
 	 */
 	private const UPDATE_CHECKOUT_JS = <<<'JS'
 		jQuery(document).ready(function($) {
+			var p4pRefocusId = null;
 			$(document.body).on('change', 'input[name="payment_method"]', function() {
+				p4pRefocusId = (this === document.activeElement && this.id) ? this.id : null;
 				$('body').trigger('update_checkout');
 				if (typeof $fragment_refresh !== 'undefined') {
 					$.ajax($fragment_refresh);
 				}
+			});
+			$(document.body).on('updated_checkout', function(e, data) {
+				var id = p4pRefocusId;
+				var active = document.activeElement;
+				p4pRefocusId = null;
+				if (!id || !data || data.result !== 'success' || (active && active !== document.body)) {
+					return;
+				}
+				var radio = document.getElementById(id);
+				if (radio) {
+					radio.focus();
+				}
+			});
+			$(document).ajaxError(function(e, xhr, settings) {
+				var url = settings && settings.url ? String(settings.url) : '';
+				if (xhr.statusText !== 'abort' && url.indexOf('update_order_review') !== -1) {
+					p4pRefocusId = null;
+				}
+			});
+			$(document.body).on('checkout_error', function() {
+				p4pRefocusId = null;
 			});
 		});
 		JS;

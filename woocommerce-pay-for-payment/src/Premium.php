@@ -2,24 +2,33 @@
 
 namespace Pay4Payment;
 
+use Pay4Payment\Distribution\Distribution;
+
 /**
  * The single free↔Pro gate.
  *
- * The default is the Freemius verdict, and it needs both halves:
+ * The verdict comes from the channel this copy was distributed through
+ * ({@see Distribution}, set once by the bootstrap — `distribution/freemius.php`
+ * or `distribution/marketplace.php`), and it needs both halves:
  *
- * - `is_premium()` — the premium code version is running. Freemius writes
- *   `'is_premium' => false` into the free build it generates from this
- *   codebase, so the free build never unlocks Pro — a licence activated
- *   there points the merchant at the Pro download instead.
+ * - `is_premium_code()` — the premium code version is running. Freemius
+ *   writes `'is_premium' => false` into the free build it generates from
+ *   this codebase, so the free build never unlocks Pro — a licence
+ *   activated there points the merchant at the Pro download instead.
  * - `can_use_premium_code()` — the site holds a features-enabled licence
- *   or is in an active trial. It ignores the code version on its own.
+ *   or is in an active trial (Freemius), or bought the plugin before
+ *   downloading it (the WooCommerce.com marketplace, where this is always
+ *   true).
  *
  * The `pay4payment_is_premium` filter lets tests and development stores
- * flip the verdict either way; it receives the Freemius verdict as its
+ * flip the verdict either way; it receives the channel's verdict as its
  * default.
  *
- * No other module may ask Freemius (or anything else) whether Pro is
- * active — changing the gate must stay a change to this method only.
+ * No other module may ask the channel (or anything else) whether Pro is
+ * active — changing the gate must stay a change to this method only. And
+ * no module, this one included, may ask the Freemius SDK directly: the
+ * only class that does is `Freemius\FreemiusDistribution`, which the
+ * marketplace build does not ship (docs/agents/distribution.md).
  * {@see is_premium_build()} is the one sibling predicate: the
  * distribution-channel question (which code flavor shipped), asked by
  * surfaces keyed on where the plugin came from rather than on features.
@@ -45,23 +54,61 @@ final class Premium {
 	public const UTM_MEDIUM_UPGRADE_NOTICE = 'upgrade-notice';
 
 	/**
+	 * The channel this copy came through, set by the bootstrap.
+	 *
+	 * @var Distribution|null
+	 */
+	private static $distribution = null;
+
+	/**
+	 * Tell the gate which channel this copy was distributed through. Called
+	 * once, by the bootstrap file the build ships (`distribution/*.php`),
+	 * before anything asks.
+	 *
+	 * @param Distribution $distribution The channel.
+	 * @return void
+	 */
+	public static function set_distribution( Distribution $distribution ): void {
+		self::$distribution = $distribution;
+	}
+
+	/**
+	 * The channel every question below is put to.
+	 *
+	 * Throws rather than falling back: a build whose bootstrap forgot to set
+	 * the channel must fail on the first request, loudly, not quietly
+	 * behave as free for every customer — the silent failure the whole
+	 * distribution seam exists to rule out.
+	 *
+	 * @return Distribution
+	 * @throws \LogicException When no bootstrap has set the channel.
+	 */
+	public static function distribution(): Distribution {
+		if ( null === self::$distribution ) {
+			throw new \LogicException( 'Pay for Payment: no distribution channel set — the bootstrap (distribution/*.php) must call Premium::set_distribution() before anything asks the gate.' );
+		}
+
+		return self::$distribution;
+	}
+
+	/**
 	 * Whether Pro features are active.
 	 *
 	 * @return bool
 	 */
 	public static function is_premium(): bool {
-		$fs = pay4payment_fs();
+		$channel = self::distribution();
 
 		/**
 		 * Filters whether Pro features are active.
 		 *
 		 * @since 3.0.0
-		 * @param bool $is_premium Whether Pro features are active — the Freemius
+		 * @param bool $is_premium Whether Pro features are active — the channel's
 		 *                         verdict by default (see the class docblock).
 		 */
 		return (bool) apply_filters(
 			'pay4payment_is_premium',
-			$fs->is_premium() && $fs->can_use_premium_code()
+			$channel->is_premium_code() && $channel->can_use_premium_code()
 		);
 	}
 
@@ -69,20 +116,21 @@ final class Premium {
 	 * Whether the PREMIUM BUILD is running — the code flavor alone,
 	 * licence state ignored. Freemius writes `'is_premium' => false` into
 	 * the free build it generates, so this separates the distribution
-	 * channel ("installed from wordpress.org" vs "installed through
-	 * Freemius") from the feature verdict: an unlicensed Pro install is
-	 * still a Freemius customer — the wrong audience for a wp.org review
-	 * ask (#72). Deliberately not filterable: the `pay4payment_is_premium`
-	 * filter flips features, never where the plugin came from.
+	 * channel ("installed from wordpress.org" vs "bought") from the feature
+	 * verdict: an unlicensed Pro install is still a Freemius customer — the
+	 * wrong audience for a wp.org review ask (#72). The marketplace build
+	 * is a premium build too. Deliberately not filterable: the
+	 * `pay4payment_is_premium` filter flips features, never where the
+	 * plugin came from.
 	 *
 	 * @return bool
 	 */
 	public static function is_premium_build(): bool {
-		return (bool) pay4payment_fs()->is_premium();
+		return self::distribution()->is_premium_code();
 	}
 
 	/**
-	 * The Freemius upgrade/checkout URL, or '' when unavailable.
+	 * The upgrade/checkout URL, or '' when unavailable.
 	 *
 	 * Every returned URL carries the campaign tags (#201), the caller naming
 	 * the admin surface it is linking from; and while the launch offer runs
@@ -90,10 +138,11 @@ final class Premium {
 	 * applied when checkout opens. Both ride the same mechanism: the SDK's
 	 * pricing template merges the query args it receives into the config it
 	 * hands the pricing app. An empty URL stays empty rather than becoming a
-	 * bare query string.
+	 * bare query string — and the marketplace build's URL is always empty,
+	 * because the marketplace forbids checkout links to the vendor's site.
 	 *
-	 * Two ways the URL can still lead nowhere, neither of which this guard
-	 * catches — both tracked in #206:
+	 * Two ways a Freemius URL can still lead nowhere, neither of which this
+	 * guard catches — both tracked in #206:
 	 *
 	 * - `has_paid_plan()` reads the `has_paid_plans` flag from this plugin's
 	 *   own SDK config, never the store's plan data, so it is always true
@@ -116,13 +165,7 @@ final class Premium {
 	 * @return string
 	 */
 	public static function upgrade_url( string $medium ): string {
-		$fs = pay4payment_fs();
-
-		if ( ! $fs->has_paid_plan() ) {
-			return '';
-		}
-
-		$url = (string) $fs->get_upgrade_url();
+		$url = self::distribution()->upgrade_url();
 
 		if ( '' === $url ) {
 			return '';
@@ -134,7 +177,7 @@ final class Premium {
 	/**
 	 * The query args every link into the pricing screen carries — the campaign
 	 * tags, and the launch coupon while it runs. {@see upgrade_url()} is this
-	 * plus the SDK's own URL.
+	 * plus the channel's own URL.
 	 *
 	 * Split out because the settings tab links to a pricing screen it renders
 	 * itself (`&section=pricing`, #230) rather than to the SDK's page, and
@@ -162,17 +205,18 @@ final class Premium {
 	}
 
 	/**
-	 * The Freemius contact/support URL for a licensed site, or '' otherwise.
+	 * The channel's contact/support URL for a licensed site, or '' otherwise.
 	 *
 	 * wp.org's support forum (readme.txt FAQ) is for the free plugin;
 	 * commercial support is off-topic there, so a licensed site is routed to
-	 * Freemius' own contact form instead. Support is a plan entitlement, not
-	 * a code-flavor question — unlike {@see is_premium_build()} (the
-	 * review-ask sibling, #72, which deliberately checks the build alone, to
-	 * keep an unlicensed Freemius customer off the wp.org review ask), this
-	 * checks the full licence verdict, so an unlicensed Pro build gets no
-	 * Freemius contact link either. Callers fall back to the wp.org forum
-	 * link when this is empty.
+	 * the channel's own desk instead — Freemius' contact form, or
+	 * WooCommerce.com's ticket form on the marketplace build. Support is a
+	 * plan entitlement, not a code-flavor question — unlike
+	 * {@see is_premium_build()} (the review-ask sibling, #72, which
+	 * deliberately checks the build alone, to keep an unlicensed Freemius
+	 * customer off the wp.org review ask), this checks the full licence
+	 * verdict, so an unlicensed Pro build gets no contact link either.
+	 * Callers fall back to the public support page when this is empty.
 	 *
 	 * @return string
 	 */
@@ -181,19 +225,52 @@ final class Premium {
 			return '';
 		}
 
-		return (string) pay4payment_fs()->contact_url();
+		return self::distribution()->contact_url();
 	}
 
 	/**
-	 * The Freemius Account screen for a connected site, or '' when there is
-	 * no such screen to link to.
+	 * The channel's documentation, or '' for the plugin's own site. Not a
+	 * plan entitlement: whoever installed this copy reads the docs of the
+	 * channel it came from.
 	 *
-	 * The SDK registers that page only once the site is connected
-	 * (`add_submenu_items()` gates it on `is_registered()`), and this plugin
-	 * has no admin menu of its own — Freemius' pages are hidden subpages,
-	 * linked from the plugins list. So the settings screen cannot assume the
-	 * page exists: it asks for a URL and shows its Account tab only when it
-	 * gets one, rather than offering a tab that 404s (#230).
+	 * @return string
+	 */
+	public static function documentation_url(): string {
+		return self::distribution()->documentation_url();
+	}
+
+	/**
+	 * Where the channel collects feature requests, or '' for the plugin's
+	 * own site.
+	 *
+	 * @return string
+	 */
+	public static function feature_request_url(): string {
+		return self::distribution()->feature_request_url();
+	}
+
+	/**
+	 * Whether the settings header names the plan beside the plugin's name.
+	 * The header asks this together with the licence verdict: a plan is
+	 * named only when Pro runs and the channel sells more than one.
+	 *
+	 * @return bool
+	 */
+	public static function names_the_plan(): bool {
+		return self::distribution()->names_the_plan();
+	}
+
+	/**
+	 * The account screen for a connected site, or '' when there is no such
+	 * screen to link to.
+	 *
+	 * On Freemius the SDK registers that page only once the site is
+	 * connected, and this plugin has no admin menu of its own — Freemius'
+	 * pages are hidden subpages, linked from the plugins list. So the
+	 * settings screen cannot assume the page exists: it asks for a URL and
+	 * shows its Account tab only when it gets one, rather than offering a
+	 * tab that 404s (#230). The marketplace build has no account screen of
+	 * ours at all — WooCommerce.com holds the subscription.
 	 *
 	 * Deliberately the registration question, not the licence one: a
 	 * connected free site has an account page too — that is where it manages
@@ -202,13 +279,7 @@ final class Premium {
 	 * @return string
 	 */
 	public static function account_url(): string {
-		$fs = pay4payment_fs();
-
-		if ( ! $fs->is_on() || ! $fs->is_registered() ) {
-			return '';
-		}
-
-		return (string) $fs->get_account_url();
+		return self::distribution()->account_url();
 	}
 
 	/**
@@ -223,14 +294,12 @@ final class Premium {
 	 * selling Pro. A store that decides to buy during a trial still has the
 	 * Upgrade button inside the account panel.
 	 *
-	 * The second is Freemius', from the account screen this tab row sits above
-	 * (`templates/account.php`, `$show_upgrade`), so the row carries the tabs
-	 * that screen would have carried on its own (#230): a paid plan exists,
-	 * the store is not already paying, it is not in a paid trial. It is not
+	 * The second is the channel's ({@see Distribution::offers_upgrade()}) —
+	 * on Freemius, the conditions of the account screen this tab row sits
+	 * above (`templates/account.php`, `$show_upgrade`), so the row carries
+	 * the tabs that screen would have carried on its own (#230). It is not
 	 * redundant with the first — the filter can turn Pro *off* on a paying
-	 * store, and that store still has nothing to buy. White-labeled sites are
-	 * excluded there and here: an agency-managed store hides the commercial UI
-	 * from its client.
+	 * store, and that store still has nothing to buy.
 	 *
 	 * Connecting to Freemius is deliberately NOT one of the conditions, though
 	 * it used to be. The reasoning was that an unconnected store should be
@@ -244,38 +313,30 @@ final class Premium {
 	 *
 	 * Nothing about buying needs an account first — Freemius' checkout collects
 	 * identity itself, and the pricing screen renders for an anonymous store.
-	 * `is_on()` replaces the account check: it is the part that actually
-	 * mattered, because with the SDK off the link goes nowhere.
+	 * The SDK being on (`is_on()`, the first of the channel's conditions in
+	 * {@see \Pay4Payment\Freemius\FreemiusDistribution::offers_upgrade()})
+	 * replaces the account check: it is the part that actually mattered,
+	 * because with the SDK off the link goes nowhere.
 	 *
 	 * @return bool
 	 */
 	public static function offers_upgrade(): bool {
-		$fs = pay4payment_fs();
-
-		if ( ! $fs->is_on() || self::is_premium() ) {
+		if ( self::is_premium() ) {
 			return false;
 		}
 
-		return ! $fs->is_whitelabeled()
-			&& $fs->has_paid_plan()
-			&& ! $fs->is_paying()
-			&& ! $fs->is_paid_trial();
+		return self::distribution()->offers_upgrade();
 	}
 
 	/**
 	 * Whether a free trial is still on offer: {@see offers_upgrade()} plus the
-	 * SDK's own two conditions — the product has a trial plan, and this store
-	 * has not used it yet — and the `show_trial` switch its own screens honour.
+	 * channel's own conditions — the product has a trial plan, this store
+	 * has not used it yet, and the `show_trial` switch its screens honour.
 	 *
 	 * @return bool
 	 */
 	public static function offers_trial(): bool {
-		$fs = pay4payment_fs();
-
-		return self::offers_upgrade()
-			&& (bool) $fs->apply_filters( 'show_trial', true )
-			&& $fs->has_trial_plan()
-			&& ! $fs->is_trial_utilized();
+		return self::offers_upgrade() && self::distribution()->offers_trial();
 	}
 
 	/**
@@ -290,10 +351,9 @@ final class Premium {
 	 * between hearing from that base and not, so {@see \Pay4Payment\Admin\UpgradeNotice}
 	 * carries the ask in the one banner those stores are already shown.
 	 *
-	 * Two refusals:
-	 *
-	 * - Freemius off (`is_on()`): no API behind the link, so it goes nowhere.
-	 * - Already connected (`is_registered()`): nothing left to ask.
+	 * The two refusals (Freemius off, already connected) are the channel's —
+	 * {@see \Pay4Payment\Freemius\FreemiusDistribution::optin_url()}. The
+	 * marketplace never asks.
 	 *
 	 * Declining is NOT one of them, though it used to be. This is the ROUTE,
 	 * and a store must be able to opt in whenever it decides to — including
@@ -306,13 +366,7 @@ final class Premium {
 	 * @return string Opt-in URL, or '' when there is nothing to connect to.
 	 */
 	public static function optin_url(): string {
-		$fs = pay4payment_fs();
-
-		if ( ! $fs->is_on() || $fs->is_registered() ) {
-			return '';
-		}
-
-		return (string) $fs->get_activation_url();
+		return self::distribution()->optin_url();
 	}
 
 	/**
@@ -320,14 +374,14 @@ final class Premium {
 	 * of `admin.php?page=…` while the store is in activation mode.
 	 *
 	 * Only {@see \Pay4Payment\Admin\OptinPageFallback} needs it, to recognise
-	 * a request for a page that has stopped existing. It lives here because
-	 * this class is the one place allowed to ask the SDK anything (see the
-	 * class docblock), not because the slug is otherwise interesting.
+	 * a request for a page that has stopped existing. The answer is the
+	 * channel's ({@see Distribution::optin_page_slug()}): the SDK's slug on
+	 * Freemius, '' on the marketplace, which has no opt-in page to rescue.
 	 *
 	 * @return string
 	 */
 	public static function optin_page_slug(): string {
-		return (string) pay4payment_fs()->get_slug();
+		return self::distribution()->optin_page_slug();
 	}
 
 
@@ -344,7 +398,7 @@ final class Premium {
 	 * @return void
 	 */
 	public static function prepare_account_panel(): void {
-		pay4payment_fs()->_account_page_load();
+		self::distribution()->prepare_account_panel();
 	}
 
 	/**
@@ -368,12 +422,14 @@ final class Premium {
 	 * Both templates are internal to the SDK — there is no public API for
 	 * showing them elsewhere (the one the SDK does support, its tabs
 	 * integration, needs the product to own an admin menu, and this one
-	 * deliberately doesn't). Re-check them when the SDK is updated.
+	 * deliberately doesn't). Re-check them when the SDK is updated. On the
+	 * marketplace build there is no screen, and nothing is rendered — the
+	 * tab that leads here is never offered ({@see account_url()}).
 	 *
 	 * @return void
 	 */
 	public static function render_account_panel(): void {
-		pay4payment_fs()->_account_page_render();
+		self::distribution()->render_account_panel();
 	}
 
 	/**
@@ -386,7 +442,7 @@ final class Premium {
 	 * @return void
 	 */
 	public static function render_connect_panel(): void {
-		pay4payment_fs()->_connect_page_render();
+		self::distribution()->render_connect_panel();
 	}
 
 	/**
@@ -407,7 +463,7 @@ final class Premium {
 	 * @return void
 	 */
 	public static function render_pricing_panel(): void {
-		pay4payment_fs()->_pricing_page_render();
+		self::distribution()->render_pricing_panel();
 	}
 
 	/**

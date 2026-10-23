@@ -15,17 +15,19 @@ trait AdminPostActions {
 	/**
 	 * Nonce-protected admin-post URL for a notice action.
 	 *
+	 * Returned raw (`&`, not `&amp;`), so escape it on output. Not built with
+	 * wp_nonce_url(): that HTML-escapes the URL, and the settings banner
+	 * passes it to React as data, where `&amp;_wpnonce` stays literal and the
+	 * nonce check fails.
+	 *
 	 * @param string $action Action name (also the nonce context).
 	 * @param array<string, string> $args Extra query args.
 	 * @return string
 	 */
 	private function action_url( string $action, array $args = array() ): string {
-		return wp_nonce_url(
-			add_query_arg(
-				array_merge( array( 'action' => $action ), $args ),
-				admin_url( 'admin-post.php' )
-			),
-			$action
+		return add_query_arg(
+			array_merge( array( 'action' => $action ), $args, array( '_wpnonce' => wp_create_nonce( $action ) ) ),
+			admin_url( 'admin-post.php' )
 		);
 	}
 

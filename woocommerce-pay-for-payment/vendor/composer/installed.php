@@ -3,7 +3,7 @@
         'name' => 'kbnt/pay4payment',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1cd14596386a11cb84caa19622d205e2c20b180c',
+        'reference' => 'f93520eccfa369d7b41e778b5c08335a4beb4c82',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'kbnt/pay4payment' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1cd14596386a11cb84caa19622d205e2c20b180c',
+            'reference' => 'f93520eccfa369d7b41e778b5c08335a4beb4c82',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

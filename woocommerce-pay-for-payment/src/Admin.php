@@ -65,7 +65,8 @@ class Admin implements ComponentInterface {
 			add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_assets' ] );
 
 			// WooCommerce adds its own rating request and version to the footer of every
-			// WC settings screen — credit this plugin instead on its own tab.
+			// WC settings screen — on the free build, ask for this plugin's review
+			// instead; on a premium build leave WooCommerce's line alone.
 			add_filter( 'admin_footer_text', [ $this, 'admin_footer_text' ], PHP_INT_MAX );
 			add_filter( 'update_footer', [ $this, 'update_footer' ], PHP_INT_MAX );
 
@@ -253,6 +254,11 @@ class Admin implements ComponentInterface {
 					// Freemius contact link for a licensed site, '' otherwise —
 					// the settings app falls back to the wp.org forum link.
 					'supportUrl'   => Premium::support_url(),
+					// The channel's docs and feature-request board, '' where
+					// payforpayment.com hosts them (the app's own links).
+					'docsUrl'      => Premium::documentation_url(),
+					'suggestUrl'   => Premium::feature_request_url(),
+					'namesPlan'    => Premium::names_the_plan(),
 				],
 				$this->freemius_tab_urls()
 			),
@@ -289,23 +295,23 @@ class Admin implements ComponentInterface {
 	}
 
 	/**
-	 * Credit the plugin in the admin footer of the settings tab. The free
-	 * build adds the wp.org review ask, the Freemius build carries the
-	 * credit alone (#72) — the why lives on {@see Premium::is_premium_build()}.
+	 * The admin footer of the settings tab: the free build asks for a wp.org
+	 * review — its users installed from there (#72, the why lives on
+	 * {@see Premium::is_premium_build()}). A premium build leaves WooCommerce's
+	 * own footer line untouched: Freemius asks its customers for reviews by
+	 * post-purchase email, the WooCommerce.com marketplace's UX guidelines
+	 * want no branding or self-promotion in the admin, and a "thank you"
+	 * credit was the one branded surface left (decided 2026-09-18).
 	 *
 	 * @param string $text Footer text.
 	 * @return string
 	 */
 	public function admin_footer_text( $text ) {
-		$plugin_name = '<strong>Pay for Payment for WooCommerce</strong>';
-
 		if ( Premium::is_premium_build() ) {
-			return sprintf(
-				/* translators: %s: plugin name. */
-				__( 'Thank you for using %s!', 'woocommerce-pay-for-payment' ),
-				$plugin_name
-			);
+			return $text;
 		}
+
+		$plugin_name = '<strong>Pay for Payment for WooCommerce</strong>';
 
 		return sprintf(
 			/* translators: 1: plugin name, 2: five-star rating link. */
